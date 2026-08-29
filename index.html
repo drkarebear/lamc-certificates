@@ -761,11 +761,16 @@
       text-underline-offset: 3px;
     }
 
+
+    /* =========================================================
+       COPYRIGHT
+       ========================================================= */
+
     .copyright {
       width: min(1200px, 100%);
       margin: 0 auto;
 
-      padding: 17px 24px 23px;
+      padding: 17px 24px 18px;
 
       border-top:
         1px solid rgba(255,255,255,.25);
@@ -774,6 +779,57 @@
 
       font-size: .85rem;
       line-height: 1.5;
+    }
+
+
+    /* =========================================================
+       SITE DISCLAIMER
+       ========================================================= */
+
+    .site-disclaimer {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+
+      padding: 17px 24px 25px;
+
+      border-top:
+        1px solid rgba(255,255,255,.16);
+
+      color: #cbd6e0;
+
+      font-size: .75rem;
+      line-height: 1.55;
+    }
+
+    .site-disclaimer p {
+      max-width: 950px;
+
+      margin: 0;
+
+      color: #cbd6e0;
+    }
+
+    .site-disclaimer p + p {
+      margin-top: 7px;
+    }
+
+    .site-disclaimer strong {
+      color: var(--white);
+    }
+
+    .site-disclaimer a {
+      display: inline;
+
+      min-height: auto;
+
+      color: var(--white);
+
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .site-disclaimer a:hover {
+      color: var(--gold-light);
     }
 
 
@@ -811,7 +867,7 @@
       /* Header */
 
       .header-inner {
-        padding: 14px 18px 11px;
+        padding: 14px 17px 13px;
 
         flex-direction: column;
         align-items: stretch;
@@ -820,7 +876,7 @@
       }
 
       .college-name-main {
-        font-size: 1.4rem;
+        font-size: 1.38rem;
         line-height: 1.1;
       }
 
@@ -833,32 +889,56 @@
       }
 
 
-      /* Navigation */
+      /* Cleaner mobile navigation */
 
       .top-nav {
-        padding-top: 7px;
+        padding-top: 10px;
 
         border-top: 1px solid var(--border);
       }
 
       .top-nav ul {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
 
-        gap: 5px;
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+
+        gap: 9px;
+
+        width: 100%;
+      }
+
+      /* Home is unnecessary on the homepage */
+
+      .top-nav li:first-child {
+        display: none;
       }
 
       .top-nav a {
-        min-height: 44px;
+        width: 100%;
+        min-height: 48px;
 
-        padding: 6px 4px;
+        padding: 9px 10px;
 
+        display: flex;
+        align-items: center;
         justify-content: center;
 
-        font-size: .79rem;
+        background: #f5f8fb;
+        color: var(--navy);
+
+        border: 1px solid #d9e2ea;
+        border-radius: 6px;
+
+        font-size: .81rem;
+        font-weight: 700;
         line-height: 1.2;
 
         text-align: center;
+      }
+
+      .top-nav a:hover {
+        background: #edf3f8;
       }
 
 
@@ -1062,9 +1142,16 @@
       }
 
       .copyright {
-        padding: 16px 18px 21px;
+        padding: 16px 18px 17px;
 
         font-size: .8rem;
+      }
+
+      .site-disclaimer {
+        padding: 15px 18px 20px;
+
+        font-size: .7rem;
+        line-height: 1.5;
       }
 
     }
@@ -1077,15 +1164,11 @@
     @media (max-width: 390px) {
 
       .top-nav ul {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
       }
 
-      .top-nav li:first-child {
-        grid-column: 1 / -1;
-      }
-
-      .top-nav li:first-child a {
-        min-height: 36px;
+      .top-nav a {
+        min-height: 46px;
       }
 
       .hero h1 {
@@ -1551,6 +1634,32 @@
     <div class="copyright">
       Los Angeles Mission College ·
       English, Communication Studies &amp; Journalism
+    </div>
+
+
+    <div class="site-disclaimer">
+
+      <p>
+        <strong>About This Site:</strong>
+        This website is maintained by faculty in the Los Angeles Mission
+        College English, Communication Studies &amp; Journalism Department
+        as a resource for students and the community. It is not an official
+        Los Angeles Mission College or Los Angeles Community College
+        District website. For official college policies, requirements,
+        and information, please consult the
+        <a href="https://www.lamission.edu/">
+          LAMC website
+        </a>
+        and current College Catalog.
+      </p>
+
+      <p>
+        <strong>See something that needs updating?</strong>
+        <a href="https://www.lamc.edu/academics/pathways/scc/english-dept">
+          Contact the ECJ Department.
+        </a>
+      </p>
+
     </div>
 
   </footer>
