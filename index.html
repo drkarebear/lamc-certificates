@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
   <title>ECJ Degrees &amp; Certificates | Los Angeles Mission College</title>
 
   <meta name="description"
         content="Explore degrees and certificates in English, Communication Studies, Journalism, Creative Writing, and Social Media at Los Angeles Mission College.">
+
+  <!-- Social sharing -->
 
   <meta property="og:title"
         content="ECJ Degrees &amp; Certificates">
@@ -21,21 +26,62 @@
   <meta property="og:site_name"
         content="Los Angeles Mission College">
 
-  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Favicon -->
+
+  <link rel="icon"
+        type="image/png"
+        href="favicon.png">
 
   <style>
-  <style>
+
+    /* =========================================================
+       DESIGN SYSTEM
+       ========================================================= */
+
     :root {
       --navy: #082f5f;
       --navy-dark: #062447;
       --blue: #145da0;
+
       --gold: #e5ad27;
-      --cream: #f8f6f1;
+      --gold-light: #ffd25d;
+
       --white: #ffffff;
+      --cream: #f8f6f1;
+
       --text: #263442;
-      --muted: #5b6773;
+      --muted: #566574;
       --border: #dce2e8;
+
+      --focus: #ffbf00;
+
+      /* Program accent colors */
+
+      --english: #a86f00;
+      --english-bg: #fff9ec;
+      --english-icon: #f6e4b3;
+
+      --comm: #2467a9;
+      --comm-bg: #f2f7fc;
+      --comm-icon: #dcebf8;
+
+      --writing: #147b75;
+      --writing-bg: #f1faf9;
+      --writing-icon: #d8efec;
+
+      --journalism: #ad4e12;
+      --journalism-bg: #fff6ef;
+      --journalism-icon: #f7dece;
+
+      --social: #68458a;
+      --social-bg: #f7f3fa;
+      --social-icon: #e7dcef;
     }
+
+
+    /* =========================================================
+       BASE
+       ========================================================= */
 
     * {
       box-sizing: border-box;
@@ -43,40 +89,92 @@
 
     html {
       scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
     }
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
+      min-width: 320px;
+
       background: var(--white);
+      color: var(--text);
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
       line-height: 1.6;
+
+      overflow-wrap: break-word;
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+      height: auto;
     }
 
     a {
       color: inherit;
     }
 
+    p {
+      max-width: 75ch;
+    }
+
+
+    /* =========================================================
+       ACCESSIBILITY
+       ========================================================= */
+
     .skip-link {
       position: absolute;
       left: -9999px;
       top: 0;
-      background: var(--gold);
-      color: #000;
+      z-index: 9999;
+
       padding: 12px 18px;
-      font-weight: bold;
-      z-index: 1000;
+
+      background: var(--gold);
+      color: #132a3d;
+
+      border-radius: 0 0 5px 5px;
+
+      font-weight: 700;
+      text-decoration: none;
     }
 
     .skip-link:focus {
-      left: 10px;
-      top: 10px;
+      left: 12px;
+      top: 0;
     }
 
     a:focus-visible {
-      outline: 3px solid var(--gold);
+      outline: 3px solid var(--focus);
       outline-offset: 4px;
+      border-radius: 3px;
     }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+    }
+
+
+    /* =========================================================
+       HEADER
+       ========================================================= */
 
     .site-header {
       background: var(--white);
@@ -84,301 +182,509 @@
     }
 
     .header-inner {
-      max-width: 1200px;
+      width: min(1200px, 100%);
       margin: 0 auto;
+
       padding: 20px 24px;
+
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 30px;
+      justify-content: space-between;
+
+      gap: 32px;
     }
 
     .college-name {
+      display: inline-block;
+
+      color: var(--navy);
       text-decoration: none;
     }
 
     .college-name-main {
       display: block;
+
       color: var(--navy);
+
       font-family: Georgia, "Times New Roman", serif;
       font-size: 1.65rem;
-      font-weight: bold;
-      letter-spacing: .02em;
+      font-weight: 700;
+      line-height: 1.15;
     }
 
     .department-name {
       display: block;
+
+      margin-top: 5px;
+
       color: var(--navy);
-      margin-top: 3px;
-      font-size: .9rem;
-      font-weight: bold;
-      letter-spacing: .04em;
+
+      font-size: .86rem;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: .045em;
       text-transform: uppercase;
     }
 
+
+    /* =========================================================
+       NAVIGATION
+       ========================================================= */
+
     .top-nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
       margin: 0;
       padding: 0;
+
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+
+      gap: 8px 22px;
+
       list-style: none;
     }
 
     .top-nav a {
+      min-height: 44px;
+
+      display: inline-flex;
+      align-items: center;
+
       color: var(--navy);
+
       font-size: .95rem;
-      font-weight: bold;
+      font-weight: 700;
+      line-height: 1.25;
+
       text-decoration: none;
     }
 
     .top-nav a:hover {
       text-decoration: underline;
       text-decoration-thickness: 2px;
-      text-underline-offset: 6px;
+      text-underline-offset: 5px;
     }
+
+
+    /* =========================================================
+       HERO
+       ========================================================= */
 
     .hero {
       background:
         linear-gradient(
           115deg,
-          rgba(6, 36, 71, .98),
-          rgba(8, 47, 95, .92)
+          #062447 0%,
+          #082f5f 100%
         );
+
       color: var(--white);
     }
 
     .hero-inner {
-      max-width: 1200px;
+      width: min(1200px, 100%);
       margin: 0 auto;
-      padding: 82px 24px 88px;
+
+      padding: 76px 24px 82px;
+
       text-align: center;
     }
 
     .eyebrow {
-      color: #ffd25d;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: .08em;
       margin: 0 0 12px;
+
+      color: var(--gold-light);
+
+      font-size: .94rem;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
 
     .hero h1 {
       max-width: 850px;
-      margin: 0 auto 18px;
+
+      margin: 0 auto 20px;
+
+      color: var(--white);
+
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.5rem, 6vw, 4.6rem);
+      font-size: clamp(2.6rem, 6vw, 4.6rem);
+      font-weight: 700;
       line-height: 1.05;
+
+      text-wrap: balance;
     }
 
     .hero-description {
       max-width: 760px;
+
       margin: 0 auto 30px;
+
+      color: var(--white);
+
       font-size: 1.15rem;
+      line-height: 1.65;
     }
 
     .hero-button {
-      display: inline-block;
+      min-height: 48px;
+
+      padding: 12px 22px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
       background: var(--gold);
       color: #132a3d;
-      padding: 13px 22px;
-      border-radius: 5px;
+
+      border-radius: 6px;
+
+      font-weight: 700;
+      line-height: 1.3;
+      text-align: center;
       text-decoration: none;
-      font-weight: bold;
     }
 
     .hero-button:hover {
-      background: #f0bf45;
+      background: #f2bf40;
+
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
+
+    /* =========================================================
+       PROGRAM SECTION
+       ========================================================= */
+
     .program-section {
-      max-width: 1200px;
+      width: min(1200px, 100%);
       margin: 0 auto;
-      padding: 68px 24px 78px;
+
+      padding: 64px 24px 76px;
     }
 
     .section-heading {
+      margin-bottom: 38px;
+
       text-align: center;
-      margin-bottom: 36px;
     }
 
     .section-heading h2 {
       margin: 0 0 10px;
+
       color: var(--navy);
+
       font-family: Georgia, "Times New Roman", serif;
       font-size: 2.2rem;
+      line-height: 1.2;
     }
 
     .section-heading p {
       max-width: 760px;
+
       margin: 0 auto;
+
       color: var(--muted);
+
       font-size: 1.05rem;
     }
 
     .credential-group + .credential-group {
-      margin-top: 65px;
+      margin-top: 58px;
     }
 
     .credential-label {
+      margin-bottom: 26px;
+
       text-align: center;
-      margin-bottom: 28px;
     }
 
     .credential-label h2 {
       margin: 0 0 8px;
+
       color: var(--navy);
+
       font-family: Georgia, "Times New Roman", serif;
       font-size: 1.9rem;
+      line-height: 1.2;
     }
 
     .credential-label p {
       max-width: 700px;
+
       margin: 0 auto;
+
       color: var(--muted);
     }
 
+
+    /* =========================================================
+       PROGRAM GRID
+       ========================================================= */
+
     .program-grid {
-      display: grid;
-      gap: 22px;
       margin: 0 auto;
+
+      display: grid;
+
+      gap: 22px;
     }
 
     .program-grid.degrees {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
       max-width: 860px;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
     }
 
     .program-grid.certificates {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
     }
+
+
+    /* =========================================================
+       PROGRAM CARDS
+       ========================================================= */
 
     .program-card {
+      min-width: 0;
+      min-height: 100%;
+
+      padding: 27px 23px 22px;
+
       display: flex;
       flex-direction: column;
-      min-height: 100%;
-      background: var(--white);
+
       border: 1px solid var(--border);
       border-top: 5px solid var(--navy);
-      border-radius: 8px;
-      padding: 30px 24px 24px;
-      box-shadow: 0 5px 18px rgba(20, 43, 67, .08);
+      border-radius: 9px;
+
+      box-shadow:
+        0 5px 16px rgba(20, 43, 67, .07);
     }
+
+
+    /* English */
 
     .degree-card:nth-child(1) {
-      border-top-color: #c89219;
+      background: var(--english-bg);
+      border-top-color: var(--english);
     }
+
+    .degree-card:nth-child(1) .program-icon {
+      background: var(--english-icon);
+      color: #674600;
+    }
+
+
+    /* Communication Studies */
 
     .degree-card:nth-child(2) {
-      border-top-color: #2467a9;
+      background: var(--comm-bg);
+      border-top-color: var(--comm);
     }
+
+    .degree-card:nth-child(2) .program-icon {
+      background: var(--comm-icon);
+      color: #174f87;
+    }
+
+
+    /* Creative Writing */
 
     .certificate-card:nth-child(1) {
-      border-top-color: #16847d;
+      background: var(--writing-bg);
+      border-top-color: var(--writing);
     }
+
+    .certificate-card:nth-child(1) .program-icon {
+      background: var(--writing-icon);
+      color: #0b625d;
+    }
+
+
+    /* Journalism */
 
     .certificate-card:nth-child(2) {
-      border-top-color: #d36d25;
+      background: var(--journalism-bg);
+      border-top-color: var(--journalism);
     }
+
+    .certificate-card:nth-child(2) .program-icon {
+      background: var(--journalism-icon);
+      color: #813907;
+    }
+
+
+    /* Social Media */
 
     .certificate-card:nth-child(3) {
-      border-top-color: #765296;
+      background: var(--social-bg);
+      border-top-color: var(--social);
     }
 
+    .certificate-card:nth-child(3) .program-icon {
+      background: var(--social-icon);
+      color: #57366f;
+    }
+
+
+    /* =========================================================
+       CARD CONTENT
+       ========================================================= */
+
     .program-icon {
-      width: 60px;
-      height: 60px;
-      margin: 0 auto 16px;
-      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+
+      margin: 0 auto 14px;
+
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--cream);
-      color: var(--navy);
-      font-size: 1.7rem;
-      font-weight: bold;
+
+      border-radius: 50%;
+
+      font-size: 1.55rem;
+      font-weight: 700;
+      line-height: 1;
     }
 
     .credential-type {
-      margin: 0 0 8px;
-      text-align: center;
-      color: var(--muted);
-      font-size: .84rem;
-      font-weight: bold;
+      margin: 0 0 7px;
+
+      color: #4f5d6a;
+
+      font-size: .8rem;
+      font-weight: 700;
+      line-height: 1.4;
+
       letter-spacing: .04em;
+      text-align: center;
       text-transform: uppercase;
     }
 
     .program-card h3 {
-      margin: 0 0 14px;
+      margin: 0 0 12px;
+
       color: var(--navy);
-      text-align: center;
+
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.4rem;
+      font-size: 1.38rem;
       line-height: 1.25;
+
+      text-align: center;
     }
 
-    .program-card p.program-description {
-      margin: 0 0 25px;
-      color: var(--muted);
+    .program-description {
+      margin: 0 0 22px;
+
+      color: #445361;
+
+      font-size: .95rem;
+      line-height: 1.6;
+
       text-align: center;
-      font-size: .96rem;
+
       flex-grow: 1;
     }
 
     .program-link {
-      display: block;
+      min-height: 48px;
+
+      padding: 11px 14px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       background: var(--navy);
       color: var(--white);
-      padding: 11px 12px;
-      border-radius: 4px;
+
+      border-radius: 5px;
+
+      font-weight: 700;
+      line-height: 1.3;
+
       text-align: center;
       text-decoration: none;
-      font-weight: bold;
     }
 
     .program-link:hover {
       background: var(--blue);
+
       text-decoration: underline;
+      text-underline-offset: 3px;
     }
+
+
+    /* =========================================================
+       NEXT STEP
+       ========================================================= */
 
     .path-wrapper {
       background: var(--cream);
+
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
 
     .path-section {
-      max-width: 1050px;
+      width: min(1050px, 100%);
       margin: 0 auto;
-      padding: 52px 24px;
+
+      padding: 48px 24px;
+
       display: grid;
       grid-template-columns: 1fr auto;
+
       align-items: center;
+
       gap: 40px;
     }
 
     .path-section h2 {
       margin: 0 0 8px;
+
       color: var(--navy);
+
       font-family: Georgia, "Times New Roman", serif;
       font-size: 1.8rem;
+      line-height: 1.25;
     }
 
     .path-section p {
-      margin: 0;
       max-width: 700px;
+
+      margin: 0;
     }
 
     .secondary-button {
-      display: inline-block;
-      border: 2px solid var(--navy);
-      color: var(--navy);
+      min-height: 48px;
+
       padding: 11px 20px;
-      border-radius: 4px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--white);
+      color: var(--navy);
+
+      border: 2px solid var(--navy);
+      border-radius: 5px;
+
+      font-weight: 700;
+      line-height: 1.3;
+
+      text-align: center;
       text-decoration: none;
-      font-weight: bold;
-      white-space: nowrap;
     }
 
     .secondary-button:hover {
@@ -386,469 +692,869 @@
       color: var(--white);
     }
 
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
     footer {
       background: var(--navy-dark);
       color: var(--white);
     }
 
     .footer-inner {
-      max-width: 1200px;
+      width: min(1200px, 100%);
       margin: 0 auto;
-      padding: 42px 24px;
+
+      padding: 38px 24px;
+
       display: grid;
       grid-template-columns: 2fr 1fr;
-      gap: 50px;
+
+      gap: 48px;
     }
 
     footer h2 {
       margin: 0 0 10px;
+
+      color: var(--white);
+
       font-family: Georgia, "Times New Roman", serif;
       font-size: 1.35rem;
+      line-height: 1.25;
     }
 
     footer h3 {
-      margin-top: 0;
-      color: #ffd25d;
+      margin: 0 0 10px;
+
+      color: var(--gold-light);
+
       font-size: 1rem;
+      line-height: 1.3;
     }
 
     footer p {
       margin: 5px 0;
-    }
 
-    footer ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    footer li + li {
-      margin-top: 7px;
-    }
-
-    footer a {
       color: var(--white);
     }
 
-    .copyright {
-      border-top: 1px solid rgba(255,255,255,.25);
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 18px 24px 25px;
-      font-size: .85rem;
-      color: #d8e0e8;
+    footer ul {
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
     }
+
+    footer li + li {
+      margin-top: 4px;
+    }
+
+    footer a {
+      min-height: 42px;
+
+      display: inline-flex;
+      align-items: center;
+
+      color: var(--white);
+
+      text-underline-offset: 3px;
+    }
+
+    .copyright {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+
+      padding: 17px 24px 23px;
+
+      border-top:
+        1px solid rgba(255,255,255,.25);
+
+      color: #d8e0e8;
+
+      font-size: .85rem;
+      line-height: 1.5;
+    }
+
+
+    /* =========================================================
+       TABLET
+       ========================================================= */
 
     @media (max-width: 900px) {
+
       .program-grid.certificates {
-        grid-template-columns: 1fr;
-        max-width: 620px;
-      }
-    }
+        max-width: 650px;
 
-    @media (max-width: 760px) {
-      .header-inner {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .top-nav ul {
-        gap: 14px 20px;
-      }
-
-      .hero-inner {
-        padding: 60px 22px;
-      }
-
-      .program-grid.degrees,
-      .program-grid.certificates {
         grid-template-columns: 1fr;
       }
 
       .path-section {
         grid-template-columns: 1fr;
+
+        gap: 22px;
       }
 
-      .footer-inner {
-        grid-template-columns: 1fr;
+      .secondary-button {
+        justify-self: start;
       }
+
     }
+
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 700px) {
+
+      /* Header */
+
+      .header-inner {
+        padding: 14px 18px 11px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 11px;
+      }
+
+      .college-name-main {
+        font-size: 1.4rem;
+        line-height: 1.1;
+      }
+
+      .department-name {
+        margin-top: 5px;
+
+        font-size: .72rem;
+        line-height: 1.4;
+        letter-spacing: .025em;
+      }
+
+
+      /* Navigation */
+
+      .top-nav {
+        padding-top: 7px;
+
+        border-top: 1px solid var(--border);
+      }
+
+      .top-nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 5px;
+      }
+
+      .top-nav a {
+        min-height: 44px;
+
+        padding: 6px 4px;
+
+        justify-content: center;
+
+        font-size: .79rem;
+        line-height: 1.2;
+
+        text-align: center;
+      }
+
+
+      /* Hero */
+
+      .hero-inner {
+        padding: 40px 19px 44px;
+
+        text-align: left;
+      }
+
+      .eyebrow {
+        margin-bottom: 9px;
+
+        font-size: .76rem;
+        line-height: 1.35;
+      }
+
+      .hero h1 {
+        margin: 0 0 16px;
+
+        max-width: 600px;
+
+        font-size: clamp(
+          2.15rem,
+          10.5vw,
+          3rem
+        );
+
+        line-height: 1.03;
+
+        text-wrap: pretty;
+      }
+
+      .hero-description {
+        margin: 0 0 22px;
+
+        font-size: 1rem;
+        line-height: 1.55;
+      }
+
+      .hero-button {
+        width: 100%;
+        min-height: 50px;
+
+        padding: 13px 16px;
+      }
+
+
+      /* Programs */
+
+      .program-section {
+        padding: 39px 16px 48px;
+      }
+
+      .section-heading {
+        margin-bottom: 27px;
+
+        text-align: left;
+      }
+
+      .section-heading h2 {
+        margin-bottom: 8px;
+
+        font-size: 1.9rem;
+      }
+
+      .section-heading p {
+        margin: 0;
+
+        font-size: .98rem;
+        line-height: 1.55;
+      }
+
+      .credential-group + .credential-group {
+        margin-top: 42px;
+      }
+
+      .credential-label {
+        margin-bottom: 18px;
+
+        text-align: left;
+      }
+
+      .credential-label h2 {
+        margin-bottom: 7px;
+
+        font-size: 1.5rem;
+      }
+
+      .credential-label p {
+        margin: 0;
+
+        font-size: .96rem;
+        line-height: 1.55;
+      }
+
+      .program-grid.degrees,
+      .program-grid.certificates {
+        max-width: none;
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+      }
+
+
+      /* Compact mobile cards */
+
+      .program-card {
+        padding: 18px 16px 16px;
+      }
+
+      .program-icon {
+        width: 46px;
+        height: 46px;
+
+        margin-bottom: 9px;
+
+        font-size: 1.3rem;
+      }
+
+      .credential-type {
+        margin-bottom: 5px;
+
+        font-size: .72rem;
+        line-height: 1.35;
+      }
+
+      .program-card h3 {
+        margin-bottom: 9px;
+
+        font-size: 1.22rem;
+        line-height: 1.22;
+      }
+
+      .program-description {
+        margin-bottom: 15px;
+
+        font-size: .92rem;
+        line-height: 1.5;
+      }
+
+      .program-link {
+        min-height: 48px;
+
+        padding: 11px 12px;
+
+        font-size: .94rem;
+      }
+
+
+      /* Next step */
+
+      .path-section {
+        display: block;
+
+        padding: 33px 18px 37px;
+      }
+
+      .path-section h2 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+      }
+
+      .path-section p {
+        margin-bottom: 20px;
+
+        font-size: .96rem;
+        line-height: 1.55;
+      }
+
+      .secondary-button {
+        width: 100%;
+        min-height: 50px;
+
+        padding: 12px 15px;
+      }
+
+
+      /* Footer */
+
+      .footer-inner {
+        padding: 29px 18px;
+
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+      }
+
+      footer h2 {
+        font-size: 1.22rem;
+      }
+
+      footer p {
+        font-size: .94rem;
+      }
+
+      footer a {
+        min-height: 44px;
+      }
+
+      .copyright {
+        padding: 16px 18px 21px;
+
+        font-size: .8rem;
+      }
+
+    }
+
+
+    /* =========================================================
+       VERY SMALL PHONES
+       ========================================================= */
+
+    @media (max-width: 390px) {
+
+      .top-nav ul {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .top-nav li:first-child {
+        grid-column: 1 / -1;
+      }
+
+      .top-nav li:first-child a {
+        min-height: 36px;
+      }
+
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+
+      .hero-inner {
+        padding-left: 17px;
+        padding-right: 17px;
+      }
+
+      .program-section {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+    }
+
   </style>
 </head>
 
+
 <body>
 
-<a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link"
+     href="#main-content">
+    Skip to main content
+  </a>
 
-<header class="site-header">
-  <div class="header-inner">
 
-    <a class="college-name"
-       href="https://www.lamission.edu/"
-       aria-label="Visit the Los Angeles Mission College website">
+  <!-- =======================================================
+       HEADER
+       ======================================================= -->
 
-      <span class="college-name-main">
-        Los Angeles Mission College
-      </span>
+  <header class="site-header">
 
-      <span class="department-name">
-        English, Communication Studies &amp; Journalism
-      </span>
-    </a>
+    <div class="header-inner">
 
-    <nav class="top-nav" aria-label="Main navigation">
-      <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
+      <a class="college-name"
+         href="https://www.lamission.edu/"
+         aria-label="Los Angeles Mission College homepage">
 
-        <li>
-          <a href="#programs">Degrees &amp; Certificates</a>
-        </li>
+        <span class="college-name-main">
+          Los Angeles Mission College
+        </span>
 
-        <li>
-          <a href="https://www.lamission.edu/student-services">
-            Student Resources
-          </a>
-        </li>
-      </ul>
-    </nav>
+        <span class="department-name">
+          English, Communication Studies &amp; Journalism
+        </span>
 
-  </div>
-</header>
-
-<main id="main-content">
-
-  <section class="hero" aria-labelledby="page-title">
-    <div class="hero-inner">
-
-      <p class="eyebrow">
-        Degrees &amp; Certificate Pathways
-      </p>
-
-      <h1 id="page-title">
-        Build Your Skills.<br>
-        Shape Your Future.
-      </h1>
-
-      <p class="hero-description">
-        Explore transfer-focused associate degrees and career-focused
-        Certificates of Achievement in English, Communication Studies,
-        Creative Writing, Journalism, and Social Media.
-      </p>
-
-      <a class="hero-button" href="#programs">
-        Explore Our Programs
       </a>
 
+
+      <nav class="top-nav"
+           aria-label="Main navigation">
+
+        <ul>
+
+          <li>
+            <a href="index.html"
+               aria-current="page">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="#programs">
+              Degrees &amp; Certificates
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.lamission.edu/student-services">
+              Student Resources
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
     </div>
-  </section>
+
+  </header>
 
 
-  <section class="program-section"
-           id="programs"
-           aria-labelledby="program-heading">
+  <!-- =======================================================
+       MAIN
+       ======================================================= -->
 
-    <div class="section-heading">
-
-      <h2 id="program-heading">
-        Find Your Path
-      </h2>
-
-      <p>
-        Choose a transfer pathway or build focused creative,
-        professional, and digital communication skills through one
-        of our Certificates of Achievement.
-      </p>
-
-    </div>
+  <main id="main-content">
 
 
-    <section class="credential-group"
-             aria-labelledby="degrees-heading">
+    <!-- HERO -->
 
-      <div class="credential-label">
+    <section class="hero"
+             aria-labelledby="page-title">
 
-        <h2 id="degrees-heading">
-          Associate Degrees for Transfer
-        </h2>
+      <div class="hero-inner">
 
-        <p>
-          Prepare for transfer to a four-year university while building
-          a strong academic foundation in writing, communication,
-          analysis, and critical thinking.
+        <p class="eyebrow">
+          Degrees &amp; Certificate Pathways
         </p>
 
-      </div>
+        <h1 id="page-title">
+          Build Your Skills. Shape Your Future.
+        </h1>
 
+        <p class="hero-description">
+          Explore transfer-focused associate degrees and
+          career-focused Certificates of Achievement in English,
+          Communication Studies, Creative Writing, Journalism,
+          and Social Media.
+        </p>
 
-      <div class="program-grid degrees">
-
-        <article class="program-card degree-card">
-
-          <div class="program-icon" aria-hidden="true">
-            E
-          </div>
-
-          <p class="credential-type">
-            Associate Degree for Transfer
-          </p>
-
-          <h3>
-            English AA-T
-          </h3>
-
-          <p class="program-description">
-            Build a strong foundation in literature, writing,
-            critical analysis, and interpretation while preparing
-            to transfer into English or a related bachelor's
-            degree program.
-          </p>
-
-          <a class="program-link"
-             href="english-aa-t.html">
-            Explore the English AA-T
-          </a>
-
-        </article>
-
-
-        <article class="program-card degree-card">
-
-          <div class="program-icon" aria-hidden="true">
-            C
-          </div>
-
-          <p class="credential-type">
-            Associate Degree for Transfer
-          </p>
-
-          <h3>
-            Communication Studies 2.0 AA-T
-          </h3>
-
-          <p class="program-description">
-            Develop skills in communication, presentation,
-            critical thinking, and interpersonal interaction
-            while preparing to transfer into Communication Studies
-            or a related field.
-          </p>
-
-          <a class="program-link"
-             href="communication-studies-aa-t.html">
-            Explore the Communication Studies AA-T
-          </a>
-
-        </article>
+        <a class="hero-button"
+           href="#programs">
+          Explore Our Programs
+        </a>
 
       </div>
 
     </section>
 
 
-    <section class="credential-group"
-             aria-labelledby="certificates-heading">
+    <!-- =====================================================
+         PROGRAMS
+         ===================================================== -->
 
-      <div class="credential-label">
+    <section class="program-section"
+             id="programs"
+             aria-labelledby="program-heading">
 
-        <h2 id="certificates-heading">
-          Certificates of Achievement
+      <div class="section-heading">
+
+        <h2 id="program-heading">
+          Find Your Path
         </h2>
 
         <p>
-          Build focused, career-relevant skills through shorter
-          programs centered on creative, professional, and digital
-          communication.
+          Choose a transfer pathway or build focused creative,
+          professional, and digital communication skills through
+          one of our Certificates of Achievement.
         </p>
 
       </div>
 
 
-      <div class="program-grid certificates">
+      <!-- ===================================================
+           ASSOCIATE DEGREES
+           =================================================== -->
 
-        <article class="program-card certificate-card">
+      <section class="credential-group"
+               aria-labelledby="degrees-heading">
 
-          <div class="program-icon" aria-hidden="true">
-            W
-          </div>
+        <div class="credential-label">
 
-          <p class="credential-type">
-            Certificate of Achievement
+          <h2 id="degrees-heading">
+            Associate Degrees for Transfer
+          </h2>
+
+          <p>
+            Prepare for transfer to a four-year university while
+            building a strong academic foundation in writing,
+            communication, analysis, and critical thinking.
           </p>
 
-          <h3>
-            Creative Writing
-          </h3>
+        </div>
 
-          <p class="program-description">
-            Develop your voice and strengthen your craft in fiction,
-            poetry, creative nonfiction, and other forms of
-            storytelling.
+
+        <div class="program-grid degrees">
+
+
+          <!-- English -->
+
+          <article class="program-card degree-card">
+
+            <div class="program-icon"
+                 aria-hidden="true">
+              E
+            </div>
+
+            <p class="credential-type">
+              Associate Degree for Transfer
+            </p>
+
+            <h3>
+              English AA-T
+            </h3>
+
+            <p class="program-description">
+              Build a strong foundation in literature, writing,
+              critical analysis, and interpretation while preparing
+              to transfer into English or a related bachelor's
+              degree program.
+            </p>
+
+            <a class="program-link"
+               href="english-aa-t.html">
+              Explore the English AA-T
+            </a>
+
+          </article>
+
+
+          <!-- Communication Studies -->
+
+          <article class="program-card degree-card">
+
+            <div class="program-icon"
+                 aria-hidden="true">
+              C
+            </div>
+
+            <p class="credential-type">
+              Associate Degree for Transfer
+            </p>
+
+            <h3>
+              Communication Studies 2.0 AA-T
+            </h3>
+
+            <p class="program-description">
+              Develop skills in communication, presentation,
+              critical thinking, and interpersonal interaction
+              while preparing to transfer into Communication Studies
+              or a related field.
+            </p>
+
+            <a class="program-link"
+               href="communication-studies-aa-t.html">
+              Explore the Communication Studies AA-T
+            </a>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           CERTIFICATES
+           =================================================== -->
+
+      <section class="credential-group"
+               aria-labelledby="certificates-heading">
+
+        <div class="credential-label">
+
+          <h2 id="certificates-heading">
+            Certificates of Achievement
+          </h2>
+
+          <p>
+            Build focused, career-relevant skills through shorter
+            programs centered on creative, professional, and digital
+            communication.
           </p>
 
-          <a class="program-link"
-             href="creative-writing.html">
-            Explore Creative Writing
-          </a>
-
-        </article>
+        </div>
 
 
-        <article class="program-card certificate-card">
-
-          <div class="program-icon" aria-hidden="true">
-            J
-          </div>
-
-          <p class="credential-type">
-            Certificate of Achievement
-          </p>
-
-          <h3>
-            Journalism
-          </h3>
-
-          <p class="program-description">
-            Build skills in reporting, interviewing, news writing,
-            editing, ethics, and multimedia storytelling for today's
-            media landscape.
-          </p>
-
-          <a class="program-link"
-             href="journalism.html">
-            Explore Journalism
-          </a>
-
-        </article>
+        <div class="program-grid certificates">
 
 
-        <article class="program-card certificate-card">
+          <!-- Creative Writing -->
 
-          <div class="program-icon" aria-hidden="true">
-            S
-          </div>
+          <article class="program-card certificate-card">
 
-          <p class="credential-type">
-            Certificate of Achievement
-          </p>
+            <div class="program-icon"
+                 aria-hidden="true">
+              W
+            </div>
 
-          <h3>
-            Social Media Strategist
-          </h3>
+            <p class="credential-type">
+              Certificate of Achievement
+            </p>
 
-          <p class="program-description">
-            Learn content strategy, audience engagement, social media
-            writing, and digital communication skills across platforms.
-          </p>
+            <h3>
+              Creative Writing
+            </h3>
 
-          <a class="program-link"
-             href="social-media-strategist.html">
-            Explore Social Media Strategist
-          </a>
+            <p class="program-description">
+              Develop your voice and strengthen your craft in fiction,
+              poetry, creative nonfiction, and other forms of
+              storytelling.
+            </p>
 
-        </article>
+            <a class="program-link"
+               href="creative-writing.html">
+              Explore Creative Writing
+            </a>
 
-      </div>
+          </article>
+
+
+          <!-- Journalism -->
+
+          <article class="program-card certificate-card">
+
+            <div class="program-icon"
+                 aria-hidden="true">
+              J
+            </div>
+
+            <p class="credential-type">
+              Certificate of Achievement
+            </p>
+
+            <h3>
+              Journalism
+            </h3>
+
+            <p class="program-description">
+              Build skills in reporting, interviewing, news writing,
+              editing, ethics, and multimedia storytelling for
+              today's media landscape.
+            </p>
+
+            <a class="program-link"
+               href="journalism.html">
+              Explore Journalism
+            </a>
+
+          </article>
+
+
+          <!-- Social Media -->
+
+          <article class="program-card certificate-card">
+
+            <div class="program-icon"
+                 aria-hidden="true">
+              S
+            </div>
+
+            <p class="credential-type">
+              Certificate of Achievement
+            </p>
+
+            <h3>
+              Social Media Strategist
+            </h3>
+
+            <p class="program-description">
+              Learn content strategy, audience engagement,
+              social media writing, and digital communication
+              skills across platforms.
+            </p>
+
+            <a class="program-link"
+               href="social-media-strategist.html">
+              Explore Social Media Strategist
+            </a>
+
+          </article>
+
+        </div>
+
+      </section>
 
     </section>
 
-  </section>
+
+    <!-- =====================================================
+         NEXT STEP
+         ===================================================== -->
+
+    <div class="path-wrapper">
+
+      <section class="path-section"
+               aria-labelledby="path-heading">
+
+        <div>
+
+          <h2 id="path-heading">
+            Your Path. Your Purpose.
+          </h2>
+
+          <p>
+            Whether you are preparing to transfer, exploring a career,
+            developing your creative voice, or adding new professional
+            skills, these programs can help you take your next step.
+          </p>
+
+        </div>
+
+        <a class="secondary-button"
+           href="https://www.lamission.edu/academics">
+          Explore LAMC Academics
+        </a>
+
+      </section>
+
+    </div>
+
+  </main>
 
 
-  <div class="path-wrapper">
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
 
-    <section class="path-section"
-             aria-labelledby="path-heading">
+  <footer>
+
+    <div class="footer-inner">
 
       <div>
 
-        <h2 id="path-heading">
-          Your Path. Your Purpose.
+        <h2>
+          Los Angeles Mission College
         </h2>
 
         <p>
-          Whether you are preparing to transfer, exploring a career,
-          developing your creative voice, or adding new professional
-          skills, these programs can help you take your next step.
+          English, Communication Studies &amp; Journalism
+        </p>
+
+        <p>
+          13356 Eldridge Avenue
+        </p>
+
+        <p>
+          Sylmar, CA 91342
         </p>
 
       </div>
 
-      <a class="secondary-button"
-         href="https://www.lamission.edu/academics">
-        Explore LAMC Academics
-      </a>
 
-    </section>
+      <nav aria-label="Footer navigation">
 
-  </div>
+        <h3>
+          Quick Links
+        </h3>
 
-</main>
+        <ul>
 
+          <li>
+            <a href="https://www.lamission.edu/">
+              Visit Los Angeles Mission College
+            </a>
+          </li>
 
-<footer>
+          <li>
+            <a href="https://www.lamission.edu/academics">
+              Explore LAMC Academics
+            </a>
+          </li>
 
-  <div class="footer-inner">
+          <li>
+            <a href="https://www.lamission.edu/student-services">
+              View Student Services
+            </a>
+          </li>
 
-    <div>
+        </ul>
 
-      <h2>
-        Los Angeles Mission College
-      </h2>
-
-      <p>
-        English, Communication Studies &amp; Journalism
-      </p>
-
-      <p>
-        13356 Eldridge Avenue
-      </p>
-
-      <p>
-        Sylmar, CA 91342
-      </p>
+      </nav>
 
     </div>
 
 
-    <div>
-
-      <h3>
-        Quick Links
-      </h3>
-
-      <ul>
-
-        <li>
-          <a href="https://www.lamission.edu/">
-            Visit Los Angeles Mission College
-          </a>
-        </li>
-
-        <li>
-          <a href="https://www.lamission.edu/academics">
-            Explore LAMC Academics
-          </a>
-        </li>
-
-        <li>
-          <a href="https://www.lamission.edu/student-services">
-            View Student Services
-          </a>
-        </li>
-
-      </ul>
-
+    <div class="copyright">
+      Los Angeles Mission College ·
+      English, Communication Studies &amp; Journalism
     </div>
 
-  </div>
-
-
-  <div class="copyright">
-    Los Angeles Mission College · English, Communication Studies &amp; Journalism
-  </div>
-
-</footer>
+  </footer>
 
 </body>
+
 </html>
