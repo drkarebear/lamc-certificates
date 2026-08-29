@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Programs & Certificates | Los Angeles Mission College</title>
+  <title>Degrees & Certificates | Los Angeles Mission College</title>
 
   <style>
     :root {
@@ -39,8 +39,6 @@
       color: inherit;
     }
 
-    /* Accessibility */
-
     .skip-link {
       position: absolute;
       left: -9999px;
@@ -61,8 +59,6 @@
       outline: 3px solid var(--gold);
       outline-offset: 4px;
     }
-
-    /* Header */
 
     .site-header {
       background: var(--white);
@@ -124,14 +120,12 @@
       text-underline-offset: 6px;
     }
 
-    /* Hero */
-
     .hero {
       background:
         linear-gradient(
           115deg,
           rgba(6, 36, 71, .98),
-          rgba(8, 47, 95, .91)
+          rgba(8, 47, 95, .92)
         );
       color: var(--white);
     }
@@ -139,7 +133,7 @@
     .hero-inner {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 80px 24px 85px;
+      padding: 82px 24px 88px;
       text-align: center;
     }
 
@@ -152,7 +146,7 @@
     }
 
     .hero h1 {
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto 18px;
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(2.5rem, 6vw, 4.6rem);
@@ -160,7 +154,7 @@
     }
 
     .hero-description {
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto 30px;
       font-size: 1.15rem;
     }
@@ -179,21 +173,15 @@
       background: #f0bf45;
     }
 
-    /* Main */
-
-    main {
-      display: block;
-    }
-
     .program-section {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 65px 24px 75px;
+      padding: 68px 24px 78px;
     }
 
     .section-heading {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 36px;
     }
 
     .section-heading h2 {
@@ -204,18 +192,47 @@
     }
 
     .section-heading p {
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto;
       color: var(--muted);
       font-size: 1.05rem;
     }
 
-    /* Program cards */
+    .credential-group + .credential-group {
+      margin-top: 65px;
+    }
+
+    .credential-label {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .credential-label h2 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.9rem;
+    }
+
+    .credential-label p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--muted);
+    }
 
     .program-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 18px;
+      gap: 22px;
+      margin: 0 auto;
+    }
+
+    .program-grid.degrees {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 860px;
+    }
+
+    .program-grid.certificates {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .program-card {
@@ -226,42 +243,52 @@
       border: 1px solid var(--border);
       border-top: 5px solid var(--navy);
       border-radius: 8px;
-      padding: 28px 22px 22px;
+      padding: 30px 24px 24px;
       box-shadow: 0 5px 18px rgba(20, 43, 67, .08);
     }
 
-    .program-card:nth-child(1) {
+    .degree-card:nth-child(1) {
       border-top-color: #c89219;
     }
 
-    .program-card:nth-child(2) {
+    .degree-card:nth-child(2) {
       border-top-color: #2467a9;
     }
 
-    .program-card:nth-child(3) {
+    .certificate-card:nth-child(1) {
       border-top-color: #16847d;
     }
 
-    .program-card:nth-child(4) {
-      border-top-color: #765296;
-    }
-
-    .program-card:nth-child(5) {
+    .certificate-card:nth-child(2) {
       border-top-color: #d36d25;
     }
 
+    .certificate-card:nth-child(3) {
+      border-top-color: #765296;
+    }
+
     .program-icon {
-      width: 58px;
-      height: 58px;
-      margin: 0 auto 18px;
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 16px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       background: var(--cream);
       color: var(--navy);
-      font-size: 1.65rem;
+      font-size: 1.7rem;
       font-weight: bold;
+    }
+
+    .credential-type {
+      margin: 0 0 8px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .84rem;
+      font-weight: bold;
+      letter-spacing: .04em;
+      text-transform: uppercase;
     }
 
     .program-card h3 {
@@ -269,15 +296,15 @@
       color: var(--navy);
       text-align: center;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       line-height: 1.25;
     }
 
-    .program-card p {
-      margin: 0 0 24px;
+    .program-card p.program-description {
+      margin: 0 0 25px;
       color: var(--muted);
       text-align: center;
-      font-size: .95rem;
+      font-size: .96rem;
       flex-grow: 1;
     }
 
@@ -297,8 +324,6 @@
       text-decoration: underline;
     }
 
-    /* Path section */
-
     .path-wrapper {
       background: var(--cream);
       border-top: 1px solid var(--border);
@@ -308,7 +333,7 @@
     .path-section {
       max-width: 1050px;
       margin: 0 auto;
-      padding: 50px 24px;
+      padding: 52px 24px;
       display: grid;
       grid-template-columns: 1fr auto;
       align-items: center;
@@ -343,8 +368,6 @@
       color: var(--white);
     }
 
-    /* Footer */
-
     footer {
       background: var(--navy-dark);
       color: var(--white);
@@ -353,7 +376,7 @@
     .footer-inner {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 40px 24px;
+      padding: 42px 24px;
       display: grid;
       grid-template-columns: 2fr 1fr;
       gap: 50px;
@@ -381,6 +404,10 @@
       margin: 0;
     }
 
+    footer li + li {
+      margin-top: 7px;
+    }
+
     footer a {
       color: var(--white);
     }
@@ -394,11 +421,10 @@
       color: #d8e0e8;
     }
 
-    /* Responsive */
-
-    @media (max-width: 1050px) {
-      .program-grid {
-        grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 900px) {
+      .program-grid.certificates {
+        grid-template-columns: 1fr;
+        max-width: 620px;
       }
     }
 
@@ -416,7 +442,8 @@
         padding: 60px 22px;
       }
 
-      .program-grid {
+      .program-grid.degrees,
+      .program-grid.certificates {
         grid-template-columns: 1fr;
       }
 
@@ -441,7 +468,11 @@
     <a class="college-name"
        href="https://www.lamission.edu/"
        aria-label="Visit the Los Angeles Mission College website">
-      <span class="college-name-main">Los Angeles Mission College</span>
+
+      <span class="college-name-main">
+        Los Angeles Mission College
+      </span>
+
       <span class="department-name">
         English, Communication Studies &amp; Journalism
       </span>
@@ -449,8 +480,14 @@
 
     <nav class="top-nav" aria-label="Main navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#programs">Programs &amp; Certificates</a></li>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="#programs">Degrees &amp; Certificates</a>
+        </li>
+
         <li>
           <a href="https://www.lamission.edu/student-services">
             Student Resources
@@ -467,7 +504,9 @@
   <section class="hero" aria-labelledby="page-title">
     <div class="hero-inner">
 
-      <p class="eyebrow">Programs &amp; Certificate Pathways</p>
+      <p class="eyebrow">
+        Degrees &amp; Certificate Pathways
+      </p>
 
       <h1 id="page-title">
         Build Your Skills.<br>
@@ -475,9 +514,9 @@
       </h1>
 
       <p class="hero-description">
-        Explore programs in communication, writing, journalism,
-        digital media, and social media designed to help you build
-        practical skills and move toward your academic and career goals.
+        Explore transfer-focused associate degrees and career-focused
+        Certificates of Achievement in English, Communication Studies,
+        Creative Writing, Journalism, and Social Media.
       </p>
 
       <a class="hero-button" href="#programs">
@@ -488,121 +527,233 @@
   </section>
 
 
-  <section class="program-section" id="programs"
+  <section class="program-section"
+           id="programs"
            aria-labelledby="program-heading">
 
     <div class="section-heading">
-      <h2 id="program-heading">Explore Our Programs</h2>
+
+      <h2 id="program-heading">
+        Find Your Path
+      </h2>
 
       <p>
-        Find the pathway that fits your interests, goals, and next step.
-        Select a program below to learn more.
+        Choose a transfer pathway or build focused creative,
+        professional, and digital communication skills through one
+        of our Certificates of Achievement.
       </p>
-    </div>
-
-
-    <div class="program-grid">
-
-      <article class="program-card">
-        <div class="program-icon" aria-hidden="true">C</div>
-
-        <h3>Communication Studies</h3>
-
-        <p>
-          Build communication, critical-thinking, presentation,
-          and leadership skills for college, careers, and community.
-        </p>
-
-        <a class="program-link"
-           href="communication-studies.html">
-          Explore Communication Studies
-        </a>
-      </article>
-
-
-      <article class="program-card">
-        <div class="program-icon" aria-hidden="true">W</div>
-
-        <h3>Creative Writing</h3>
-
-        <p>
-          Develop your voice and strengthen your craft in fiction,
-          poetry, creative nonfiction, and other forms of storytelling.
-        </p>
-
-        <a class="program-link"
-           href="creative-writing.html">
-          Explore Creative Writing
-        </a>
-      </article>
-
-
-      <article class="program-card">
-        <div class="program-icon" aria-hidden="true">D</div>
-
-        <h3>Digital Media &amp; Journalism</h3>
-
-        <p>
-          Develop skills in digital storytelling, media production,
-          journalism, writing, and contemporary communication.
-        </p>
-
-        <a class="program-link"
-           href="digital-media-journalism.html">
-          Explore Digital Media &amp; Journalism
-        </a>
-      </article>
-
-
-      <article class="program-card">
-        <div class="program-icon" aria-hidden="true">S</div>
-
-        <h3>Social Media Strategist</h3>
-
-        <p>
-          Learn content strategy, audience engagement, social media
-          writing, and digital communication across platforms.
-        </p>
-
-        <a class="program-link"
-           href="social-media-strategist.html">
-          Explore Social Media Strategist
-        </a>
-      </article>
-
-
-      <article class="program-card">
-        <div class="program-icon" aria-hidden="true">J</div>
-
-        <h3>Journalism</h3>
-
-        <p>
-          Build a foundation in reporting, interviewing, news writing,
-          editing, ethics, and multimedia storytelling.
-        </p>
-
-        <a class="program-link"
-           href="journalism.html">
-          Explore Journalism
-        </a>
-      </article>
 
     </div>
+
+
+    <section class="credential-group"
+             aria-labelledby="degrees-heading">
+
+      <div class="credential-label">
+
+        <h2 id="degrees-heading">
+          Associate Degrees for Transfer
+        </h2>
+
+        <p>
+          Prepare for transfer to a four-year university while building
+          a strong academic foundation in writing, communication,
+          analysis, and critical thinking.
+        </p>
+
+      </div>
+
+
+      <div class="program-grid degrees">
+
+        <article class="program-card degree-card">
+
+          <div class="program-icon" aria-hidden="true">
+            E
+          </div>
+
+          <p class="credential-type">
+            Associate Degree for Transfer
+          </p>
+
+          <h3>
+            English AA-T
+          </h3>
+
+          <p class="program-description">
+            Build a strong foundation in literature, writing,
+            critical analysis, and interpretation while preparing
+            to transfer into English or a related bachelor's
+            degree program.
+          </p>
+
+          <a class="program-link"
+             href="english-aa-t.html">
+            Explore the English AA-T
+          </a>
+
+        </article>
+
+
+        <article class="program-card degree-card">
+
+          <div class="program-icon" aria-hidden="true">
+            C
+          </div>
+
+          <p class="credential-type">
+            Associate Degree for Transfer
+          </p>
+
+          <h3>
+            Communication Studies 2.0 AA-T
+          </h3>
+
+          <p class="program-description">
+            Develop skills in communication, presentation,
+            critical thinking, and interpersonal interaction
+            while preparing to transfer into Communication Studies
+            or a related field.
+          </p>
+
+          <a class="program-link"
+             href="communication-studies-aa-t.html">
+            Explore the Communication Studies AA-T
+          </a>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <section class="credential-group"
+             aria-labelledby="certificates-heading">
+
+      <div class="credential-label">
+
+        <h2 id="certificates-heading">
+          Certificates of Achievement
+        </h2>
+
+        <p>
+          Build focused, career-relevant skills through shorter
+          programs centered on creative, professional, and digital
+          communication.
+        </p>
+
+      </div>
+
+
+      <div class="program-grid certificates">
+
+        <article class="program-card certificate-card">
+
+          <div class="program-icon" aria-hidden="true">
+            W
+          </div>
+
+          <p class="credential-type">
+            Certificate of Achievement
+          </p>
+
+          <h3>
+            Creative Writing
+          </h3>
+
+          <p class="program-description">
+            Develop your voice and strengthen your craft in fiction,
+            poetry, creative nonfiction, and other forms of
+            storytelling.
+          </p>
+
+          <a class="program-link"
+             href="creative-writing.html">
+            Explore Creative Writing
+          </a>
+
+        </article>
+
+
+        <article class="program-card certificate-card">
+
+          <div class="program-icon" aria-hidden="true">
+            J
+          </div>
+
+          <p class="credential-type">
+            Certificate of Achievement
+          </p>
+
+          <h3>
+            Journalism
+          </h3>
+
+          <p class="program-description">
+            Build skills in reporting, interviewing, news writing,
+            editing, ethics, and multimedia storytelling for today's
+            media landscape.
+          </p>
+
+          <a class="program-link"
+             href="journalism.html">
+            Explore Journalism
+          </a>
+
+        </article>
+
+
+        <article class="program-card certificate-card">
+
+          <div class="program-icon" aria-hidden="true">
+            S
+          </div>
+
+          <p class="credential-type">
+            Certificate of Achievement
+          </p>
+
+          <h3>
+            Social Media Strategist
+          </h3>
+
+          <p class="program-description">
+            Learn content strategy, audience engagement, social media
+            writing, and digital communication skills across platforms.
+          </p>
+
+          <a class="program-link"
+             href="social-media-strategist.html">
+            Explore Social Media Strategist
+          </a>
+
+        </article>
+
+      </div>
+
+    </section>
+
   </section>
 
 
   <div class="path-wrapper">
+
     <section class="path-section"
              aria-labelledby="path-heading">
 
       <div>
-        <h2 id="path-heading">Your Path. Your Purpose.</h2>
+
+        <h2 id="path-heading">
+          Your Path. Your Purpose.
+        </h2>
 
         <p>
           Whether you are preparing to transfer, exploring a career,
-          developing a creative practice, or adding new professional
-          skills, these programs can help you take the next step.
+          developing your creative voice, or adding new professional
+          skills, these programs can help you take your next step.
         </p>
+
       </div>
 
       <a class="secondary-button"
@@ -611,26 +762,45 @@
       </a>
 
     </section>
+
   </div>
 
 </main>
 
 
 <footer>
+
   <div class="footer-inner">
 
     <div>
-      <h2>Los Angeles Mission College</h2>
 
-      <p>English, Communication Studies &amp; Journalism</p>
-      <p>13356 Eldridge Avenue</p>
-      <p>Sylmar, CA 91342</p>
+      <h2>
+        Los Angeles Mission College
+      </h2>
+
+      <p>
+        English, Communication Studies &amp; Journalism
+      </p>
+
+      <p>
+        13356 Eldridge Avenue
+      </p>
+
+      <p>
+        Sylmar, CA 91342
+      </p>
+
     </div>
 
+
     <div>
-      <h3>Quick Links</h3>
+
+      <h3>
+        Quick Links
+      </h3>
 
       <ul>
+
         <li>
           <a href="https://www.lamission.edu/">
             Visit Los Angeles Mission College
@@ -648,14 +818,18 @@
             View Student Services
           </a>
         </li>
+
       </ul>
+
     </div>
 
   </div>
 
+
   <div class="copyright">
     Los Angeles Mission College · English, Communication Studies &amp; Journalism
   </div>
+
 </footer>
 
 </body>
