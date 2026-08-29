@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>English AA-T | Los Angeles Mission College</title>
+
+  <style>
+    :root {
+      --navy: #082f5f;
+      --navy-dark: #062447;
+      --blue: #145da0;
+      --light-blue: #edf6fc;
+      --gold: #e5ad27;
+      --cream: #fff9e6;
+      --white: #ffffff;
+      --text: #263442;
+      --muted: #5b6773;
+      --border: #dce2e8;
+      --soft-gray: #f7f9fb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--blue);
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--gold);
+      color: #000;
+      padding: 12px 18px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    .skip-link:focus {
+      left: 10px;
+      top: 10px;
+    }
+
+    /* Header */
+
+    .site-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .college-name {
+      text-decoration: none;
+    }
+
+    .college-name-main {
+      display: block;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.65rem;
+      font-weight: bold;
+    }
+
+    .department-name {
+      display: block;
+      color: var(--navy);
+      margin-top: 3px;
+      font-size: .9rem;
+      font-weight: bold;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .top-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .top-nav a {
+      color: var(--navy);
+      font-size: .95rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .top-nav a:hover {
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+
+    /* Hero */
+
+    .hero {
+      background:
+        linear-gradient(
+          115deg,
+          rgba(6, 36, 71, .99),
+          rgba(8, 47, 95, .92)
+        );
+      color: var(--white);
+    }
+
+    .hero-inner {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 72px 24px 76px;
+    }
+
+    .breadcrumb {
+      margin: 0 0 18px;
+      font-size: .95rem;
+    }
+
+    .breadcrumb a {
+      color: #d9ebff;
+    }
+
+    .eyebrow {
+      color: #ffd25d;
+      margin: 0 0 8px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      font-size: .9rem;
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.7rem, 6vw, 4.6rem);
+      line-height: 1.05;
+    }
+
+    .hero-description {
+      max-width: 780px;
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    /* Main */
+
+    .content {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 58px 24px 72px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr;
+      gap: 32px;
+      align-items: start;
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2rem;
+      line-height: 1.25;
+      margin: 0 0 12px;
+    }
+
+    h3 {
+      color: var(--navy);
+      font-size: 1.35rem;
+      line-height: 1.3;
+      margin-top: 0;
+    }
+
+    h4 {
+      color: var(--navy);
+      font-size: 1.1rem;
+      margin: 22px 0 8px;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    .highlight-card {
+      background: var(--light-blue);
+      border: 1px solid #d4e7f5;
+      border-radius: 9px;
+      padding: 24px;
+    }
+
+    .highlight-card h2 {
+      font-size: 1.45rem;
+    }
+
+    .highlight-card ul {
+      margin-bottom: 0;
+      padding-left: 22px;
+    }
+
+    .highlight-card li + li {
+      margin-top: 7px;
+    }
+
+    .career-section {
+      border-left: 5px solid var(--gold);
+      background: #fcfbf7;
+      padding: 24px 26px;
+      margin: 0 0 48px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* Degree requirements */
+
+    .requirements-heading {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .requirements-heading p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--muted);
+    }
+
+    .requirement-card {
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 24px 26px;
+      margin-bottom: 20px;
+      background: var(--white);
+    }
+
+    .requirement-card.blue {
+      background: var(--light-blue);
+      border-color: #d4e7f5;
+    }
+
+    .requirement-card.gold {
+      background: var(--cream);
+      border-color: #f0dfa7;
+    }
+
+    .requirement-number {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      min-width: 34px;
+      height: 34px;
+      line-height: 34px;
+      text-align: center;
+      border-radius: 50%;
+      margin-right: 8px;
+      font-weight: bold;
+    }
+
+    .requirement-title {
+      display: inline;
+      color: var(--navy);
+      font-size: 1.35rem;
+    }
+
+    ul {
+      padding-left: 24px;
+    }
+
+    li + li {
+      margin-top: 7px;
+    }
+
+    .coming-soon {
+      display: inline-block;
+      background: #fff0bf;
+      color: #684d00;
+      border-radius: 12px;
+      padding: 1px 8px;
+      margin-left: 5px;
+      font-size: .82rem;
+      font-weight: bold;
+    }
+
+    /* Counseling */
+
+    .counseling {
+      margin-top: 42px;
+      background: var(--soft-gray);
+      border-top: 5px solid var(--blue);
+      border-radius: 8px;
+      padding: 28px;
+    }
+
+    .counseling h2 {
+      font-size: 1.55rem;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      padding: 12px 18px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 6px;
+    }
+
+    .button:hover {
+      background: var(--blue);
+      text-decoration: underline;
+    }
+
+    .back-link-wrap {
+      margin-top: 42px;
+      text-align: center;
+    }
+
+    .back-link {
+      display: inline-block;
+      border: 2px solid var(--navy);
+      color: var(--navy);
+      padding: 11px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    /* Footer */
+
+    footer {
+      background: var(--navy-dark);
+      color: var(--white);
+    }
+
+    .footer-inner {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 38px 24px;
+    }
+
+    footer h2 {
+      color: var(--white);
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      margin: 4px 0;
+    }
+
+    footer a {
+      color: var(--white);
+    }
+
+    @media (max-width: 760px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-inner {
+        padding: 55px 22px;
+      }
+
+      .content {
+        padding: 42px 20px 58px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+
+    <a class="college-name"
+       href="https://www.lamission.edu/"
+       aria-label="Visit the Los Angeles Mission College website">
+
+      <span class="college-name-main">
+        Los Angeles Mission College
+      </span>
+
+      <span class="department-name">
+        English, Communication Studies &amp; Journalism
+      </span>
+    </a>
+
+    <nav class="top-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Degrees &amp; Certificates</a></li>
+        <li>
+          <a href="https://www.lamission.edu/student-services">
+            Student Resources
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+
+<main id="main-content">
+
+  <section class="hero">
+    <div class="hero-inner">
+
+      <p class="breadcrumb">
+        <a href="index.html">Degrees &amp; Certificates</a>
+        &nbsp;›&nbsp; English AA-T
+      </p>
+
+      <p class="eyebrow">
+        Associate Degree for Transfer
+      </p>
+
+      <h1>English AA-T</h1>
+
+      <p class="hero-description">
+        Build strong writing, literary analysis, and critical-thinking
+        skills while preparing to transfer as an English major.
+      </p>
+
+    </div>
+  </section>
+
+
+  <div class="content">
+
+    <section class="intro-grid" aria-labelledby="why-english">
+
+      <div>
+
+        <h2 id="why-english">
+          Why Consider an English Major?
+        </h2>
+
+        <p>
+          English majors learn to read closely, think critically,
+          communicate clearly, and understand how language and stories
+          shape culture.
+        </p>
+
+        <p>
+          The AA-T prepares you to transfer to a four-year college or
+          university. It also gives eligible students
+          <strong>priority admission to the CSU system</strong>,
+          although admission to a specific CSU campus or major is not
+          guaranteed.
+        </p>
+
+      </div>
+
+
+      <aside class="highlight-card"
+             aria-labelledby="skills-heading">
+
+        <h2 id="skills-heading">
+          What You'll Be Able to Do
+        </h2>
+
+        <ul>
+          <li>Analyze literature, language, culture, and media</li>
+          <li>Write clearly and persuasively for different audiences</li>
+          <li>Develop evidence-based interpretations and arguments</li>
+          <li>
+            Apply strong reading, writing, and research skills
+            across disciplines
+          </li>
+        </ul>
+
+      </aside>
+
+    </section>
+
+
+    <section class="career-section"
+             aria-labelledby="career-heading">
+
+      <h2 id="career-heading">
+        Career Connection
+      </h2>
+
+      <p>
+        English skills support careers in
+        <strong>
+          education, law, publishing, media, writing, editing,
+          communications, marketing, nonprofit work, public service,
+          and creative industries.
+        </strong>
+      </p>
+
+    </section>
+
+
+    <section aria-labelledby="plan-heading">
+
+      <div class="requirements-heading">
+
+        <h2 id="plan-heading">
+          Plan Your Path
+        </h2>
+
+        <p>
+          The English AA-T includes <strong>18–21 units in the major</strong>.
+          Many courses may also double-count with Cal-GETC. A counselor
+          can help you choose courses strategically and stay on track
+          for transfer.
+        </p>
+
+      </div>
+
+
+      <section class="requirement-card"
+               aria-labelledby="prerequisite-heading">
+
+        <h3 id="prerequisite-heading">
+          <span class="requirement-number" aria-hidden="true">1</span>
+          <span class="requirement-title">Complete the Prerequisite</span>
+        </h3>
+
+        <p><strong>Complete one of the following:</strong></p>
+
+        <ul>
+          <li>
+            <strong>ENGL C1000</strong> –
+            Academic Reading and Writing (3 units)
+          </li>
+
+          <li>
+            <strong>ENGL C1000E</strong> –
+            Academic Reading and Writing (3 units)
+          </li>
+
+          <li>
+            <strong>ENGLISH 101Z</strong> –
+            College Reading and Composition I Plus 3-Hour Lab (4 units)
+          </li>
+
+          <li>
+            <strong>E.S.L. 110</strong> –
+            College Composition for Non-Native Speakers (4 units)
+          </li>
+        </ul>
+
+      </section>
+
+
+      <section class="requirement-card blue"
+               aria-labelledby="core-heading">
+
+        <h3 id="core-heading">
+          <span class="requirement-number" aria-hidden="true">2</span>
+          <span class="requirement-title">Complete the Required Core</span>
+        </h3>
+
+        <p><strong>Complete both courses:</strong></p>
+
+        <ul>
+          <li>
+            <strong>ENGL C1001</strong> –
+            Critical Thinking and Writing (3 units)
+          </li>
+
+          <li>
+            <strong>ENGLISH 102</strong> –
+            College Reading and Composition II (3 units)
+          </li>
+        </ul>
+
+      </section>
+
+
+      <section class="requirement-card"
+               aria-labelledby="list-a-heading">
+
+        <h3 id="list-a-heading">
+          <span class="requirement-number" aria-hidden="true">3</span>
+          <span class="requirement-title">List A: Literature</span>
+        </h3>
+
+        <p><strong>Select two courses:</strong></p>
+
+        <ul>
+          <li>
+            <strong>ENGLISH 203</strong> –
+            World Literature I (3 units)
+          </li>
+
+          <li>
+            <strong>ENGLISH 205</strong> –
+            British Literature I (3 units)
+          </li>
+
+          <li>
+            <strong>ENGLISH 206</strong> –
+            British Literature II (3 units)
+          </li>
+
+          <li>
+            <strong>ENGLISH 208</strong> –
+            American Literature II (3 units)
+          </li>
+        </ul>
+
+      </section>
+
+
+      <section class="requirement-card"
+               aria-labelledby="list-b-heading">
+
+        <h3 id="list-b-heading">
+          <span class="requirement-number" aria-hidden="true">4</span>
+          <span class="requirement-title">List B: Expand Your Focus</span>
+        </h3>
+
+        <p>
+          <strong>
+            Select one course below or another List A course
+            you have not already used:
+          </strong>
+        </p>
+
+        <ul>
+          <li>
+            <strong>ENGLISH 127</strong> –
+            Creative Writing (3 units)
+          </li>
+
+          <li>
+            <strong>ENGLISH 218</strong> –
+            Children's Literature (3 units)
+          </li>
+        </ul>
+
+      </section>
+
+
+      <section class="requirement-card gold"
+               aria-labelledby="list-c-heading">
+
+        <h3 id="list-c-heading">
+          <span class="requirement-number" aria-hidden="true">5</span>
+          <span class="requirement-title">List C: Choose Your Direction</span>
+        </h3>
+
+        <p>
+          <strong>
+            Select one course below or another unused course from
+            List A or B.
+          </strong>
+          Choose an option that fits your interests and transfer goals.
+        </p>
+
+
+        <h4>Writing &amp; Creative Focus</h4>
+
+        <ul>
+          <li>
+            <strong>ENGLISH 78</strong> –
+            Memoir (3 units)
+            <span class="coming-soon">Coming Soon</span>
+          </li>
+
+          <li>
+            <strong>ENGLISH 124</strong> –
+            Short Story Writing I (3 units)
+          </li>
+
+          <li>
+            <strong>ENGLISH 223</strong> –
+            Creative Nonfiction (3 units)
+          </li>
+
+          <li>
+            <strong>ENGLISH 32</strong> –
+            Literary Magazine Editing (3 units)
+          </li>
+
+          <li>
+            <strong>ENGLISH 109</strong> –
+            Writing for Social Media (3 units)
+          </li>
+        </ul>
+
+
+        <h4>Literature &amp; Culture</h4>
+
+        <ul>
+          <li>
+            <strong>ENGLISH 239</strong> –
+            Women in Literature (3 units)
+            <span class="coming-soon">Coming Soon</span>
+          </li>
+
+          <li>
+            <strong>ENGLISH 240</strong> –
+            Literature and the Motion Picture I (3 units)
+          </li>
+
+          <li>
+            <strong>ENGLISH 241</strong> –
+            Literature and the Motion Picture II (3 units)
+          </li>
+
+          <li>
+            <strong>CHICANO 037</strong> –
+            Chicano Literature (3 units)
+          </li>
+
+          <li>
+            <strong>CHICANO 042</strong> –
+            Contemporary Mexican Literature (3 units)
+          </li>
+        </ul>
+
+
+        <h4>Communication, Media &amp; Performance</h4>
+
+        <ul>
+          <li>
+            <strong>JOURNAL 101</strong> –
+            Collecting and Writing News (3 units)
+          </li>
+
+          <li>
+            <strong>COMM 130</strong> –
+            Oral Interpretation of Literature (3 units)
+          </li>
+
+          <li>
+            <strong>THEATER 100</strong> –
+            Introduction to Theater (3 units)
+          </li>
+        </ul>
+
+      </section>
+
+    </section>
+
+
+    <aside class="counseling"
+           aria-labelledby="counseling-heading">
+
+      <h2 id="counseling-heading">
+        Interested? Talk With Counseling
+      </h2>
+
+      <p>
+        An LAMC counselor can help you choose courses, maximize
+        double-counting, confirm transfer requirements, and create
+        a plan for completing the AA-T.
+      </p>
+
+      <a class="button"
+         href="https://www.lamission.edu/student-services/counseling"
+         target="_blank"
+         rel="noopener">
+        Contact LAMC Counseling for Academic and Transfer Planning
+      </a>
+
+    </aside>
+
+
+    <div class="back-link-wrap">
+
+      <a class="back-link" href="index.html">
+        ← Back to Degrees &amp; Certificates
+      </a>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-inner">
+
+    <h2>Los Angeles Mission College</h2>
+
+    <p>
+      English, Communication Studies &amp; Journalism
+    </p>
+
+    <p>
+      13356 Eldridge Avenue · Sylmar, CA 91342
+    </p>
+
+    <p>
+      <a href="https://www.lamission.edu/">
+        Visit the Los Angeles Mission College website
+      </a>
+    </p>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
