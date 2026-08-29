@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Journalism Certificate | Los Angeles Mission College</title>
+
+  <style>
+    :root {
+      --navy: #082f5f;
+      --navy-dark: #062447;
+      --blue: #145da0;
+      --light-blue: #edf6fc;
+      --gold: #e5ad27;
+      --cream: #fff9e6;
+      --white: #ffffff;
+      --text: #263442;
+      --muted: #5b6773;
+      --border: #dce2e8;
+      --soft-gray: #f7f9fb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--blue);
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--gold);
+      color: #000;
+      padding: 12px 18px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    .skip-link:focus {
+      left: 10px;
+      top: 10px;
+    }
+
+    .site-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .college-name {
+      text-decoration: none;
+    }
+
+    .college-name-main {
+      display: block;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.65rem;
+      font-weight: bold;
+    }
+
+    .department-name {
+      display: block;
+      color: var(--navy);
+      margin-top: 3px;
+      font-size: .9rem;
+      font-weight: bold;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .top-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .top-nav a {
+      color: var(--navy);
+      font-size: .95rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .top-nav a:hover {
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+
+    .hero {
+      background:
+        linear-gradient(
+          115deg,
+          rgba(6, 36, 71, .99),
+          rgba(8, 47, 95, .92)
+        );
+      color: var(--white);
+    }
+
+    .hero-inner {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 72px 24px 76px;
+    }
+
+    .breadcrumb {
+      margin: 0 0 18px;
+      font-size: .95rem;
+    }
+
+    .breadcrumb a {
+      color: #d9ebff;
+    }
+
+    .eyebrow {
+      color: #ffd25d;
+      margin: 0 0 8px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      font-size: .9rem;
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.7rem, 6vw, 4.6rem);
+      line-height: 1.05;
+    }
+
+    .hero-description {
+      max-width: 780px;
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .content {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 58px 24px 72px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr;
+      gap: 32px;
+      align-items: start;
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2rem;
+      line-height: 1.25;
+      margin: 0 0 12px;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    .highlight-card {
+      background: var(--light-blue);
+      border: 1px solid #d4e7f5;
+      border-radius: 9px;
+      padding: 24px;
+    }
+
+    .highlight-card h2 {
+      font-size: 1.45rem;
+    }
+
+    .highlight-card ul {
+      margin-bottom: 0;
+      padding-left: 22px;
+    }
+
+    .highlight-card li + li {
+      margin-top: 7px;
+    }
+
+    .career-section {
+      border-left: 5px solid var(--gold);
+      background: #fcfbf7;
+      padding: 24px 26px;
+      margin: 0 0 48px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .plan-heading {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .plan-heading p {
+      max-width: 800px;
+      margin: 0 auto;
+      color: var(--muted);
+    }
+
+    .course-card {
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 26px;
+      background: var(--white);
+      margin-bottom: 26px;
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+      border: 1px solid #b8c7d4;
+    }
+
+    caption {
+      text-align: left;
+      padding: 0 0 10px;
+      font-weight: bold;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+
+    th {
+      background: var(--navy);
+      color: var(--white);
+      padding: 12px 11px;
+      text-align: left;
+      border: 1px solid #b8c7d4;
+    }
+
+    td {
+      padding: 11px;
+      border: 1px solid #b8c7d4;
+      vertical-align: top;
+    }
+
+    tbody tr:nth-child(even) {
+      background: var(--soft-gray);
+    }
+
+    .schedule-note {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: .93rem;
+    }
+
+    .counseling {
+      margin-top: 42px;
+      background: var(--cream);
+      border: 1px solid #f0dfa7;
+      border-top: 5px solid var(--gold);
+      border-radius: 8px;
+      padding: 28px;
+    }
+
+    .counseling h2 {
+      font-size: 1.55rem;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      padding: 12px 18px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 6px;
+    }
+
+    .button:hover {
+      background: var(--blue);
+      text-decoration: underline;
+    }
+
+    .back-link-wrap {
+      margin-top: 42px;
+      text-align: center;
+    }
+
+    .back-link {
+      display: inline-block;
+      border: 2px solid var(--navy);
+      color: var(--navy);
+      padding: 11px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    footer {
+      background: var(--navy-dark);
+      color: var(--white);
+    }
+
+    .footer-inner {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 38px 24px;
+    }
+
+    footer h2 {
+      color: var(--white);
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      margin: 4px 0;
+    }
+
+    footer a {
+      color: var(--white);
+    }
+
+    @media (max-width: 760px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-inner {
+        padding: 55px 22px;
+      }
+
+      .content {
+        padding: 42px 20px 58px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+
+    <a class="college-name"
+       href="https://www.lamission.edu/"
+       aria-label="Visit the Los Angeles Mission College website">
+
+      <span class="college-name-main">
+        Los Angeles Mission College
+      </span>
+
+      <span class="department-name">
+        English, Communication Studies &amp; Journalism
+      </span>
+    </a>
+
+    <nav class="top-nav" aria-label="Main navigation">
+      <ul>
+        <li>
+          <a href="index.html">Degrees &amp; Certificates</a>
+        </li>
+        <li>
+          <a href="https://www.lamission.edu/student-services">
+            Student Resources
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<main id="main-content">
+
+  <section class="hero">
+    <div class="hero-inner">
+
+      <p class="breadcrumb">
+        <a href="index.html">Degrees &amp; Certificates</a>
+        &nbsp;›&nbsp; Journalism
+      </p>
+
+      <p class="eyebrow">
+        Certificate of Achievement
+      </p>
+
+      <h1>Journalism Certificate</h1>
+
+      <p class="hero-description">
+        Build practical skills in reporting, writing, editing,
+        digital storytelling, public relations, and multimedia
+        communication.
+      </p>
+
+    </div>
+  </section>
+
+  <div class="content">
+
+    <section class="intro-grid"
+             aria-labelledby="why-journalism">
+
+      <div>
+
+        <h2 id="why-journalism">
+          Why Consider This Certificate?
+        </h2>
+
+        <p>
+          Today's journalism goes far beyond print. Reporters and media
+          professionals work across websites, social media, photography,
+          video, audio, and other digital platforms.
+        </p>
+
+        <p>
+          This certificate brings together
+          <strong>
+            journalism, social media, public relations, visual
+            communication, and digital storytelling
+          </strong>
+          to prepare you for today's multimedia environment.
+        </p>
+
+      </div>
+
+      <aside class="highlight-card"
+             aria-labelledby="skills-heading">
+
+        <h2 id="skills-heading">
+          What You'll Be Able to Do
+        </h2>
+
+        <ul>
+          <li>Research, report, write, and edit accurate stories</li>
+          <li>Evaluate sources, evidence, and potential bias</li>
+          <li>Create multimedia stories for digital audiences</li>
+          <li>
+            Use social media, visual media, and public relations
+            strategies professionally
+          </li>
+        </ul>
+
+      </aside>
+
+    </section>
+
+    <section class="career-section"
+             aria-labelledby="career-heading">
+
+      <h2 id="career-heading">
+        Career Connection
+      </h2>
+
+      <p>
+        These skills can support work in
+        <strong>
+          journalism, writing, digital media, public relations,
+          and content creation
+        </strong>,
+        as well as preparation for further study in journalism
+        or media-related fields.
+      </p>
+
+    </section>
+
+    <section aria-labelledby="plan-heading">
+
+      <div class="plan-heading">
+
+        <h2 id="plan-heading">
+          Plan Your Path
+        </h2>
+
+        <p>
+          To earn the
+          <strong>
+            Journalism Certificate of Achievement, complete all 6
+            required core courses plus 1 elective for a total of
+            21 units.
+          </strong>
+          The program is designed to be completed across Fall and Spring.
+        </p>
+
+      </div>
+
+      <div class="course-card">
+
+        <div class="table-wrap">
+
+          <table>
+
+            <caption>
+              Journalism Certificate Required Core
+            </caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Course</th>
+                <th scope="col">Title</th>
+                <th scope="col">Units</th>
+                <th scope="col">Suggested Term</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td><strong>JOURNAL 100</strong></td>
+                <td>Social Values in Mass Communication</td>
+                <td>3</td>
+                <td>Fall, Spring, &amp; Summer</td>
+              </tr>
+
+              <tr>
+                <td><strong>JOURNAL 101</strong></td>
+                <td>Collecting and Writing News</td>
+                <td>3</td>
+                <td>Fall &amp; Spring</td>
+              </tr>
+
+              <tr>
+                <td><strong>JOURNAL 43</strong></td>
+                <td>Principles of Public Relations</td>
+                <td>3</td>
+                <td>Fall</td>
+              </tr>
+
+              <tr>
+                <td><strong>JOURNAL 202</strong></td>
+                <td>Advanced Newswriting</td>
+                <td>3</td>
+                <td>Spring</td>
+              </tr>
+
+              <tr>
+                <td><strong>MEDIART 117</strong></td>
+                <td>Introduction to Social Media</td>
+                <td>3</td>
+                <td>Fall</td>
+              </tr>
+
+              <tr>
+                <td><strong>MEDIART 801</strong></td>
+                <td>Digital Storytelling</td>
+                <td>3</td>
+                <td>Fall</td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+      <div class="course-card">
+
+        <div class="table-wrap">
+
+          <table>
+
+            <caption>
+              Journalism Certificate Electives: Choose 1
+            </caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Course</th>
+                <th scope="col">Title</th>
+                <th scope="col">Units</th>
+                <th scope="col">Suggested Term</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td><strong>PHOTO 007</strong></td>
+                <td>Exploring Digital Photography</td>
+                <td>3</td>
+                <td>Summer &amp; Fall</td>
+              </tr>
+
+              <tr>
+                <td><strong>ENGLISH 223</strong></td>
+                <td>Creative Nonfiction</td>
+                <td>3</td>
+                <td>Spring</td>
+              </tr>
+
+              <tr>
+                <td><strong>MEDIART 802</strong></td>
+                <td>Introduction to Podcasting</td>
+                <td>3</td>
+                <td>Spring</td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+        <p class="schedule-note">
+          <em>
+            The sequence above reflects the program's proposed course
+            plan. Actual course offerings may change, so check the
+            current LAMC schedule when planning your classes.
+          </em>
+        </p>
+
+      </div>
+
+    </section>
+
+    <aside class="counseling"
+           aria-labelledby="counseling-heading">
+
+      <h2 id="counseling-heading">
+        Interested? Talk With Counseling
+      </h2>
+
+      <p>
+        A counselor can help you confirm certificate requirements,
+        plan your 6 required courses and elective, and see how the
+        certificate fits your academic or career goals.
+      </p>
+
+      <a class="button"
+         href="https://www.lamission.edu/student-services/counseling"
+         target="_blank"
+         rel="noopener">
+        Contact LAMC Counseling for Planning and Enrollment Support
+      </a>
+
+    </aside>
+
+    <div class="back-link-wrap">
+
+      <a class="back-link" href="index.html">
+        ← Back to Degrees &amp; Certificates
+      </a>
+
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+
+  <div class="footer-inner">
+
+    <h2>
+      Los Angeles Mission College
+    </h2>
+
+    <p>
+      English, Communication Studies &amp; Journalism
+    </p>
+
+    <p>
+      13356 Eldridge Avenue · Sylmar, CA 91342
+    </p>
+
+    <p>
+      <a href="https://www.lamission.edu/">
+        Visit the Los Angeles Mission College website
+      </a>
+    </p>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
