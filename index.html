@@ -1,1841 +1,630 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Independent faculty guide to English OER for California Community Colleges, combining course-specific editorial alignment with faculty recommendations and teaching notes."
+  />
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <title>ECJ Degrees &amp; Certificates | Los Angeles Mission College</title>
-
-  <meta name="description"
-        content="Explore degrees, certificates, program guidance, and student resources from the English, Communication Studies, and Journalism Department at Los Angeles Mission College.">
-
-  <!-- Social sharing -->
-
-  <meta property="og:title"
-        content="ECJ Degrees &amp; Certificates">
-
-  <meta property="og:description"
-        content="Explore English, Communication Studies, Creative Writing, Journalism, and Social Media programs at Los Angeles Mission College.">
-
-  <meta property="og:type"
-        content="website">
-
-  <meta property="og:site_name"
-        content="Los Angeles Mission College">
-
-  <!-- Favicon -->
-
-  <link rel="icon"
-        type="image/png"
-        href="favicon.png">
+  <title>CCC English OER Picks</title>
 
   <style>
-
-    /* =========================================================
-       DESIGN SYSTEM
-       ========================================================= */
-
     :root {
-      --navy: #082f5f;
-      --navy-dark: #062447;
-      --blue: #145da0;
-
-      --gold: #e5ad27;
-      --gold-light: #ffd25d;
-
+      --navy: #18324a;
+      --blue: #245d78;
+      --cream: #fffaf2;
+      --gold: #d9a441;
+      --green: #3e6b57;
+      --rose: #9a5b66;
+      --purple: #6c5a86;
+      --text: #263746;
+      --muted: #5f6f7d;
+      --border: #d9e1e7;
       --white: #ffffff;
-      --cream: #f8f6f1;
-
-      --text: #263442;
-      --muted: #566574;
-      --border: #dce2e8;
-
-      --focus: #ffbf00;
-
-      /* Program accent colors */
-
-      --english: #a86f00;
-      --english-bg: #fff9ec;
-      --english-icon: #f6e4b3;
-
-      --comm: #2467a9;
-      --comm-bg: #f2f7fc;
-      --comm-icon: #dcebf8;
-
-      --writing: #147b75;
-      --writing-bg: #f1faf9;
-      --writing-icon: #d8efec;
-
-      --journalism: #ad4e12;
-      --journalism-bg: #fff6ef;
-      --journalism-icon: #f7dece;
-
-      --social: #68458a;
-      --social-bg: #f7f3fa;
-      --social-icon: #e7dcef;
+      --shadow: 0 8px 24px rgba(29, 49, 67, 0.09);
     }
-
-
-    /* =========================================================
-       BASE
-       ========================================================= */
 
     * {
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-      -webkit-text-size-adjust: 100%;
-    }
-
     body {
       margin: 0;
-      min-width: 320px;
-
-      background: var(--white);
-      color: var(--text);
-
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 1rem;
+      color: var(--text);
+      background: #f7f9fb;
       line-height: 1.6;
-
-      overflow-wrap: break-word;
-    }
-
-    img,
-    svg {
-      display: block;
-      max-width: 100%;
-      height: auto;
     }
 
     a {
       color: inherit;
     }
 
-    p {
-      max-width: 75ch;
-    }
-
-
-    /* =========================================================
-       ACCESSIBILITY
-       ========================================================= */
-
     .skip-link {
       position: absolute;
       left: -9999px;
-      top: 0;
-      z-index: 9999;
-
-      padding: 12px 18px;
-
-      background: var(--gold);
-      color: #132a3d;
-
-      border-radius: 0 0 5px 5px;
-
-      font-weight: 700;
-      text-decoration: none;
+      top: 10px;
+      z-index: 999;
+      background: #ffffff;
+      color: #000000;
+      padding: 10px 14px;
+      border: 2px solid #000000;
     }
 
     .skip-link:focus {
-      left: 12px;
-      top: 0;
+      left: 10px;
     }
 
-    a:focus-visible {
-      outline: 3px solid var(--focus);
-      outline-offset: 4px;
-      border-radius: 3px;
+    header {
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      color: var(--white);
+      padding: 24px 20px 56px;
     }
 
-    @media (prefers-reduced-motion: reduce) {
-
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-
-    }
-
-
-    /* =========================================================
-       HEADER
-       ========================================================= */
-
-    .site-header {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .header-inner {
-      width: min(1200px, 100%);
-      margin: 0 auto;
-
-      padding: 20px 24px;
-
+    .topbar {
+      max-width: 1180px;
+      margin: 0 auto 42px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-
-      gap: 32px;
-    }
-
-    .college-name {
-      display: inline-block;
-
-      color: var(--navy);
-      text-decoration: none;
-    }
-
-    .college-name-main {
-      display: block;
-
-      color: var(--navy);
-
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.65rem;
-      font-weight: 700;
-      line-height: 1.15;
-    }
-
-    .department-name {
-      display: block;
-
-      margin-top: 5px;
-
-      color: var(--navy);
-
-      font-size: .86rem;
-      font-weight: 700;
-      line-height: 1.4;
-      letter-spacing: .045em;
-      text-transform: uppercase;
-    }
-
-
-    /* =========================================================
-       NAVIGATION
-       ========================================================= */
-
-    .top-nav ul {
-      margin: 0;
-      padding: 0;
-
-      display: flex;
-      flex-wrap: wrap;
       align-items: center;
-      justify-content: flex-end;
-
-      gap: 8px 22px;
-
-      list-style: none;
+      gap: 20px;
     }
 
-    .top-nav a {
-      min-height: 44px;
-
-      display: inline-flex;
-      align-items: center;
-
-      color: var(--navy);
-
-      font-size: .95rem;
+    .brand {
+      font-size: 1.05rem;
       font-weight: 700;
-      line-height: 1.25;
+      letter-spacing: 0.02em;
+    }
 
+    .about-link {
+      color: #ffffff;
       text-decoration: none;
+      font-weight: 700;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.45);
     }
-
-    .top-nav a:hover {
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 5px;
-    }
-
-
-    /* =========================================================
-       HERO
-       ========================================================= */
 
     .hero {
-      background:
-        linear-gradient(
-          115deg,
-          #062447 0%,
-          #082f5f 100%
-        );
-
-      color: var(--white);
-    }
-
-    .hero-inner {
-      width: min(1200px, 100%);
+      max-width: 920px;
       margin: 0 auto;
-
-      padding: 76px 24px 82px;
-
       text-align: center;
     }
 
     .eyebrow {
-      margin: 0 0 12px;
-
-      color: var(--gold-light);
-
-      font-size: .94rem;
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 7px 12px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 999px;
+      font-size: 0.9rem;
       font-weight: 700;
-      line-height: 1.4;
-      letter-spacing: .08em;
-      text-transform: uppercase;
     }
 
-    .hero h1 {
-      max-width: 850px;
-
-      margin: 0 auto 20px;
-
-      color: var(--white);
-
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.6rem, 6vw, 4.6rem);
-      font-weight: 700;
-      line-height: 1.05;
-
-      text-wrap: balance;
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 6vw, 4.3rem);
+      line-height: 1.04;
+      letter-spacing: -0.03em;
     }
 
-    .hero-description {
+    .hero p {
       max-width: 760px;
-
-      margin: 0 auto 30px;
-
-      color: var(--white);
-
-      font-size: 1.15rem;
-      line-height: 1.65;
+      margin: 22px auto 0;
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+      color: #eef5f8;
     }
 
-
-    /* =========================================================
-       HERO ACTIONS
-       ========================================================= */
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      gap: 12px;
+    main {
+      width: 100%;
     }
 
-    .hero-button {
-      min-height: 48px;
-
-      padding: 12px 22px;
-
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      background: var(--gold);
-      color: #132a3d;
-
-      border: 2px solid var(--gold);
-      border-radius: 6px;
-
-      font-weight: 700;
-      line-height: 1.3;
-      text-align: center;
-      text-decoration: none;
+    .intro-wrap {
+      max-width: 1050px;
+      margin: -28px auto 0;
+      padding: 0 20px;
+      position: relative;
+      z-index: 2;
     }
 
-    .hero-button:hover {
-      background: #f2bf40;
-      border-color: #f2bf40;
-
-      text-decoration: underline;
-      text-underline-offset: 3px;
+    .intro-card {
+      background: #fff9e8;
+      border: 1px solid #ead9a6;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--shadow);
     }
 
-    .hero-button-secondary {
-      background: transparent;
-      color: var(--white);
-
-      border-color: rgba(255,255,255,.9);
-    }
-
-    .hero-button-secondary:hover {
-      background: var(--white);
+    .intro-card strong {
       color: var(--navy);
-
-      border-color: var(--white);
     }
 
-
-    /* =========================================================
-       PROGRAM SECTION
-       ========================================================= */
-
-    .program-section {
-      width: min(1200px, 100%);
+    .section {
+      max-width: 1180px;
       margin: 0 auto;
-
-      padding: 64px 24px 76px;
+      padding: 60px 20px;
     }
 
-    .section-heading {
-      margin-bottom: 38px;
-
-      text-align: center;
-    }
-
-    .section-heading h2 {
+    h2 {
       margin: 0 0 10px;
-
       color: var(--navy);
-
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 2.2rem;
+      font-size: clamp(1.8rem, 4vw, 2.45rem);
       line-height: 1.2;
     }
 
-    .section-heading p {
+    .section-lead {
       max-width: 760px;
-
-      margin: 0 auto;
-
+      margin: 0 0 28px;
       color: var(--muted);
-
-      font-size: 1.05rem;
+      font-size: 1.08rem;
     }
 
-    .credential-group + .credential-group {
-      margin-top: 58px;
-    }
-
-    .credential-label {
-      margin-bottom: 26px;
-
-      text-align: center;
-    }
-
-    .credential-label h2 {
-      margin: 0 0 8px;
-
-      color: var(--navy);
-
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.9rem;
-      line-height: 1.2;
-    }
-
-    .credential-label p {
-      max-width: 700px;
-
-      margin: 0 auto;
-
-      color: var(--muted);
-    }
-
-
-    /* =========================================================
-       PROGRAM GRID
-       ========================================================= */
-
-    .program-grid {
-      margin: 0 auto;
-
+    .course-grid {
       display: grid;
-
-      gap: 22px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
     }
 
-    .program-grid.degrees {
-      max-width: 860px;
-
-      grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-    }
-
-    .program-grid.certificates {
-      grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-    }
-
-
-    /* =========================================================
-       PROGRAM CARDS
-       ========================================================= */
-
-    .program-card {
-      min-width: 0;
-      min-height: 100%;
-
-      padding: 27px 23px 22px;
-
+    .course-card {
       display: flex;
       flex-direction: column;
-
+      min-height: 260px;
+      background: var(--white);
       border: 1px solid var(--border);
-      border-top: 5px solid var(--navy);
-      border-radius: 9px;
-
-      box-shadow:
-        0 5px 16px rgba(20, 43, 67, .07);
+      border-radius: 18px;
+      padding: 26px;
+      text-decoration: none;
+      box-shadow: var(--shadow);
+      transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
     }
 
-
-    /* English */
-
-    .degree-card:nth-child(1) {
-      background: var(--english-bg);
-      border-top-color: var(--english);
+    .course-card:hover,
+    .course-card:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(29, 49, 67, 0.14);
+      outline: 3px solid rgba(36, 93, 120, 0.2);
+      outline-offset: 3px;
     }
 
-    .degree-card:nth-child(1) .program-icon {
-      background: var(--english-icon);
-      color: #674600;
+    .course-code {
+      display: inline-block;
+      width: fit-content;
+      margin-bottom: 18px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 800;
     }
 
-
-    /* Communication Studies */
-
-    .degree-card:nth-child(2) {
-      background: var(--comm-bg);
-      border-top-color: var(--comm);
+    .c1000 .course-code {
+      background: #e7f1f5;
+      color: #245d78;
     }
 
-    .degree-card:nth-child(2) .program-icon {
-      background: var(--comm-icon);
-      color: #174f87;
+    .c1001 .course-code {
+      background: #eef3e9;
+      color: #486b3c;
     }
 
-
-    /* Creative Writing */
-
-    .certificate-card:nth-child(1) {
-      background: var(--writing-bg);
-      border-top-color: var(--writing);
+    .c1002 .course-code {
+      background: #f6e9ec;
+      color: #874955;
     }
 
-    .certificate-card:nth-child(1) .program-icon {
-      background: var(--writing-icon);
-      color: #0b625d;
+    .c1003 .course-code {
+      background: #eeeaf5;
+      color: #625078;
     }
 
-
-    /* Journalism */
-
-    .certificate-card:nth-child(2) {
-      background: var(--journalism-bg);
-      border-top-color: var(--journalism);
-    }
-
-    .certificate-card:nth-child(2) .program-icon {
-      background: var(--journalism-icon);
-      color: #813907;
-    }
-
-
-    /* Social Media */
-
-    .certificate-card:nth-child(3) {
-      background: var(--social-bg);
-      border-top-color: var(--social);
-    }
-
-    .certificate-card:nth-child(3) .program-icon {
-      background: var(--social-icon);
-      color: #57366f;
-    }
-
-
-    /* =========================================================
-       CARD CONTENT
-       ========================================================= */
-
-    .program-icon {
-      width: 56px;
-      height: 56px;
-
-      margin: 0 auto 14px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      border-radius: 50%;
-
-      font-size: 1.55rem;
-      font-weight: 700;
-      line-height: 1;
-    }
-
-    .credential-type {
-      margin: 0 0 7px;
-
-      color: #4f5d6a;
-
-      font-size: .8rem;
-      font-weight: 700;
-      line-height: 1.4;
-
-      letter-spacing: .04em;
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    .program-card h3 {
-      margin: 0 0 12px;
-
+    .course-card h3 {
+      margin: 0 0 10px;
       color: var(--navy);
-
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.38rem;
+      font-size: 1.45rem;
       line-height: 1.25;
-
-      text-align: center;
     }
 
-    .program-description {
+    .course-card p {
       margin: 0 0 22px;
-
-      color: #445361;
-
-      font-size: .95rem;
-      line-height: 1.6;
-
-      text-align: center;
-
+      color: var(--muted);
       flex-grow: 1;
     }
 
-    .program-link {
-      min-height: 48px;
-
-      padding: 11px 14px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      background: var(--navy);
-      color: var(--white);
-
-      border-radius: 5px;
-
-      font-weight: 700;
-      line-height: 1.3;
-
-      text-align: center;
-      text-decoration: none;
+    .card-link {
+      font-weight: 800;
+      color: var(--blue);
     }
 
-    .program-link:hover {
-      background: var(--blue);
-
-      text-decoration: underline;
-      text-underline-offset: 3px;
+    .how-it-works {
+      background: #eef4f7;
+      border-top: 1px solid #dbe6ec;
+      border-bottom: 1px solid #dbe6ec;
     }
 
-
-    /* =========================================================
-       STUDENT SUPPORT STRIP
-       ========================================================= */
-
-    .support-wrapper {
-      background: #f3f7fa;
-
-      border-top: 1px solid var(--border);
-    }
-
-    .support-section {
-      width: min(1050px, 100%);
+    .steps {
+      max-width: 1180px;
       margin: 0 auto;
+      padding: 54px 20px;
+    }
 
-      padding: 46px 24px;
-
+    .step-grid {
       display: grid;
-      grid-template-columns: 1fr auto;
-
-      align-items: center;
-
-      gap: 36px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 24px;
     }
 
-    .support-section h2 {
-      margin: 0 0 8px;
-
-      color: var(--navy);
-
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.8rem;
-      line-height: 1.25;
+    .step {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 22px;
+      border: 1px solid #dbe4e9;
     }
 
-    .support-section p {
-      max-width: 720px;
-
-      margin: 0;
-    }
-
-    .support-button {
-      min-height: 48px;
-
-      padding: 11px 20px;
-
+    .step-number {
       display: inline-flex;
+      width: 34px;
+      height: 34px;
       align-items: center;
       justify-content: center;
-
+      margin-bottom: 12px;
+      border-radius: 50%;
       background: var(--navy);
-      color: var(--white);
-
-      border: 2px solid var(--navy);
-      border-radius: 5px;
-
-      font-weight: 700;
-      line-height: 1.3;
-
-      text-align: center;
-      text-decoration: none;
+      color: #ffffff;
+      font-weight: 800;
     }
 
-    .support-button:hover {
-      background: var(--blue);
-      border-color: var(--blue);
-
-      text-decoration: underline;
-      text-underline-offset: 3px;
+    .step h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
     }
 
-
-    /* =========================================================
-       NEXT STEP
-       ========================================================= */
-
-    .path-wrapper {
-      background: var(--cream);
-
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+    .step p {
+      margin: 0;
+      color: var(--muted);
     }
 
-    .path-section {
-      width: min(1050px, 100%);
+    .oeri-note {
+      max-width: 900px;
       margin: 0 auto;
-
-      padding: 48px 24px;
-
-      display: grid;
-      grid-template-columns: 1fr auto;
-
-      align-items: center;
-
-      gap: 40px;
-    }
-
-    .path-section h2 {
-      margin: 0 0 8px;
-
-      color: var(--navy);
-
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.8rem;
-      line-height: 1.25;
-    }
-
-    .path-section p {
-      max-width: 700px;
-
-      margin: 0;
-    }
-
-    .secondary-button {
-      min-height: 48px;
-
-      padding: 11px 20px;
-
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      background: var(--white);
-      color: var(--navy);
-
-      border: 2px solid var(--navy);
-      border-radius: 5px;
-
-      font-weight: 700;
-      line-height: 1.3;
-
+      padding: 56px 20px;
       text-align: center;
-      text-decoration: none;
     }
 
-    .secondary-button:hover {
+    .oeri-note p {
+      max-width: 760px;
+      margin: 0 auto 20px;
+      color: var(--muted);
+    }
+
+    .button {
+      display: inline-block;
       background: var(--navy);
-      color: var(--white);
+      color: #ffffff;
+      padding: 12px 18px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: #244c6c;
+      outline: 3px solid rgba(24, 50, 74, 0.2);
+      outline-offset: 3px;
     }
 
 
-    /* =========================================================
-       FOOTER
-       ========================================================= */
+
+    .principles-heading {
+      margin-top: 34px;
+      margin-bottom: 18px;
+    }
+
+    .oeri-button {
+      padding: 16px 24px;
+      font-size: 1.05rem;
+      line-height: 1.3;
+      min-width: min(100%, 360px);
+      text-align: center;
+    }
 
     footer {
-      background: var(--navy-dark);
-      color: var(--white);
+      background: #182734;
+      color: #dbe6ec;
+      padding: 34px 20px;
     }
 
     .footer-inner {
-      width: min(1200px, 100%);
+      max-width: 1000px;
       margin: 0 auto;
+      text-align: center;
+    }
 
-      padding: 38px 24px;
+    .footer-inner p {
+      margin: 6px 0;
+      font-size: 0.92rem;
+    }
+.course-note {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--green);
+    }
 
+    .feature-grid {
       display: grid;
-      grid-template-columns: 2fr 1fr;
-
-      gap: 48px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 24px;
     }
 
-    footer h2 {
-      margin: 0 0 10px;
-
-      color: var(--white);
-
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.35rem;
-      line-height: 1.25;
+    .feature {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
     }
 
-    footer h3 {
-      margin: 0 0 10px;
-
-      color: var(--gold-light);
-
-      font-size: 1rem;
-      line-height: 1.3;
+    .feature h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 1.08rem;
     }
 
-    footer p {
-      margin: 5px 0;
-
-      color: var(--white);
-    }
-
-    footer ul {
+    .feature p {
       margin: 0;
-      padding: 0;
-
-      list-style: none;
+      color: var(--muted);
     }
 
-    footer li + li {
-      margin-top: 5px;
-    }
+    @media (max-width: 760px) {
+      header {
+        padding-bottom: 44px;
+      }
 
-    footer a {
-      min-height: 42px;
+      .topbar {
+        margin-bottom: 32px;
+      }
 
-      display: inline-flex;
-      align-items: center;
-
-      color: var(--white);
-
-      text-underline-offset: 3px;
-    }
-
-
-    /* =========================================================
-       COPYRIGHT
-       ========================================================= */
-
-    .copyright {
-      width: min(1200px, 100%);
-      margin: 0 auto;
-
-      padding: 17px 24px 18px;
-
-      border-top:
-        1px solid rgba(255,255,255,.25);
-
-      color: #d8e0e8;
-
-      font-size: .85rem;
-      line-height: 1.5;
-    }
-
-
-    /* =========================================================
-       SITE DISCLAIMER
-       ========================================================= */
-
-    .site-disclaimer {
-      width: min(1200px, 100%);
-      margin: 0 auto;
-
-      padding: 17px 24px 25px;
-
-      border-top:
-        1px solid rgba(255,255,255,.16);
-
-      color: #cbd6e0;
-
-      font-size: .75rem;
-      line-height: 1.55;
-    }
-
-    .site-disclaimer p {
-      max-width: 950px;
-
-      margin: 0;
-
-      color: #cbd6e0;
-    }
-
-    .site-disclaimer p + p {
-      margin-top: 7px;
-    }
-
-    .site-disclaimer strong {
-      color: var(--white);
-    }
-
-    .site-disclaimer a {
-      display: inline;
-
-      min-height: auto;
-
-      color: var(--white);
-
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    .site-disclaimer a:hover {
-      color: var(--gold-light);
-    }
-
-
-    /* =========================================================
-       TABLET
-       ========================================================= */
-
-    @media (max-width: 900px) {
-
-      .program-grid.certificates {
-        max-width: 650px;
-
+      .course-grid,
+      .step-grid,
+      .feature-grid {
         grid-template-columns: 1fr;
       }
 
-      .support-section,
-      .path-section {
-        grid-template-columns: 1fr;
-
-        gap: 22px;
+      .course-card {
+        min-height: auto;
       }
 
-      .support-button,
-      .secondary-button {
-        justify-self: start;
+      .section {
+        padding-top: 46px;
+        padding-bottom: 46px;
       }
-
     }
-
-
-    /* =========================================================
-       MOBILE
-       ========================================================= */
-
-    @media (max-width: 700px) {
-
-      /* Header */
-
-      .header-inner {
-        padding: 14px 17px 13px;
-
-        flex-direction: column;
-        align-items: stretch;
-
-        gap: 11px;
-      }
-
-      .college-name-main {
-        font-size: 1.38rem;
-        line-height: 1.1;
-      }
-
-      .department-name {
-        margin-top: 5px;
-
-        font-size: .72rem;
-        line-height: 1.4;
-        letter-spacing: .025em;
-      }
-
-
-      /* Mobile navigation */
-
-      .top-nav {
-        padding-top: 10px;
-
-        border-top: 1px solid var(--border);
-      }
-
-      .top-nav ul {
-        display: grid;
-
-        grid-template-columns:
-          repeat(2, minmax(0, 1fr));
-
-        gap: 9px;
-
-        width: 100%;
-      }
-
-      /* Home is redundant on the homepage */
-
-      .top-nav li:first-child {
-        display: none;
-      }
-
-      .top-nav a {
-        width: 100%;
-        min-height: 48px;
-
-        padding: 9px 10px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        background: #f5f8fb;
-        color: var(--navy);
-
-        border: 1px solid #d9e2ea;
-        border-radius: 6px;
-
-        font-size: .81rem;
-        font-weight: 700;
-        line-height: 1.2;
-
-        text-align: center;
-      }
-
-      .top-nav a:hover {
-        background: #edf3f8;
-      }
-
-
-      /* Hero */
-
-      .hero-inner {
-        padding: 40px 19px 44px;
-
-        text-align: left;
-      }
-
-      .eyebrow {
-        margin-bottom: 9px;
-
-        font-size: .76rem;
-        line-height: 1.35;
-      }
-
-      .hero h1 {
-        margin: 0 0 16px;
-
-        max-width: 600px;
-
-        font-size: clamp(
-          2.15rem,
-          10.5vw,
-          3rem
-        );
-
-        line-height: 1.03;
-
-        text-wrap: pretty;
-      }
-
-      .hero-description {
-        margin: 0 0 22px;
-
-        font-size: 1rem;
-        line-height: 1.55;
-      }
-
-      .hero-actions {
-        width: 100%;
-
-        flex-direction: column;
-
-        gap: 10px;
-      }
-
-      .hero-actions .hero-button {
-        width: 100%;
-        min-height: 50px;
-
-        padding: 13px 16px;
-      }
-
-
-      /* Programs */
-
-      .program-section {
-        padding: 39px 16px 48px;
-      }
-
-      .section-heading {
-        margin-bottom: 27px;
-
-        text-align: left;
-      }
-
-      .section-heading h2 {
-        margin-bottom: 8px;
-
-        font-size: 1.9rem;
-      }
-
-      .section-heading p {
-        margin: 0;
-
-        font-size: .98rem;
-        line-height: 1.55;
-      }
-
-      .credential-group + .credential-group {
-        margin-top: 42px;
-      }
-
-      .credential-label {
-        margin-bottom: 18px;
-
-        text-align: left;
-      }
-
-      .credential-label h2 {
-        margin-bottom: 7px;
-
-        font-size: 1.5rem;
-      }
-
-      .credential-label p {
-        margin: 0;
-
-        font-size: .96rem;
-        line-height: 1.55;
-      }
-
-      .program-grid.degrees,
-      .program-grid.certificates {
-        max-width: none;
-
-        grid-template-columns: 1fr;
-
-        gap: 15px;
-      }
-
-
-      /* Compact mobile cards */
-
-      .program-card {
-        padding: 18px 16px 16px;
-      }
-
-      .program-icon {
-        width: 46px;
-        height: 46px;
-
-        margin-bottom: 9px;
-
-        font-size: 1.3rem;
-      }
-
-      .credential-type {
-        margin-bottom: 5px;
-
-        font-size: .72rem;
-        line-height: 1.35;
-      }
-
-      .program-card h3 {
-        margin-bottom: 9px;
-
-        font-size: 1.22rem;
-        line-height: 1.22;
-      }
-
-      .program-description {
-        margin-bottom: 15px;
-
-        font-size: .92rem;
-        line-height: 1.5;
-      }
-
-      .program-link {
-        min-height: 48px;
-
-        padding: 11px 12px;
-
-        font-size: .94rem;
-      }
-
-
-      /* Support and next step */
-
-      .support-section,
-      .path-section {
-        display: block;
-
-        padding: 33px 18px 37px;
-      }
-
-      .support-section h2,
-      .path-section h2 {
-        font-size: 1.6rem;
-        line-height: 1.2;
-      }
-
-      .support-section p,
-      .path-section p {
-        margin-bottom: 20px;
-
-        font-size: .96rem;
-        line-height: 1.55;
-      }
-
-      .support-button,
-      .secondary-button {
-        width: 100%;
-        min-height: 50px;
-
-        padding: 12px 15px;
-      }
-
-
-      /* Footer */
-
-      .footer-inner {
-        padding: 29px 18px;
-
-        grid-template-columns: 1fr;
-
-        gap: 24px;
-      }
-
-      footer h2 {
-        font-size: 1.22rem;
-      }
-
-      footer p {
-        font-size: .94rem;
-      }
-
-      footer a {
-        min-height: 44px;
-      }
-
-      .copyright {
-        padding: 16px 18px 17px;
-
-        font-size: .8rem;
-      }
-
-      .site-disclaimer {
-        padding: 15px 18px 20px;
-
-        font-size: .7rem;
-        line-height: 1.5;
-      }
-
-    }
-
-
-    /* =========================================================
-       VERY SMALL PHONES
-       ========================================================= */
-
-    @media (max-width: 390px) {
-
-      .top-nav ul {
-        grid-template-columns: 1fr;
-      }
-
-      .top-nav a {
-        min-height: 46px;
-      }
-
-      .hero h1 {
-        font-size: 2.1rem;
-      }
-
-      .hero-inner {
-        padding-left: 17px;
-        padding-right: 17px;
-      }
-
-      .program-section {
-        padding-left: 14px;
-        padding-right: 14px;
-      }
-
-    }
-
   </style>
 </head>
 
-
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <a class="skip-link"
-     href="#main-content">
-    Skip to main content
-  </a>
-
-
-  <!-- =======================================================
-       HEADER
-       ======================================================= -->
-
-  <header class="site-header">
-
-    <div class="header-inner">
-
-      <a class="college-name"
-         href="https://www.lamission.edu/"
-         aria-label="Los Angeles Mission College homepage">
-
-        <span class="college-name-main">
-          Los Angeles Mission College
-        </span>
-
-        <span class="department-name">
-          English, Communication Studies &amp; Journalism
-        </span>
-
-      </a>
-
-
-      <nav class="top-nav"
-           aria-label="Main navigation">
-
-        <ul>
-
-          <li>
-            <a href="index.html"
-               aria-current="page">
-              Home
-            </a>
-          </li>
-
-          <li>
-            <a href="#programs">
-              Degrees &amp; Certificates
-            </a>
-          </li>
-
-          <li>
-            <a href="student-resources.html">
-              Student Resources
-            </a>
-          </li>
-
-        </ul>
-
-      </nav>
-
+  <header>
+    <div class="topbar">
+      <div class="brand">CCC English OER Picks</div>
+      <div style="display: flex; gap: 18px; align-items: center; flex-wrap: wrap;">
+        <a class="about-link" href="about.html">About this project</a>
+        <a class="about-link" href="privacy.html">Privacy</a>
+      </div>
     </div>
 
+    <div class="hero">
+      <div class="eyebrow">Independent faculty guide to English OER</div>
+
+      <h1>Too many OERs?<br />Start with the strongest matches.</h1>
+
+      <p>
+        A practical guide for California Community College English faculty:
+        compare course-specific OER alignment, see what each resource does well,
+        note what it may still need, and add faculty recommendations and teaching notes.
+      </p>
+    </div>
   </header>
 
-
-  <!-- =======================================================
-       MAIN
-       ======================================================= -->
-
   <main id="main-content">
-
-
-    <!-- =====================================================
-         HERO
-         ===================================================== -->
-
-    <section class="hero"
-             aria-labelledby="page-title">
-
-      <div class="hero-inner">
-
-        <p class="eyebrow">
-          Degrees &amp; Certificate Pathways
-        </p>
-
-        <h1 id="page-title">
-          Build Your Skills. Shape Your Future.
-        </h1>
-
-        <p class="hero-description">
-          Explore transfer-focused associate degrees and
-          career-focused Certificates of Achievement in English,
-          Communication Studies, Creative Writing, Journalism,
-          and Social Media.
-        </p>
-
-
-        <div class="hero-actions">
-
-          <a class="hero-button"
-             href="#programs">
-            Explore Our Programs
-          </a>
-
-          <a class="hero-button hero-button-secondary"
-             href="program-explorer.html">
-            Help Me Choose a Program
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         PROGRAMS
-         ===================================================== -->
-
-    <section class="program-section"
-             id="programs"
-             aria-labelledby="program-heading">
-
-      <div class="section-heading">
-
-        <h2 id="program-heading">
-          Find Your Path
-        </h2>
+    <div class="intro-wrap">
+      <section class="intro-card" aria-labelledby="why-heading">
+        <h2 id="why-heading">The idea is simple.</h2>
 
         <p>
-          Choose a transfer pathway or build focused creative,
-          professional, and digital communication skills through
-          one of our Certificates of Achievement.
+          The ASCCC OERI already does the essential work of identifying and
+          collecting English OER. This project adds a practical comparison layer:
+          <strong>Which resources look strongest for a specific CCC course, what role might each one play, and what do faculty say after using them?</strong>
         </p>
 
+        <p>
+          Each course page separates <strong>editorial alignment</strong> from
+          <strong>faculty recommendations</strong>. Alignment scores are an independent
+          review of how well a resource appears to match that course's statewide
+          requirements; faculty reviews reflect real teaching experience.
+        </p>
+
+      </section>
+    </div>
+
+    <section class="section" aria-labelledby="course-heading">
+      <h2 id="course-heading">Choose Your Course</h2>
+
+      <p class="section-lead">
+        Start with the course you teach. Each guide uses its own course-specific
+        criteria, so a resource can be an excellent fit for one course and only a
+        supplement for another.
+      </p>
+
+      <div class="course-grid">
+        <a class="course-card c1000" href="c1000.html">
+          <span class="course-code">ENGL C1000</span>
+
+          <h3>Academic Reading and Writing</h3>
+
+          <p>
+            Compare OER for academic reading and writing, rhetoric, research,
+            documentation, writing process, and language use.
+          </p>
+
+          <div class="course-note">Composition-centered scoring</div>
+          <span class="card-link">Explore C1000 OER →</span>
+        </a>
+
+        <a class="course-card c1001" href="c1001.html">
+          <span class="course-code">ENGL C1001</span>
+
+          <h3>Critical Thinking and Writing</h3>
+
+          <p>
+            Compare OER for argument, rhetorical analysis, logic and reasoning,
+            biases and fallacies, research, and evidence-based writing.
+          </p>
+
+          <div class="course-note">Critical thinking-focused scoring</div>
+          <span class="card-link">Explore C1001 OER →</span>
+        </a>
+
+        <a class="course-card c1002" href="c1002.html">
+          <span class="course-code">ENGL C1002</span>
+
+          <h3>Introduction to Literature</h3>
+
+          <p>
+            Explore literature-centered texts, anthologies, and supplements for
+            poetry, drama, fiction, diverse voices, close reading, and literary analysis.
+          </p>
+
+          <div class="course-note">Literature-centered scoring</div>
+          <span class="card-link">Explore C1002 OER →</span>
+        </a>
+
+        <a class="course-card c1003" href="c1003.html">
+          <span class="course-code">ENGL C1003</span>
+
+          <h3>Critical Thinking and Writing through Literature</h3>
+
+          <p>
+            Compare resources that combine literary study with argument,
+            reasoning, critical approaches, research, revision, and documentation.
+          </p>
+
+          <div class="course-note">Literature + critical thinking scoring</div>
+          <span class="card-link">Explore C1003 OER →</span>
+        </a>
       </div>
-
-
-      <!-- ===================================================
-           ASSOCIATE DEGREES
-           =================================================== -->
-
-      <section class="credential-group"
-               aria-labelledby="degrees-heading">
-
-        <div class="credential-label">
-
-          <h2 id="degrees-heading">
-            Associate Degrees for Transfer
-          </h2>
-
-          <p>
-            Prepare for transfer to a four-year university while
-            building a strong academic foundation in writing,
-            communication, analysis, and critical thinking.
-          </p>
-
-        </div>
-
-
-        <div class="program-grid degrees">
-
-
-          <!-- English -->
-
-          <article class="program-card degree-card">
-
-            <div class="program-icon"
-                 aria-hidden="true">
-              E
-            </div>
-
-            <p class="credential-type">
-              Associate Degree for Transfer
-            </p>
-
-            <h3>
-              English AA-T
-            </h3>
-
-            <p class="program-description">
-              Build a strong foundation in literature, writing,
-              critical analysis, and interpretation while preparing
-              to transfer into English or a related bachelor's
-              degree program.
-            </p>
-
-            <a class="program-link"
-               href="english-aa-t.html">
-              Explore the English AA-T
-            </a>
-
-          </article>
-
-
-          <!-- Communication Studies -->
-
-          <article class="program-card degree-card">
-
-            <div class="program-icon"
-                 aria-hidden="true">
-              C
-            </div>
-
-            <p class="credential-type">
-              Associate Degree for Transfer
-            </p>
-
-            <h3>
-              Communication Studies 2.0 AA-T
-            </h3>
-
-            <p class="program-description">
-              Develop skills in communication, presentation,
-              critical thinking, and interpersonal interaction
-              while preparing to transfer into Communication Studies
-              or a related field.
-            </p>
-
-            <a class="program-link"
-               href="communication-studies-aa-t.html">
-              Explore the Communication Studies AA-T
-            </a>
-
-          </article>
-
-        </div>
-
-      </section>
-
-
-      <!-- ===================================================
-           CERTIFICATES
-           =================================================== -->
-
-      <section class="credential-group"
-               aria-labelledby="certificates-heading">
-
-        <div class="credential-label">
-
-          <h2 id="certificates-heading">
-            Certificates of Achievement
-          </h2>
-
-          <p>
-            Build focused, career-relevant skills through shorter
-            programs centered on creative, professional, and digital
-            communication.
-          </p>
-
-        </div>
-
-
-        <div class="program-grid certificates">
-
-
-          <!-- Creative Writing -->
-
-          <article class="program-card certificate-card">
-
-            <div class="program-icon"
-                 aria-hidden="true">
-              W
-            </div>
-
-            <p class="credential-type">
-              Certificate of Achievement
-            </p>
-
-            <h3>
-              Creative Writing
-            </h3>
-
-            <p class="program-description">
-              Develop your voice and strengthen your craft in fiction,
-              poetry, creative nonfiction, and other forms of
-              storytelling.
-            </p>
-
-            <a class="program-link"
-               href="creative-writing.html">
-              Explore Creative Writing
-            </a>
-
-          </article>
-
-
-          <!-- Journalism -->
-
-          <article class="program-card certificate-card">
-
-            <div class="program-icon"
-                 aria-hidden="true">
-              J
-            </div>
-
-            <p class="credential-type">
-              Certificate of Achievement
-            </p>
-
-            <h3>
-              Journalism
-            </h3>
-
-            <p class="program-description">
-              Build skills in reporting, interviewing, news writing,
-              editing, ethics, and multimedia storytelling for
-              today's media landscape.
-            </p>
-
-            <a class="program-link"
-               href="journalism.html">
-              Explore Journalism
-            </a>
-
-          </article>
-
-
-          <!-- Social Media -->
-
-          <article class="program-card certificate-card">
-
-            <div class="program-icon"
-                 aria-hidden="true">
-              S
-            </div>
-
-            <p class="credential-type">
-              Certificate of Achievement
-            </p>
-
-            <h3>
-              Social Media Strategist
-            </h3>
-
-            <p class="program-description">
-              Learn content strategy, audience engagement,
-              social media writing, and digital communication
-              skills across platforms.
-            </p>
-
-            <a class="program-link"
-               href="social-media-strategist.html">
-              Explore Social Media Strategist
-            </a>
-
-          </article>
-
-        </div>
-
-      </section>
-
     </section>
 
+    <section class="how-it-works" aria-labelledby="how-heading">
+      <div class="steps">
+        <h2 id="how-heading">Try It Out</h2>
 
-    <!-- =====================================================
-         STUDENT SUPPORT
-         ===================================================== -->
+        <div class="step-grid">
+          <div class="step">
+            <div class="step-number" aria-hidden="true">1</div>
 
-    <div class="support-wrapper">
+            <h3>Choose your course.</h3>
 
-      <section class="support-section"
-               aria-labelledby="support-heading">
+            <p>
+              See only the resources mapped to that course and scored against
+              criteria that actually fit its statewide requirements.
+            </p>
+          </div>
 
-        <div>
+          <div class="step">
+            <div class="step-number" aria-hidden="true">2</div>
 
-          <h2 id="support-heading">
-            Need Help Beyond Choosing a Program?
-          </h2>
+            <h3>Compare before you click.</h3>
 
-          <p>
-            Find tutoring, basic-needs support, financial aid,
-            health and accessibility resources, counseling,
-            transfer help, career services, student communities,
-            and other LAMC support.
-          </p>
+            <p>
+              See likely best role, strengths, alignment scores, and a
+              “watch for” note so you can decide what is worth opening first.
+            </p>
+          </div>
 
+          <div class="step">
+            <div class="step-number" aria-hidden="true">3</div>
+
+            <h3>Add faculty experience.</h3>
+
+            <p>
+              Faculty can recommend a resource, say how they used it, and leave
+              a brief teaching note. Submitted reviews are moderated before display.
+            </p>
+          </div>
         </div>
 
-        <a class="support-button"
-           href="student-resources.html">
-          Find Student Resources
-        </a>
+        <div class="feature-grid" aria-label="What the ratings mean">
+          <div class="feature">
+            <h3>Independent, not official</h3>
+            <p>
+              Scores are an independent course-alignment review, not an ASCCC,
+              OERI, or Chancellor's Office rating.
+            </p>
+          </div>
 
-      </section>
+          <div class="feature">
+            <h3>Different courses, different roles</h3>
+            <p>
+              The same resource may be a strong primary text in one course
+              and a targeted supplement in another.
+            </p>
+          </div>
 
-    </div>
-
-
-    <!-- =====================================================
-         NEXT STEP
-         ===================================================== -->
-
-    <div class="path-wrapper">
-
-      <section class="path-section"
-               aria-labelledby="path-heading">
-
-        <div>
-
-          <h2 id="path-heading">
-            Your Path. Your Purpose.
-          </h2>
-
-          <p>
-            Whether you are preparing to transfer, exploring a career,
-            developing your creative voice, or adding new professional
-            skills, these programs can help you take your next step.
-          </p>
-
+          <div class="feature">
+            <h3>Sometimes a combination works best</h3>
+            <p>
+              The guides highlight complementary strengths so faculty can
+              build a better-fit set of materials when one text does not do everything.
+            </p>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <a class="secondary-button"
-           href="https://www.lamission.edu/academics">
-          Explore LAMC Academics
+    <section class="oeri-note" aria-labelledby="about-heading">
+      <h2 id="about-heading">Built beside OERI, not instead of it.</h2>
+
+      <p>
+        ASCCC OERI maintains the comprehensive, discipline-curated collection of
+        English OER. This independent project adds a practical comparison layer
+        to help faculty decide what to investigate first.
+      </p>
+
+      <p>
+        <a class="button" href="about.html">About This Project</a>
+      </p>
+
+      <p style="margin-top: 22px;">
+        <a
+          class="button oeri-button"
+          href="https://asccc-oeri.org/open-educational-resources-and-english/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit the Official ASCCC OERI English Collection
         </a>
-
-      </section>
-
-    </div>
-
+      </p>
+    </section>
   </main>
 
-
-  <!-- =======================================================
-       FOOTER
-       ======================================================= -->
-
   <footer>
-
     <div class="footer-inner">
-
-      <div>
-
-        <h2>
-          Los Angeles Mission College
-        </h2>
-
-        <p>
-          English, Communication Studies &amp; Journalism
-        </p>
-
-        <p>
-          13356 Eldridge Avenue
-        </p>
-
-        <p>
-          Sylmar, CA 91342
-        </p>
-
-      </div>
-
-
-      <nav aria-label="Footer navigation">
-
-        <h3>
-          Quick Links
-        </h3>
-
-        <ul>
-
-          <li>
-            <a href="student-resources.html">
-              Find Student Resources
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.lamc.edu/student-services"
-               target="_blank"
-               rel="noopener">
-              Official LAMC Student Services
-              <span class="sr-only"></span>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.lamission.edu/">
-              Visit Los Angeles Mission College
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.lamission.edu/academics">
-              Explore LAMC Academics
-            </a>
-          </li>
-
-        </ul>
-
-      </nav>
-
-    </div>
-
-
-    <div class="copyright">
-      Los Angeles Mission College ·
-      English, Communication Studies &amp; Journalism
-    </div>
-
-
-    <div class="site-disclaimer">
+      <p><strong>CCC English OER Picks</strong></p>
 
       <p>
-        <strong>About This Site:</strong>
-        This website is maintained by faculty in the Los Angeles Mission
-        College English, Communication Studies &amp; Journalism Department
-        as a resource for students and the community. It is not an official
-        Los Angeles Mission College or Los Angeles Community College
-        District website. For official college policies, requirements,
-        services, and information, please consult the
-        <a href="https://www.lamission.edu/">
-          LAMC website
-        </a>,
-        <a href="https://www.lamc.edu/student-services">
-          official LAMC Student Services website
-        </a>,
-        and current College Catalog.
+        An independent faculty project. Not affiliated with or endorsed by
+        ASCCC, ASCCC OERI, or the California Community Colleges Chancellor's Office.
       </p>
-
       <p>
-        <strong>See something that needs updating?</strong>
-        <a href="https://www.lamc.edu/academics/pathways/scc/english-dept">
-          Contact the ECJ Department.
-        </a>
+        <a href="privacy.html" style="color: #ffffff; font-weight: 700;">Privacy Statement</a>
       </p>
-
     </div>
-
   </footer>
-
 </body>
-
 </html>
