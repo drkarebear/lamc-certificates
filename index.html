@@ -329,6 +329,19 @@
       line-height: 1.65;
     }
 
+
+    /* =========================================================
+       HERO ACTIONS
+       ========================================================= */
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      gap: 12px;
+    }
+
     .hero-button {
       min-height: 48px;
 
@@ -341,6 +354,7 @@
       background: var(--gold);
       color: #132a3d;
 
+      border: 2px solid var(--gold);
       border-radius: 6px;
 
       font-weight: 700;
@@ -351,9 +365,24 @@
 
     .hero-button:hover {
       background: #f2bf40;
+      border-color: #f2bf40;
 
       text-decoration: underline;
       text-underline-offset: 3px;
+    }
+
+    .hero-button-secondary {
+      background: transparent;
+      color: var(--white);
+
+      border-color: rgba(255,255,255,.9);
+    }
+
+    .hero-button-secondary:hover {
+      background: var(--white);
+      color: var(--navy);
+
+      border-color: var(--white);
     }
 
 
@@ -980,7 +1009,15 @@
         line-height: 1.55;
       }
 
-      .hero-button {
+      .hero-actions {
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 10px;
+      }
+
+      .hero-actions .hero-button {
         width: 100%;
         min-height: 50px;
 
@@ -1284,10 +1321,22 @@
           and Social Media.
         </p>
 
-        <a class="hero-button"
-           href="#programs">
-          Explore Our Programs
-        </a>
+
+        <!-- HERO ACTIONS -->
+
+        <div class="hero-actions">
+
+          <a class="hero-button"
+             href="#programs">
+            Explore Our Programs
+          </a>
+
+          <a class="hero-button hero-button-secondary"
+             href="program-explorer.html">
+            Help Me Choose a Program
+          </a>
+
+        </div>
 
       </div>
 
