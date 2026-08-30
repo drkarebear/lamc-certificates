@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Student Resources | ECJ | Los Angeles Mission College</title>
+
+  <meta name="description"
+        content="Find Los Angeles Mission College resources for tutoring, basic needs, financial aid, health, counseling, transfer, career planning, student support, and more.">
+
+  <link rel="icon"
+        type="image/png"
+        href="favicon.png">
+
+  <style>
+
+    /* =========================================================
+       DESIGN SYSTEM
+       ========================================================= */
+
+    :root {
+      --navy: #082f5f;
+      --navy-dark: #062447;
+      --blue: #145da0;
+
+      --gold: #e5ad27;
+      --gold-light: #ffd25d;
+
+      --white: #ffffff;
+      --cream: #fff9e6;
+
+      --text: #263442;
+      --muted: #566574;
+      --border: #dce2e8;
+      --soft-gray: #f7f9fb;
+
+      --school: #4d84ae;
+      --school-bg: #edf6fc;
+
+      --money: #a87912;
+      --money-bg: #fff9e6;
+
+      --life: #765a96;
+      --life-bg: #f7f3fa;
+
+      --future: #4f8060;
+      --future-bg: #f1f8f3;
+
+      --community: #9b5967;
+      --community-bg: #fff5f6;
+
+      --unsure: #397a76;
+      --unsure-bg: #f0f8f7;
+
+      --focus: #ffbf00;
+    }
+
+
+    /* =========================================================
+       BASE
+       ========================================================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+
+      background: var(--white);
+      color: var(--text);
+
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+
+      overflow-wrap: break-word;
+    }
+
+    a {
+      color: var(--blue);
+    }
+
+    p {
+      max-width: 75ch;
+    }
+
+
+    /* =========================================================
+       ACCESSIBILITY
+       ========================================================= */
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 9999;
+
+      padding: 12px 18px;
+
+      background: var(--gold);
+      color: #132a3d;
+
+      border-radius: 0 0 5px 5px;
+
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      left: 12px;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 4px;
+      border-radius: 3px;
+    }
+
+    .resource-section {
+      scroll-margin-top: 24px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+
+    }
+
+
+    /* =========================================================
+       HEADER
+       ========================================================= */
+
+    .site-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+
+      padding: 20px 24px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .college-name {
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .college-name-main {
+      display: block;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .department-name {
+      display: block;
+
+      margin-top: 5px;
+
+      font-size: .86rem;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: .045em;
+      text-transform: uppercase;
+    }
+
+
+    /* =========================================================
+       NAVIGATION
+       ========================================================= */
+
+    .top-nav ul {
+      margin: 0;
+      padding: 0;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+
+      gap: 8px 22px;
+
+      list-style: none;
+    }
+
+    .top-nav a {
+      min-height: 44px;
+
+      display: inline-flex;
+      align-items: center;
+
+      color: var(--navy);
+
+      font-size: .95rem;
+      font-weight: 700;
+
+      text-decoration: none;
+    }
+
+    .top-nav a:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 5px;
+    }
+
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .hero {
+      background:
+        linear-gradient(
+          115deg,
+          #062447 0%,
+          #082f5f 100%
+        );
+
+      color: var(--white);
+    }
+
+    .hero-inner {
+      width: min(1050px, 100%);
+      margin: 0 auto;
+
+      padding: 58px 24px 62px;
+    }
+
+    .breadcrumb {
+      margin: 0 0 18px;
+
+      color: #d9ebff;
+
+      font-size: .94rem;
+    }
+
+    .breadcrumb a {
+      color: #d9ebff;
+    }
+
+    .eyebrow {
+      margin: 0 0 9px;
+
+      color: var(--gold-light);
+
+      font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 800px;
+
+      margin: 0 0 16px;
+
+      color: var(--white);
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.6rem, 6vw, 4.2rem);
+      line-height: 1.05;
+
+      text-wrap: balance;
+    }
+
+    .hero-description {
+      max-width: 760px;
+
+      margin: 0;
+
+      color: var(--white);
+
+      font-size: 1.12rem;
+      line-height: 1.65;
+    }
+
+
+    /* =========================================================
+       MAIN CONTENT
+       ========================================================= */
+
+    .content {
+      width: min(1050px, 100%);
+      margin: 0 auto;
+
+      padding: 46px 24px 70px;
+    }
+
+
+    /* =========================================================
+       OFFICIAL SITE CALLOUT
+       ========================================================= */
+
+    .official-callout {
+      margin-bottom: 35px;
+      padding: 23px 25px;
+
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+
+      gap: 25px;
+
+      background: var(--cream);
+
+      border: 1px solid #ead89d;
+      border-left: 5px solid var(--gold);
+      border-radius: 8px;
+    }
+
+    .official-callout h2 {
+      margin: 0 0 6px;
+
+      color: var(--navy);
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.45rem;
+      line-height: 1.3;
+    }
+
+    .official-callout p {
+      margin: 0;
+
+      color: #465463;
+    }
+
+    .official-button {
+      min-height: 48px;
+
+      padding: 11px 18px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--navy);
+      color: var(--white);
+
+      border-radius: 5px;
+
+      font-weight: 700;
+      line-height: 1.3;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .official-button:hover {
+      background: var(--blue);
+
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+
+    /* =========================================================
+       INTRO
+       ========================================================= */
+
+    .intro {
+      max-width: 850px;
+
+      margin: 0 auto 35px;
+    }
+
+    .intro h2 {
+      margin: 0 0 10px;
+
+      color: var(--navy);
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.9rem;
+      line-height: 1.25;
+    }
+
+    .intro p {
+      margin: 0 0 10px;
+    }
+
+
+    /* =========================================================
+       QUICK NAVIGATION
+       ========================================================= */
+
+    .quick-nav {
+      margin: 35px 0 52px;
+    }
+
+    .quick-nav h2 {
+      margin: 0 0 7px;
+
+      color: var(--navy);
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.9rem;
+      line-height: 1.25;
+    }
+
+    .quick-nav-intro {
+      margin: 0 0 20px;
+
+      color: var(--muted);
+    }
+
+    .choice-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 13px;
+    }
+
+    .choice-card {
+      min-height: 100px;
+
+      padding: 17px 18px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      border: 2px solid var(--border);
+      border-radius: 8px;
+
+      color: var(--navy);
+
+      text-decoration: none;
+    }
+
+    .choice-card strong {
+      display: block;
+
+      margin-bottom: 3px;
+
+      font-size: 1.03rem;
+      line-height: 1.35;
+    }
+
+    .choice-card span {
+      color: #465463;
+
+      font-size: .9rem;
+      line-height: 1.45;
+    }
+
+    .choice-card:hover strong {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .choice-school {
+      background: var(--school-bg);
+      border-color: var(--school);
+    }
+
+    .choice-money {
+      background: var(--money-bg);
+      border-color: var(--money);
+    }
+
+    .choice-life {
+      background: var(--life-bg);
+      border-color: var(--life);
+    }
+
+    .choice-future {
+      background: var(--future-bg);
+      border-color: var(--future);
+    }
+
+    .choice-community {
+      background: var(--community-bg);
+      border-color: var(--community);
+    }
+
+    .choice-unsure {
+      background: var(--unsure-bg);
+      border-color: var(--unsure);
+    }
+
+
+    /* =========================================================
+       RESOURCE SECTIONS
+       ========================================================= */
+
+    .resource-section {
+      margin: 55px 0;
+    }
+
+    .resource-heading {
+      margin: 0 0 8px;
+      padding-bottom: 10px;
+
+      color: var(--navy);
+
+      border-bottom: 4px solid var(--school);
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.8rem;
+      line-height: 1.25;
+    }
+
+    .money-section .resource-heading {
+      border-color: var(--money);
+    }
+
+    .life-section .resource-heading {
+      border-color: var(--life);
+    }
+
+    .future-section .resource-heading {
+      border-color: var(--future);
+    }
+
+    .community-section .resource-heading {
+      border-color: var(--community);
+    }
+
+    .section-intro {
+      margin: 0 0 25px;
+
+      color: var(--muted);
+    }
+
+
+    /* =========================================================
+       INDIVIDUAL RESOURCE
+       ========================================================= */
+
+    .resource {
+      padding: 22px 0;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .resource:last-child {
+      border-bottom: 0;
+    }
+
+    .resource h3 {
+      margin: 0 0 6px;
+
+      color: var(--navy);
+
+      font-size: 1.08rem;
+      line-height: 1.4;
+    }
+
+    .resource p {
+      margin: 0 0 8px;
+    }
+
+    .resource-link {
+      display: inline-block;
+
+      font-weight: 700;
+
+      text-underline-offset: 3px;
+    }
+
+
+    /* =========================================================
+       SAFETY
+       ========================================================= */
+
+    .safety-box {
+      margin: 52px 0;
+      padding: 24px;
+
+      background: #f0f8f7;
+
+      border: 2px solid var(--unsure);
+      border-radius: 8px;
+    }
+
+    .safety-box h2 {
+      margin: 0 0 9px;
+
+      color: var(--navy);
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.55rem;
+    }
+
+    .safety-box p {
+      margin: 0 0 12px;
+    }
+
+
+    /* =========================================================
+       NOT SURE
+       ========================================================= */
+
+    .not-sure {
+      margin: 52px 0 20px;
+      padding: 25px;
+
+      background: var(--cream);
+
+      border-left: 5px solid var(--gold);
+      border-radius: 8px;
+    }
+
+    .not-sure h2 {
+      margin: 0 0 9px;
+
+      color: var(--navy);
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.55rem;
+      line-height: 1.3;
+    }
+
+    .not-sure p {
+      margin: 0 0 12px;
+    }
+
+    .not-sure p:last-child {
+      margin-bottom: 0;
+    }
+
+
+    /* =========================================================
+       BACK TO TOP
+       ========================================================= */
+
+    .back-top {
+      margin-top: 20px;
+
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+      background: var(--navy-dark);
+      color: var(--white);
+    }
+
+    .footer-inner {
+      width: min(1050px, 100%);
+      margin: 0 auto;
+
+      padding: 38px 24px;
+    }
+
+    footer h2 {
+      margin: 0 0 8px;
+
+      color: var(--white);
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.4rem;
+    }
+
+    footer p {
+      margin: 4px 0;
+
+      color: var(--white);
+    }
+
+    footer a {
+      color: var(--white);
+    }
+
+    .site-disclaimer {
+      width: min(1050px, 100%);
+      margin: 0 auto;
+
+      padding: 17px 24px 24px;
+
+      border-top: 1px solid rgba(255,255,255,.18);
+
+      color: #cbd6e0;
+
+      font-size: .75rem;
+      line-height: 1.55;
+    }
+
+    .site-disclaimer p {
+      max-width: 950px;
+
+      margin: 0;
+
+      color: #cbd6e0;
+    }
+
+    .site-disclaimer p + p {
+      margin-top: 7px;
+    }
+
+    .site-disclaimer strong,
+    .site-disclaimer a {
+      color: var(--white);
+    }
+
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 760px) {
+
+      .header-inner {
+        padding: 14px 17px 13px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 11px;
+      }
+
+      .college-name-main {
+        font-size: 1.38rem;
+      }
+
+      .department-name {
+        font-size: .72rem;
+      }
+
+      .top-nav {
+        padding-top: 10px;
+
+        border-top: 1px solid var(--border);
+      }
+
+      .top-nav ul {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+
+        gap: 9px;
+      }
+
+      .top-nav a {
+        width: 100%;
+        min-height: 48px;
+
+        padding: 9px 10px;
+
+        justify-content: center;
+
+        background: #f5f8fb;
+
+        border: 1px solid #d9e2ea;
+        border-radius: 6px;
+
+        font-size: .81rem;
+        text-align: center;
+      }
+
+
+      /* Hero */
+
+      .hero-inner {
+        padding: 42px 19px 46px;
+      }
+
+      .breadcrumb {
+        font-size: .85rem;
+      }
+
+      .eyebrow {
+        font-size: .77rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.2rem, 11vw, 3rem);
+      }
+
+      .hero-description {
+        font-size: 1rem;
+        line-height: 1.55;
+      }
+
+
+      /* Content */
+
+      .content {
+        padding: 32px 16px 52px;
+      }
+
+
+      /* Official site */
+
+      .official-callout {
+        padding: 20px 18px;
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+      }
+
+      .official-button {
+        width: 100%;
+        min-height: 50px;
+      }
+
+
+      /* Quick navigation */
+
+      .choice-grid {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+      }
+
+      .choice-card {
+        min-height: 88px;
+
+        padding: 15px 16px;
+      }
+
+
+      /* Resources */
+
+      .resource-section {
+        margin: 44px 0;
+      }
+
+      .resource-heading {
+        font-size: 1.55rem;
+      }
+
+      .resource {
+        padding: 19px 0;
+      }
+
+      .resource-link {
+        min-height: 44px;
+
+        display: inline-flex;
+        align-items: center;
+      }
+
+
+      /* Footer */
+
+      .footer-inner {
+        padding: 30px 18px;
+      }
+
+      .site-disclaimer {
+        padding: 15px 18px 20px;
+
+        font-size: .7rem;
+      }
+
+    }
+
+
+    @media (max-width: 390px) {
+
+      .top-nav ul {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body id="top">
+
+  <a class="skip-link"
+     href="#main-content">
+    Skip to main content
+  </a>
+
+
+  <!-- =======================================================
+       HEADER
+       ======================================================= -->
+
+  <header class="site-header">
+
+    <div class="header-inner">
+
+      <a class="college-name"
+         href="https://www.lamission.edu/"
+         aria-label="Los Angeles Mission College homepage">
+
+        <span class="college-name-main">
+          Los Angeles Mission College
+        </span>
+
+        <span class="department-name">
+          English, Communication Studies &amp; Journalism
+        </span>
+
+      </a>
+
+
+      <nav class="top-nav"
+           aria-label="Main navigation">
+
+        <ul>
+
+          <li>
+            <a href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html#programs">
+              Degrees &amp; Certificates
+            </a>
+          </li>
+
+          <li>
+            <a href="student-resources.html"
+               aria-current="page">
+              Student Resources
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =======================================================
+       MAIN
+       ======================================================= -->
+
+  <main id="main-content">
+
+
+    <!-- HERO -->
+
+    <section class="hero"
+             aria-labelledby="page-title">
+
+      <div class="hero-inner">
+
+        <p class="breadcrumb">
+          <a href="index.html">Home</a>
+          &nbsp;›&nbsp; Student Resources
+        </p>
+
+        <p class="eyebrow">
+          Support at Los Angeles Mission College
+        </p>
+
+        <h1 id="page-title">
+          Need Help? Start Here.
+        </h1>
+
+        <p class="hero-description">
+          College involves more than coursework. If something is
+          making it harder to learn, stay enrolled, or reach your
+          goals, there may be a resource that can help.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <div class="content">
+
+
+      <!-- =====================================================
+           OFFICIAL STUDENT SERVICES
+           ===================================================== -->
+
+      <section class="official-callout"
+               aria-labelledby="official-heading">
+
+        <div>
+
+          <h2 id="official-heading">
+            Looking for the Official LAMC Student Services Site?
+          </h2>
+
+          <p>
+            This page can help you figure out where to start.
+            You can also go directly to the official Los Angeles
+            Mission College Student Services website for college
+            information, offices, and services.
+          </p>
+
+        </div>
+
+        <a class="official-button"
+           href="https://www.lamc.edu/student-services"
+           target="_blank"
+           rel="noopener">
+          Visit Official LAMC Student Services
+        </a>
+
+      </section>
+
+
+      <!-- =====================================================
+           INTRO
+           ===================================================== -->
+
+      <section class="intro"
+               aria-labelledby="start-heading">
+
+        <h2 id="start-heading">
+          You Don't Need to Know Which Office You Need
+        </h2>
+
+        <p>
+          Start with <strong>what's going on in your life.</strong>
+          More than one situation may apply to you, and you can use
+          more than one resource.
+        </p>
+
+        <p>
+          <strong>You don't have to wait until a problem becomes
+          a crisis.</strong>
+          Support can help with a new problem, an ongoing challenge,
+          or something that suddenly becomes difficult.
+        </p>
+
+        <p>
+          <strong>Not sure whether you qualify for a program?</strong>
+          Ask anyway. You don't need to figure out your eligibility
+          before reaching out.
+        </p>
+
+      </section>
+
+
+      <!-- =====================================================
+           QUICK NAVIGATION
+           ===================================================== -->
+
+      <nav class="quick-nav"
+           aria-labelledby="help-heading">
+
+        <h2 id="help-heading">
+          What's Getting in the Way?
+        </h2>
+
+        <p class="quick-nav-intro">
+          Choose the situation that sounds closest to what you need
+          right now.
+        </p>
+
+
+        <div class="choice-grid">
+
+          <a class="choice-card choice-school"
+             href="#school-help">
+
+            <strong>
+              I'm Struggling With School
+            </strong>
+
+            <span>
+              Classes, writing, studying, research, Canvas,
+              or technology
+            </span>
+
+          </a>
+
+
+          <a class="choice-card choice-money"
+             href="#money-help">
+
+            <strong>
+              I'm Worried About Money or Basic Needs
+            </strong>
+
+            <span>
+              Food, housing, transportation, tuition,
+              or other essentials
+            </span>
+
+          </a>
+
+
+          <a class="choice-card choice-life"
+             href="#life-help">
+
+            <strong>
+              Life Is Making College Harder
+            </strong>
+
+            <span>
+              Health, disability, parenting, immigration,
+              foster care, or other circumstances
+            </span>
+
+          </a>
+
+
+          <a class="choice-card choice-future"
+             href="#future-help">
+
+            <strong>
+              I Need Help Planning My Future
+            </strong>
+
+            <span>
+              Classes, majors, careers, graduation,
+              or transfer
+            </span>
+
+          </a>
+
+
+          <a class="choice-card choice-community"
+             href="#community-help">
+
+            <strong>
+              I Want Extra Support or Community
+            </strong>
+
+            <span>
+              Counseling, mentoring, learning communities,
+              clubs, or involvement
+            </span>
+
+          </a>
+
+
+          <a class="choice-card choice-unsure"
+             href="#not-sure">
+
+            <strong>
+              I'm Not Sure Where to Start
+            </strong>
+
+            <span>
+              That's okay. There are people who can help
+              you figure it out.
+            </span>
+
+          </a>
+
+        </div>
+
+      </nav>
+
+
+      <!-- =====================================================
+           SCHOOL
+           ===================================================== -->
+
+      <section class="resource-section school-section"
+               id="school-help"
+               aria-labelledby="school-heading">
+
+        <h2 class="resource-heading"
+            id="school-heading">
+          I'm Struggling With School
+        </h2>
+
+        <p class="section-intro">
+          You don't have to wait until you're failing to ask
+          for academic help.
+        </p>
+
+
+        <div class="resource">
+
+          <h3>
+            I want tutoring, writing help, or help studying.
+          </h3>
+
+          <p>
+            <strong>Learning Center &amp; Writing Center</strong>
+            offers tutoring, writing support, academic help,
+            and workshops.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/learningcenter"
+             target="_blank"
+             rel="noopener">
+            Get Help From the Learning Center &amp; Writing Center →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I need help researching or finding credible sources.
+          </h3>
+
+          <p>
+            <strong>LAMC Library</strong> offers research help,
+            librarians, databases, books, study spaces, computers,
+            and other resources.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/library"
+             target="_blank"
+             rel="noopener">
+            Get Research Help From the LAMC Library →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I need help with Canvas or an online class.
+          </h3>
+
+          <p>
+            <strong>Mission Online</strong> provides Canvas and
+            online-learning help.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamc.edu/academics/online"
+             target="_blank"
+             rel="noopener">
+            Get Canvas and Online-Class Help Through Mission Online →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I can't access my student portal or have an account problem.
+          </h3>
+
+          <p>
+            <strong>Eagles Help Desk</strong> can help with passwords,
+            multi-factor authentication, the Student Portal, enrollment
+            questions, and other common technology problems.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamc.edu/student-services/welcome-center"
+             target="_blank"
+             rel="noopener">
+            Contact the Eagles Help Desk →
+          </a>
+
+        </div>
+
+
+        <p class="back-top">
+          <a href="#help-heading">
+            ↑ Back to resource choices
+          </a>
+        </p>
+
+      </section>
+
+
+      <!-- =====================================================
+           MONEY & BASIC NEEDS
+           ===================================================== -->
+
+      <section class="resource-section money-section"
+               id="money-help"
+               aria-labelledby="money-heading">
+
+        <h2 class="resource-heading"
+            id="money-heading">
+          I'm Worried About Money or Basic Needs
+        </h2>
+
+        <p class="section-intro">
+          If paying for school or meeting everyday needs is getting
+          difficult, start here.
+        </p>
+
+
+        <div class="resource">
+
+          <h3>
+            I need food, housing, transportation, clothing,
+            or other essentials.
+          </h3>
+
+          <p>
+            <strong>LAMC Basic Needs Center</strong> is a good first
+            stop for food assistance, housing referrals, transportation
+            resources, hygiene items, clothing, and connections to
+            other support.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/student-services/spr/basic-needs-center"
+             target="_blank"
+             rel="noopener">
+            Start With the LAMC Basic Needs Center →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I need help buying groceries.
+          </h3>
+
+          <p>
+            <strong>CalFresh</strong> may help eligible students
+            pay for groceries.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.getcalfresh.org/s/lamc"
+             target="_blank"
+             rel="noopener">
+            Check Whether I May Qualify for CalFresh →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I'm worried about paying for college.
+          </h3>
+
+          <p>
+            <strong>Financial Aid &amp; Scholarships</strong> can help
+            you explore grants, scholarships, fee waivers, work-study,
+            loans, and other financial aid.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/financial-aid"
+             target="_blank"
+             rel="noopener">
+            Explore Financial Aid &amp; Scholarships →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I need help completing FAFSA or the California Dream
+            Act Application.
+          </h3>
+
+          <p>
+            You don't have to complete the financial aid process
+            by yourself.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/financial-aid/apply/"
+             target="_blank"
+             rel="noopener">
+            Get Help Applying for Financial Aid →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I'm facing financial or educational barriers and could
+            use ongoing support.
+          </h3>
+
+          <p>
+            <strong>Extended Opportunity Programs &amp; Services
+            (EOPS)</strong> provides additional support to eligible
+            students facing educational, economic, social, or
+            language barriers.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamc.edu/student-services/spr/EOPS"
+             target="_blank"
+             rel="noopener">
+            See If EOPS Might Be Right for Me →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I'm a first-time, full-time student.
+          </h3>
+
+          <p>
+            <strong>LA College Promise</strong> provides tuition
+            and other support to eligible students.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/admissions/college-promise-program"
+             target="_blank"
+             rel="noopener">
+            Learn About LA College Promise →
+          </a>
+
+        </div>
+
+
+        <p class="back-top">
+          <a href="#help-heading">
+            ↑ Back to resource choices
+          </a>
+        </p>
+
+      </section>
+
+
+      <!-- =====================================================
+           LIFE
+           ===================================================== -->
+
+      <section class="resource-section life-section"
+               id="life-help"
+               aria-labelledby="life-heading">
+
+        <h2 class="resource-heading"
+            id="life-heading">
+          Life Is Making College Harder
+        </h2>
+
+        <p class="section-intro">
+          Your life outside the classroom matters. There may be
+          support for circumstances that are affecting school.
+        </p>
+
+
+        <div class="resource">
+
+          <h3>
+            My physical or mental health is making school harder,
+            or I need health support.
+          </h3>
+
+          <p>
+            <strong>Student Health Center</strong> provides information
+            about medical and behavioral health services available to
+            eligible LAMC students.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/student-services/spr/student-health-center"
+             target="_blank"
+             rel="noopener">
+            Explore Student Health Services →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            A disability or health condition is affecting my coursework.
+          </h3>
+
+          <p>
+            <strong>Disabled Student Programs &amp; Services (DSPS)</strong>
+            can help eligible students access academic accommodations
+            and other accessibility support.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/student-services/spr/dsps"
+             target="_blank"
+             rel="noopener">
+            Explore DSPS Accommodations and Support →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I'm raising children while attending college.
+          </h3>
+
+          <p>
+            LAMC has resources for students with dependent children.
+          </p>
+
+          <p>
+            <a class="resource-link"
+               href="https://www.lamission.edu/student-services/spr/child-development-center"
+               target="_blank"
+               rel="noopener">
+              Explore Childcare Through the Child Development Center →
+            </a>
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/student-services/ab-2881"
+             target="_blank"
+             rel="noopener">
+            Explore Support for Students With Dependent Children →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I receive public assistance and have children.
+          </h3>
+
+          <p>
+            <strong>CalWORKs</strong> provides support to eligible
+            student-parents receiving public assistance.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/student-services/spr/calWORKS"
+             target="_blank"
+             rel="noopener">
+            Learn About LAMC CalWORKs →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I'm undocumented, AB 540 eligible, a Dreamer,
+            or part of a mixed-status family.
+          </h3>
+
+          <p>
+            <strong>Dream Resource Center</strong> connects students
+            with information, community, and support.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/student-services/spr/drc"
+             target="_blank"
+             rel="noopener">
+            Get Support From the Dream Resource Center →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I am currently or formerly in foster care.
+          </h3>
+
+          <p>
+            <strong>Guardian Scholars &amp; NextUP</strong> provide
+            specialized support for eligible current and former
+            foster-youth students.
+          </p>
+
+          <p>
+            <a class="resource-link"
+               href="https://www.lamc.edu/student-services/spr/FKCE/guardian-scholars-program"
+               target="_blank"
+               rel="noopener">
+              Explore Guardian Scholars →
+            </a>
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamc.edu/student-services/spr/EOPS/next-up"
+             target="_blank"
+             rel="noopener">
+            Learn About NextUP →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I've been impacted by incarceration or the justice system.
+          </h3>
+
+          <p>
+            <strong>College Culture Reentry Hub</strong> provides
+            community and support for formerly incarcerated and
+            system-impacted students.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/student-services/spr/ccrh"
+             target="_blank"
+             rel="noopener">
+            Connect With the College Culture Reentry Hub →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I'm a veteran or military-connected student.
+          </h3>
+
+          <p>
+            <strong>Veterans Resource Center</strong> provides
+            specialized support and resources.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/student-services/spr/veterans"
+             target="_blank"
+             rel="noopener">
+            Connect With the Veterans Resource Center →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I'm an international student.
+          </h3>
+
+          <p>
+            <strong>International Students Program</strong> provides
+            specialized academic counseling and other support for
+            international students.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/student-services/spr/international-students"
+             target="_blank"
+             rel="noopener">
+            Connect With the International Students Program →
+          </a>
+
+        </div>
+
+
+        <p class="back-top">
+          <a href="#help-heading">
+            ↑ Back to resource choices
+          </a>
+        </p>
+
+      </section>
+
+
+      <!-- =====================================================
+           FUTURE
+           ===================================================== -->
+
+      <section class="resource-section future-section"
+               id="future-help"
+               aria-labelledby="future-heading">
+
+        <h2 class="resource-heading"
+            id="future-heading">
+          I Need Help Planning My Future
+        </h2>
+
+        <p class="section-intro">
+          You don't have to figure out your classes, degree,
+          transfer plan, or career path by yourself.
+        </p>
+
+
+        <div class="resource">
+
+          <h3>
+            I don't know which classes to take or whether I'm on track.
+          </h3>
+
+          <p>
+            <strong>LAMC Counseling</strong> can help you create an
+            education plan, choose classes, explore goals, and stay
+            on track.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/student-services/counseling"
+             target="_blank"
+             rel="noopener">
+            Get Help From LAMC Counseling →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I want to transfer to a university.
+          </h3>
+
+          <p>
+            <strong>Transfer Center</strong> can help with transfer
+            requirements, applications, university choices, and
+            transfer planning.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/student-services/transfer-center"
+             target="_blank"
+             rel="noopener">
+            Plan My Transfer With the Transfer Center →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I'm looking for a job, internship, or career direction.
+          </h3>
+
+          <p>
+            <strong>Career Services &amp; Student Employment</strong>
+            can help with career exploration, jobs, internships,
+            resumes, interviews, and employment resources.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/student-services/career-center"
+             target="_blank"
+             rel="noopener">
+            Explore Career and Employment Support →
+          </a>
+
+        </div>
+
+
+        <p class="back-top">
+          <a href="#help-heading">
+            ↑ Back to resource choices
+          </a>
+        </p>
+
+      </section>
+
+
+      <!-- =====================================================
+           COMMUNITY
+           ===================================================== -->
+
+      <section class="resource-section community-section"
+               id="community-help"
+               aria-labelledby="community-heading">
+
+        <h2 class="resource-heading"
+            id="community-heading">
+          I Want Extra Support or Community
+        </h2>
+
+        <p class="section-intro">
+          Some programs provide ongoing counseling, mentoring,
+          academic support, community, or other services.
+          You don't need to know the program names before reaching out.
+        </p>
+
+
+        <div class="resource">
+
+          <h3>
+            I could use extra academic support, counseling,
+            tutoring, or mentoring.
+          </h3>
+
+          <p>
+            <strong>TRIO Student Support Services</strong> provides
+            additional support to eligible students.
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/academic-services/trio-sss"
+             target="_blank"
+             rel="noopener">
+            See If TRIO Student Support Services Might Be Right for Me →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I'm looking for Black student community,
+            mentoring, and support.
+          </h3>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/student-services/spr/bsp"
+             target="_blank"
+             rel="noopener">
+            Explore the Black Scholars Program →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I'm interested in a learning community with counseling,
+            mentoring, and transfer support.
+          </h3>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/student-services/spr/puente"
+             target="_blank"
+             rel="noopener">
+            Learn About the Puente Program →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I want to meet people or get involved on campus.
+          </h3>
+
+          <p>
+            <a class="resource-link"
+               href="https://www.lamission.edu/campus-life/clubs"
+               target="_blank"
+               rel="noopener">
+              Explore LAMC Student Clubs →
+            </a>
+          </p>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/campus-life/ASO"
+             target="_blank"
+             rel="noopener">
+            Explore Student Leadership Through ASO →
+          </a>
+
+        </div>
+
+
+        <div class="resource">
+
+          <h3>
+            I'm interested in honors opportunities.
+          </h3>
+
+          <a class="resource-link"
+             href="https://www.lamission.edu/academics/honors-program"
+             target="_blank"
+             rel="noopener">
+            Explore the LAMC Honors Program →
+          </a>
+
+        </div>
+
+
+        <p class="back-top">
+          <a href="#help-heading">
+            ↑ Back to resource choices
+          </a>
+        </p>
+
+      </section>
+
+
+      <!-- =====================================================
+           SAFETY / TITLE IX
+           ===================================================== -->
+
+      <section class="safety-box"
+               aria-labelledby="safety-heading">
+
+        <h2 id="safety-heading">
+          I Need Safety or Title IX Support
+        </h2>
+
+        <p>
+          If you have experienced sexual harassment, sexual violence,
+          relationship violence, stalking, or another Title IX-related
+          concern, LAMC provides information about support and options.
+        </p>
+
+        <a class="resource-link"
+           href="https://www.lamc.edu/campus-life/campus-safety/title-ix/resources"
+           target="_blank"
+           rel="noopener">
+          Find Title IX Information and Support Resources →
+        </a>
+
+      </section>
+
+
+      <!-- =====================================================
+           NOT SURE
+           ===================================================== -->
+
+      <section class="not-sure"
+               id="not-sure"
+               aria-labelledby="unsure-heading">
+
+        <h2 id="unsure-heading">
+          Something Is Wrong, but I Don't Know Who to Ask
+        </h2>
+
+        <p>
+          You do not have to figure out which college office handles
+          your situation before asking for help.
+        </p>
+
+        <p>
+          The <strong>Eagles Help Desk</strong> can be a general
+          starting point for student questions and campus navigation.
+          You can also browse the official LAMC Student Services
+          website to see available offices and programs.
+        </p>
+
+        <p>
+          <a class="resource-link"
+             href="https://www.lamc.edu/student-services/welcome-center"
+             target="_blank"
+             rel="noopener">
+            Ask the Eagles Help Desk →
+          </a>
+        </p>
+
+        <p>
+          <a class="resource-link"
+             href="https://www.lamc.edu/student-services"
+             target="_blank"
+             rel="noopener">
+            Browse Official LAMC Student Services →
+          </a>
+        </p>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <h2>
+        Los Angeles Mission College
+      </h2>
+
+      <p>
+        English, Communication Studies &amp; Journalism
+      </p>
+
+      <p>
+        13356 Eldridge Avenue · Sylmar, CA 91342
+      </p>
+
+      <p>
+        <a href="https://www.lamission.edu/">
+          Visit the Los Angeles Mission College website
+        </a>
+      </p>
+
+    </div>
+
+
+    <div class="site-disclaimer">
+
+      <p>
+        <strong>About This Site:</strong>
+        This website is maintained by faculty in the Los Angeles Mission
+        College English, Communication Studies &amp; Journalism Department
+        as a resource for students and the community. It is not an official
+        Los Angeles Mission College or Los Angeles Community College
+        District website. Resource information and links may change.
+        For official college information, services, policies, and
+        requirements, please consult the
+        <a href="https://www.lamc.edu/student-services">
+          official LAMC Student Services website
+        </a>
+        and
+        <a href="https://www.lamission.edu/">
+          LAMC website
+        </a>.
+      </p>
+
+      <p>
+        <strong>See something that needs updating?</strong>
+        <a href="https://www.lamc.edu/academics/pathways/scc/english-dept">
+          Contact the ECJ Department.
+        </a>
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
