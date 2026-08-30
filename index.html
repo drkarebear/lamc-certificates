@@ -10,7 +10,7 @@
   <title>ECJ Degrees &amp; Certificates | Los Angeles Mission College</title>
 
   <meta name="description"
-        content="Explore degrees and certificates in English, Communication Studies, Journalism, Creative Writing, and Social Media at Los Angeles Mission College.">
+        content="Explore degrees, certificates, program guidance, and student resources from the English, Communication Studies, and Journalism Department at Los Angeles Mission College.">
 
   <!-- Social sharing -->
 
@@ -18,7 +18,7 @@
         content="ECJ Degrees &amp; Certificates">
 
   <meta property="og:description"
-        content="Explore degrees and certificates in English, Communication Studies, Journalism, Creative Writing, and Social Media at Los Angeles Mission College.">
+        content="Explore English, Communication Studies, Creative Writing, Journalism, and Social Media programs at Los Angeles Mission College.">
 
   <meta property="og:type"
         content="website">
@@ -654,6 +654,77 @@
 
 
     /* =========================================================
+       STUDENT SUPPORT STRIP
+       ========================================================= */
+
+    .support-wrapper {
+      background: #f3f7fa;
+
+      border-top: 1px solid var(--border);
+    }
+
+    .support-section {
+      width: min(1050px, 100%);
+      margin: 0 auto;
+
+      padding: 46px 24px;
+
+      display: grid;
+      grid-template-columns: 1fr auto;
+
+      align-items: center;
+
+      gap: 36px;
+    }
+
+    .support-section h2 {
+      margin: 0 0 8px;
+
+      color: var(--navy);
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.8rem;
+      line-height: 1.25;
+    }
+
+    .support-section p {
+      max-width: 720px;
+
+      margin: 0;
+    }
+
+    .support-button {
+      min-height: 48px;
+
+      padding: 11px 20px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--navy);
+      color: var(--white);
+
+      border: 2px solid var(--navy);
+      border-radius: 5px;
+
+      font-weight: 700;
+      line-height: 1.3;
+
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .support-button:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+
+    /* =========================================================
        NEXT STEP
        ========================================================= */
 
@@ -776,7 +847,7 @@
     }
 
     footer li + li {
-      margin-top: 4px;
+      margin-top: 5px;
     }
 
     footer a {
@@ -874,12 +945,14 @@
         grid-template-columns: 1fr;
       }
 
+      .support-section,
       .path-section {
         grid-template-columns: 1fr;
 
         gap: 22px;
       }
 
+      .support-button,
       .secondary-button {
         justify-self: start;
       }
@@ -918,7 +991,7 @@
       }
 
 
-      /* Cleaner mobile navigation */
+      /* Mobile navigation */
 
       .top-nav {
         padding-top: 10px;
@@ -937,7 +1010,7 @@
         width: 100%;
       }
 
-      /* Home is unnecessary on the homepage */
+      /* Home is redundant on the homepage */
 
       .top-nav li:first-child {
         display: none;
@@ -1128,19 +1201,22 @@
       }
 
 
-      /* Next step */
+      /* Support and next step */
 
+      .support-section,
       .path-section {
         display: block;
 
         padding: 33px 18px 37px;
       }
 
+      .support-section h2,
       .path-section h2 {
         font-size: 1.6rem;
         line-height: 1.2;
       }
 
+      .support-section p,
       .path-section p {
         margin-bottom: 20px;
 
@@ -1148,6 +1224,7 @@
         line-height: 1.55;
       }
 
+      .support-button,
       .secondary-button {
         width: 100%;
         min-height: 50px;
@@ -1278,7 +1355,7 @@
           </li>
 
           <li>
-            <a href="https://www.lamission.edu/student-services">
+            <a href="student-resources.html">
               Student Resources
             </a>
           </li>
@@ -1299,7 +1376,9 @@
   <main id="main-content">
 
 
-    <!-- HERO -->
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
 
     <section class="hero"
              aria-labelledby="page-title">
@@ -1321,8 +1400,6 @@
           and Social Media.
         </p>
 
-
-        <!-- HERO ACTIONS -->
 
         <div class="hero-actions">
 
@@ -1584,6 +1661,40 @@
 
 
     <!-- =====================================================
+         STUDENT SUPPORT
+         ===================================================== -->
+
+    <div class="support-wrapper">
+
+      <section class="support-section"
+               aria-labelledby="support-heading">
+
+        <div>
+
+          <h2 id="support-heading">
+            Need Help Beyond Choosing a Program?
+          </h2>
+
+          <p>
+            Find tutoring, basic-needs support, financial aid,
+            health and accessibility resources, counseling,
+            transfer help, career services, student communities,
+            and other LAMC support.
+          </p>
+
+        </div>
+
+        <a class="support-button"
+           href="student-resources.html">
+          Find Student Resources
+        </a>
+
+      </section>
+
+    </div>
+
+
+    <!-- =====================================================
          NEXT STEP
          ===================================================== -->
 
@@ -1656,6 +1767,21 @@
         <ul>
 
           <li>
+            <a href="student-resources.html">
+              Find Student Resources
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.lamc.edu/student-services"
+               target="_blank"
+               rel="noopener">
+              Official LAMC Student Services
+              <span class="sr-only"></span>
+            </a>
+          </li>
+
+          <li>
             <a href="https://www.lamission.edu/">
               Visit Los Angeles Mission College
             </a>
@@ -1664,12 +1790,6 @@
           <li>
             <a href="https://www.lamission.edu/academics">
               Explore LAMC Academics
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.lamission.edu/student-services">
-              View Student Services
             </a>
           </li>
 
@@ -1695,10 +1815,13 @@
         as a resource for students and the community. It is not an official
         Los Angeles Mission College or Los Angeles Community College
         District website. For official college policies, requirements,
-        and information, please consult the
+        services, and information, please consult the
         <a href="https://www.lamission.edu/">
           LAMC website
-        </a>
+        </a>,
+        <a href="https://www.lamc.edu/student-services">
+          official LAMC Student Services website
+        </a>,
         and current College Catalog.
       </p>
 
