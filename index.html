@@ -387,6 +387,136 @@
 
 
     /* =========================================================
+       STUDENT PATHWAYS
+       ========================================================= */
+
+    .pathways-wrapper {
+      background: var(--cream);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pathways-section {
+      width: min(1100px, 100%);
+      margin: 0 auto;
+      padding: 52px 24px 56px;
+    }
+
+    .pathways-heading {
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .pathways-heading h2 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    .pathways-heading p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .pathway-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .pathway-card {
+      min-width: 0;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 5px solid var(--navy);
+      border-radius: 9px;
+      box-shadow: 0 5px 16px rgba(20, 43, 67, .06);
+    }
+
+    .pathway-card.interactive {
+      border-top-color: var(--writing);
+    }
+
+    .pathway-badge {
+      width: fit-content;
+      margin: 0 0 10px;
+      padding: 4px 9px;
+      background: #e7f5f3;
+      color: #0b625d;
+      border-radius: 999px;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+
+    .pathway-card h3 {
+      margin: 0 0 9px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+      line-height: 1.25;
+    }
+
+    .pathway-card p {
+      margin: 0 0 20px;
+      color: #445361;
+      font-size: .95rem;
+      line-height: 1.55;
+      flex-grow: 1;
+    }
+
+    .pathway-button {
+      min-height: 48px;
+      padding: 11px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--navy);
+      color: var(--white);
+      border: 2px solid var(--navy);
+      border-radius: 5px;
+      font-weight: 700;
+      line-height: 1.3;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .pathway-card.interactive .pathway-button {
+      background: #0f6e68;
+      border-color: #0f6e68;
+    }
+
+    .pathway-button:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .pathway-card.interactive .pathway-button:hover {
+      background: #0a5b56;
+      border-color: #0a5b56;
+    }
+
+    .pathway-secondary {
+      margin-top: 12px;
+      color: var(--navy);
+      font-size: .9rem;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: center;
+      text-underline-offset: 3px;
+    }
+
+    /* =========================================================
        PROGRAM SECTION
        ========================================================= */
 
@@ -939,6 +1069,12 @@
 
     @media (max-width: 900px) {
 
+      .pathway-grid {
+        grid-template-columns: 1fr;
+        max-width: 680px;
+        margin: 0 auto;
+      }
+
       .program-grid.certificates {
         max-width: 650px;
 
@@ -1097,6 +1233,48 @@
         padding: 13px 16px;
       }
 
+
+      /* Student pathways */
+
+      .pathways-section {
+        padding: 34px 16px 39px;
+      }
+
+      .pathways-heading {
+        margin-bottom: 20px;
+        text-align: left;
+      }
+
+      .pathways-heading h2 {
+        font-size: 1.75rem;
+      }
+
+      .pathways-heading p {
+        margin: 0;
+        font-size: .96rem;
+        line-height: 1.55;
+      }
+
+      .pathway-grid {
+        gap: 14px;
+      }
+
+      .pathway-card {
+        padding: 19px 16px 17px;
+      }
+
+      .pathway-card h3 {
+        font-size: 1.22rem;
+      }
+
+      .pathway-card p {
+        margin-bottom: 15px;
+        font-size: .92rem;
+      }
+
+      .pathway-button {
+        min-height: 50px;
+      }
 
       /* Programs */
 
@@ -1402,8 +1580,9 @@
         </h1>
 
         <p class="hero-description">
-          Explore associate degrees and certificates offered by the Department of
-          English, Communication Studies, and Journalism at Los Angeles Mission College.
+          Explore degrees and certificates in English, Communication Studies,
+          Creative Writing, Journalism, and Social Media—or get help figuring out
+          which path might fit you.
         </p>
 
 
@@ -1416,7 +1595,7 @@
 
           <a class="hero-button hero-button-secondary"
              href="program-explorer.html">
-            Help Me Choose a Program
+            Try the Program Finder
           </a>
 
         </div>
@@ -1424,6 +1603,103 @@
       </div>
 
     </section>
+
+
+    <!-- =====================================================
+         STUDENT PATHWAYS
+         ===================================================== -->
+
+    <div class="pathways-wrapper">
+
+      <section class="pathways-section"
+               aria-labelledby="pathways-heading">
+
+        <div class="pathways-heading">
+
+          <h2 id="pathways-heading">
+            What Do You Need Today?
+          </h2>
+
+          <p>
+            Start with the option that sounds closest to you. You can always
+            explore another path later.
+          </p>
+
+        </div>
+
+        <div class="pathway-grid">
+
+          <article class="pathway-card">
+
+            <h3>
+              Explore Degrees &amp; Certificates
+            </h3>
+
+            <p>
+              I know what I want to study, or I want to browse the English,
+              Communication Studies, Creative Writing, Journalism, and Social
+              Media programs.
+            </p>
+
+            <a class="pathway-button"
+               href="#programs">
+              Browse Programs
+            </a>
+
+          </article>
+
+
+          <article class="pathway-card interactive">
+
+            <p class="pathway-badge">
+              Interactive Guide
+            </p>
+
+            <h3>
+              Help Me Choose a Program
+            </h3>
+
+            <p>
+              I am not sure which program fits me. I want to answer a few
+              questions about my interests and goals and see where I might start.
+            </p>
+
+            <a class="pathway-button"
+               href="program-explorer.html">
+              Try the Program Finder
+            </a>
+
+          </article>
+
+
+          <article class="pathway-card">
+
+            <h3>
+              Find Student Support
+            </h3>
+
+            <p>
+              I need help with a class, money or basic needs, technology,
+              counseling, transfer, accessibility, or something else affecting college.
+            </p>
+
+            <a class="pathway-button"
+               href="student-resources.html">
+              Browse Student Resources
+            </a>
+
+            <a class="pathway-secondary"
+               href="resource-navigator.html">
+              Not sure where to start? Try the Interactive Support Guide
+            </a>
+
+          </article>
+
+        </div>
+
+      </section>
+
+    </div>
 
 
     <!-- =====================================================
@@ -1677,21 +1953,19 @@
         <div>
 
           <h2 id="support-heading">
-            Need Help Beyond Choosing a Program?
+            Not Sure Which Office to Ask?
           </h2>
 
           <p>
-            Find tutoring, basic-needs support, financial aid,
-            health and accessibility resources, counseling,
-            transfer help, career services, student communities,
-            and other LAMC support.
+            Use the Interactive Support Guide and describe what is going on in
+            everyday language. You do not need to know the name of an office first.
           </p>
 
         </div>
 
         <a class="support-button"
-           href="student-resources.html">
-          Find Student Resources
+           href="resource-navigator.html">
+          Start the Support Guide
         </a>
 
       </section>
