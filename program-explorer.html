@@ -779,6 +779,14 @@
 
     }
 
+  
+    /* Keep an odd final navigation item full-width on small screens. */
+    @media (max-width: 760px) {
+      .top-nav li:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+      }
+    }
+
   </style>
 </head>
 
@@ -800,7 +808,7 @@
     <div class="header-inner">
 
       <a class="college-name"
-         href="https://www.lamission.edu/"
+         href="https://www.lamc.edu/"
          aria-label="Visit the Los Angeles Mission College website">
 
         <span class="college-name-main">
@@ -814,26 +822,19 @@
       </a>
 
 
-      <nav class="top-nav"
-           aria-label="Main navigation">
-
-        <ul>
-
-          <li>
-            <a href="index.html">
-              Degrees &amp; Certificates
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.lamission.edu/student-services">
-              Student Resources
-            </a>
-          </li>
-
-        </ul>
-
-      </nav>
+      <nav class="top-nav" aria-label="Main navigation">
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="index.html#programs">Degrees &amp; Certificates</a>
+        </li>
+        <li>
+          <a href="student-resources.html">Student Resources</a>
+        </li>
+      </ul>
+    </nav>
 
     </div>
 
@@ -916,7 +917,7 @@
         </span>
 
         <span class="program-option">
-          Communication Studies 2.0 AA-T
+          Communication Studies AA-T
         </span>
 
         <span class="program-option">
@@ -1036,9 +1037,21 @@
       </p>
 
       <p>
-        <a href="https://www.lamission.edu/">
+        <a href="https://www.lamc.edu/">
           Visit the Los Angeles Mission College website
         </a>
+      </p>
+
+      <p>
+        <a href="https://www.lamc.edu/student-services"
+           target="_blank"
+           rel="noopener">
+          Official LAMC Student Services
+        </a>
+      </p>
+
+      <p>
+        <a href="privacy.html">Privacy Statement</a>
       </p>
 
     </div>
@@ -1057,7 +1070,7 @@
         or Los Angeles Community College District website. For
         official college policies, requirements, and information,
         please consult the
-        <a href="https://www.lamission.edu/">
+        <a href="https://www.lamc.edu/">
           LAMC website
         </a>
         and current College Catalog.

@@ -111,6 +111,9 @@
     }
 
     .top-nav a {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
       color: var(--navy);
       font-size: .95rem;
       font-weight: bold;
@@ -371,8 +374,45 @@
 
     @media (max-width: 760px) {
       .header-inner {
+        padding: 14px 17px 13px;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
+        gap: 11px;
+      }
+
+      .college-name-main {
+        font-size: 1.38rem;
+      }
+
+      .department-name {
+        font-size: .72rem;
+      }
+
+      .top-nav {
+        padding-top: 10px;
+        border-top: 1px solid var(--border);
+      }
+
+      .top-nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+        width: 100%;
+      }
+
+      .top-nav a {
+        width: 100%;
+        min-height: 48px;
+        padding: 9px 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #f5f8fb;
+        border: 1px solid #d9e2ea;
+        border-radius: 6px;
+        font-size: .81rem;
+        line-height: 1.2;
+        text-align: center;
       }
 
       .intro-grid {
@@ -387,7 +427,18 @@
         padding: 42px 20px 58px;
       }
     }
+  
+    /* Keep an odd final navigation item full-width on small screens. */
+    @media (max-width: 760px) {
+      .top-nav li:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+      }
+    }
+
   </style>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
 </head>
 
 <body>
@@ -398,7 +449,7 @@
   <div class="header-inner">
 
     <a class="college-name"
-       href="https://www.lamission.edu/"
+       href="https://www.lamc.edu/"
        aria-label="Visit the Los Angeles Mission College website">
 
       <span class="college-name-main">
@@ -413,12 +464,13 @@
     <nav class="top-nav" aria-label="Main navigation">
       <ul>
         <li>
-          <a href="index.html">Degrees &amp; Certificates</a>
+          <a href="index.html">Home</a>
         </li>
         <li>
-          <a href="https://www.lamission.edu/student-services">
-            Student Resources
-          </a>
+          <a href="index.html#programs">Degrees &amp; Certificates</a>
+        </li>
+        <li>
+          <a href="student-resources.html">Student Resources</a>
         </li>
       </ul>
     </nav>
@@ -441,7 +493,7 @@
         Associate Degree for Transfer
       </p>
 
-      <h1>Communication Studies 2.0 AA-T</h1>
+      <h1>Communication Studies AA-T</h1>
 
       <p class="hero-description">
         Build strong speaking, listening, argumentation, and
@@ -762,12 +814,24 @@
     </p>
 
     <p>
-      <a href="https://www.lamission.edu/">
+      <a href="https://www.lamc.edu/">
         Visit the Los Angeles Mission College website
       </a>
     </p>
 
-  </div>
+      <p>
+        <a href="https://www.lamc.edu/student-services"
+           target="_blank"
+           rel="noopener">
+          Official LAMC Student Services
+        </a>
+      </p>
+
+      <p>
+        <a href="privacy.html">Privacy Statement</a>
+      </p>
+
+    </div>
 
 </footer>
 

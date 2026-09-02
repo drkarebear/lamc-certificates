@@ -1301,6 +1301,14 @@
 
     }
 
+  
+    /* Keep an odd final navigation item full-width on small screens. */
+    @media (max-width: 760px) {
+      .top-nav li:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+      }
+    }
+
   </style>
 </head>
 
@@ -1322,7 +1330,7 @@
     <div class="header-inner">
 
       <a class="college-name"
-         href="https://www.lamission.edu/"
+         href="https://www.lamc.edu/"
          aria-label="Los Angeles Mission College homepage">
 
         <span class="college-name-main">
@@ -1349,7 +1357,7 @@
           </li>
 
           <li>
-            <a href="#programs">
+            <a href="index.html#programs">
               Degrees &amp; Certificates
             </a>
           </li>
@@ -1715,7 +1723,7 @@
         </div>
 
         <a class="secondary-button"
-           href="https://www.lamission.edu/academics">
+           href="https://www.lamc.edu/academics">
           Explore LAMC Academics
         </a>
 
@@ -1752,7 +1760,19 @@
           Sylmar, CA 91342
         </p>
 
-      </div>
+      <p>
+        <a href="https://www.lamc.edu/student-services"
+           target="_blank"
+           rel="noopener">
+          Official LAMC Student Services
+        </a>
+      </p>
+
+      <p>
+        <a href="privacy.html">Privacy Statement</a>
+      </p>
+
+    </div>
 
 
       <nav aria-label="Footer navigation">
@@ -1779,13 +1799,13 @@
           </li>
 
           <li>
-            <a href="https://www.lamission.edu/">
+            <a href="https://www.lamc.edu/">
               Visit Los Angeles Mission College
             </a>
           </li>
 
           <li>
-            <a href="https://www.lamission.edu/academics">
+            <a href="https://www.lamc.edu/academics">
               Explore LAMC Academics
             </a>
           </li>
@@ -1813,7 +1833,7 @@
         Los Angeles Mission College or Los Angeles Community College
         District website. For official college policies, requirements,
         services, and information, please consult the
-        <a href="https://www.lamission.edu/">
+        <a href="https://www.lamc.edu/">
           LAMC website
         </a>,
         <a href="https://www.lamc.edu/student-services">
