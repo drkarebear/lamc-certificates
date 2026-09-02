@@ -7,10 +7,10 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-  <title>Student Resource Navigator | ECJ | Los Angeles Mission College</title>
+  <title>Interactive Support Guide | ECJ | Los Angeles Mission College</title>
 
   <meta name="description"
-        content="Use the LAMC Student Resource Navigator to explore Los Angeles Mission College support for academics, basic needs, health, technology, counseling, transfer, community, and more.">
+        content="Use the ECJ Interactive Support Guide to describe what you need in everyday language and find Los Angeles Mission College resources that may be a good place to start.">
 
   <link rel="icon"
         type="image/png"
@@ -275,13 +275,13 @@
     }
 
 
-    /* Intro */
+    /* Start here */
 
-    .intro {
-      margin-bottom: 26px;
+    .start-here {
+      margin-bottom: 24px;
     }
 
-    .intro h2 {
+    .start-here h2 {
       margin: 0 0 9px;
 
       color: var(--navy);
@@ -291,65 +291,127 @@
       line-height: 1.25;
     }
 
-    .intro p {
-      max-width: 760px;
+    .start-here > p {
+      max-width: 780px;
 
-      margin: 0 0 10px;
+      margin: 0 0 12px;
     }
 
+    .example-heading {
+      margin: 24px 0 10px;
 
-    /* What it can help with */
+      color: var(--navy);
 
-    .help-grid {
-      margin: 25px 0 34px;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .example-grid {
+      margin: 0 0 18px;
 
       display: grid;
-      grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
 
       gap: 12px;
     }
 
-    .help-card {
-      padding: 15px 16px;
+    .example-prompt {
+      min-height: 100%;
+      margin: 0;
+      padding: 16px 17px;
 
-      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+
+      background: #f4f8fc;
+
+      border: 1px solid #cfdae5;
+      border-radius: 9px;
+
+      color: var(--text);
+
+      font-size: .98rem;
+      line-height: 1.45;
+    }
+
+    .privacy-note {
+      margin: 18px 0 0;
+      padding: 14px 16px;
+
+      background: var(--cream);
+
+      border-left: 4px solid var(--gold);
+      border-radius: 6px;
+
+      font-size: .92rem;
+      line-height: 1.5;
+    }
+
+    .privacy-note strong {
+      color: var(--navy);
+    }
+
+    .urgent-help {
+      margin: 18px 0 30px;
+
+      background: #fffaf0;
+
+      border: 1px solid #ead7a3;
       border-radius: 8px;
     }
 
-    .help-card strong {
-      display: block;
+    .urgent-help summary {
+      min-height: 48px;
+      padding: 11px 16px;
+
+      display: flex;
+      align-items: center;
 
       color: var(--navy);
 
-      font-size: .95rem;
-      line-height: 1.35;
+      cursor: pointer;
+      font-weight: 700;
     }
 
-    .school {
-      background: var(--school-bg);
+    .urgent-help summary:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
-    .money {
-      background: var(--money-bg);
+    .urgent-help div {
+      padding: 0 16px 16px;
     }
 
-    .life {
-      background: var(--life-bg);
+    .urgent-help p {
+      margin: 8px 0 0;
     }
 
-    .future {
-      background: var(--future-bg);
+    .tool-intro {
+      margin: 0 0 14px;
     }
 
-    .community {
-      background: var(--community-bg);
+    .tool-intro h2 {
+      margin: 0 0 6px;
+
+      color: var(--navy);
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.55rem;
+      line-height: 1.25;
     }
 
-    .other {
-      background: #f2f7fb;
+    .tool-intro p {
+      max-width: 780px;
+      margin: 0;
     }
 
+    .tool-note {
+      margin-top: 7px !important;
+
+      color: var(--muted);
+
+      font-size: .9rem;
+    }
 
     /* Bot */
 
@@ -537,9 +599,8 @@
 
     @media (max-width: 850px) {
 
-      .help-grid {
-        grid-template-columns:
-          repeat(2, minmax(0, 1fr));
+      .example-grid {
+        grid-template-columns: 1fr;
       }
 
     }
@@ -626,10 +687,12 @@
         padding: 32px 16px 52px;
       }
 
-      .help-grid {
-        grid-template-columns: 1fr;
-
+      .example-grid {
         gap: 9px;
+      }
+
+      .example-prompt {
+        padding: 14px 15px;
       }
 
       .navigator-frame {
@@ -754,21 +817,21 @@
           &nbsp;›&nbsp;
           <a href="student-resources.html">Student Resources</a>
           &nbsp;›&nbsp;
-          Resource Navigator
+          Interactive Support Guide
         </p>
 
         <p class="eyebrow">
-          Guided Student Support
+          Interactive Support Guide
         </p>
 
         <h1 id="page-title">
-          LAMC Student Resource Navigator
+          Find the Right Place to Start
         </h1>
 
         <p class="hero-description">
-          Tell the navigator what's getting in the way, and it can help
-          you identify Los Angeles Mission College resources that may fit
-          your situation and decide where to start.
+          Tell the guide what's going on in everyday language. It can help
+          you find Los Angeles Mission College resources that may fit your
+          situation—you do not need to know which office to ask.
         </p>
 
       </div>
@@ -779,57 +842,82 @@
     <div class="content">
 
 
-      <!-- INTRO -->
+      <!-- START HERE -->
 
-      <section class="intro"
+      <section class="start-here"
                aria-labelledby="intro-heading">
 
         <h2 id="intro-heading">
-          You Don't Need to Know the Name of an Office
+          Just Tell the Guide What&rsquo;s Going On
         </h2>
 
         <p>
-          You can describe what's happening in your own words.
-          You can share as much or as little as you want.
+          You do not need college vocabulary or the name of a department.
+          Describe what you need in your own words, and the guide can suggest
+          a few places that may be worth trying first.
         </p>
 
-        <p>
-          The navigator may suggest more than one resource if several
-          kinds of support could be useful.
+        <p class="example-heading">
+          For example, you could type:
         </p>
+
+        <div class="example-grid"
+             aria-label="Examples of what you can ask the support guide">
+
+          <p class="example-prompt">
+            &ldquo;I&rsquo;m falling behind in a class and I don&rsquo;t know what to do.&rdquo;
+          </p>
+
+          <p class="example-prompt">
+            &ldquo;I need help paying for food and other basics.&rdquo;
+          </p>
+
+          <p class="example-prompt">
+            &ldquo;I don&rsquo;t know what classes to take next semester.&rdquo;
+          </p>
+
+        </div>
+
+        <div class="privacy-note">
+          <strong>Protect your privacy:</strong> You do not need to share a
+          student ID number, password, Social Security number, medical record,
+          financial account information, or other sensitive personal details.
+          <a href="privacy.html">Read the privacy statement</a>.
+        </div>
 
       </section>
 
 
-      <!-- QUICK VISUAL GUIDE -->
-
-      <div class="help-grid"
-           aria-label="Examples of topics the navigator can help with">
-
-        <div class="help-card school">
-          <strong>Classes, tutoring, writing, Canvas, or technology</strong>
+      <details class="urgent-help">
+        <summary>Need immediate or crisis help?</summary>
+        <div>
+          <p>
+            If you or someone else is in immediate danger, call
+            <a href="tel:911"><strong>911</strong></a>. On or near campus, you
+            can also call the LAMC Sheriff at
+            <a href="tel:18183647843"><strong>(818) 364-7843</strong></a>.
+          </p>
+          <p>
+            For immediate emotional or crisis support, call or text
+            <a href="tel:988"><strong>988</strong></a>, or
+            <a href="https://988lifeline.org/get-help/" target="_blank" rel="noopener">chat with the 988 Suicide &amp; Crisis Lifeline</a>.
+            You do not have to be suicidal to use 988.
+          </p>
         </div>
+      </details>
 
-        <div class="help-card money">
-          <strong>Money, food, housing, or basic needs</strong>
-        </div>
 
-        <div class="help-card life">
-          <strong>Health, accessibility, parenting, or life circumstances</strong>
-        </div>
-
-        <div class="help-card future">
-          <strong>Classes, transfer, careers, or future planning</strong>
-        </div>
-
-        <div class="help-card community">
-          <strong>Community, mentoring, or extra support</strong>
-        </div>
-
-        <div class="help-card other">
-          <strong>Something else—or you're not sure where to start</strong>
-        </div>
-
+      <div class="tool-intro">
+        <h2>Start the Interactive Support Guide</h2>
+        <p>
+          Type what is getting in the way, then use the suggestions as a
+          starting point for finding real LAMC people and services.
+        </p>
+        <p class="tool-note">
+          This interactive guide is powered by PlayLab. It can suggest places
+          to start, but it is not a counselor, official college system, or
+          emergency service.
+        </p>
       </div>
 
 
@@ -840,13 +928,13 @@
 
         <div class="navigator-heading"
              id="navigator-heading">
-          Student Resource Navigator
+          Interactive Support Guide
         </div>
 
         <iframe
           class="navigator-frame"
           src="https://www.playlab.ai/embedded/cmtev8j2m0y0ckn0w3zzazmw5"
-          title="LAMC Student Resource Navigator"
+          title="Interactive support guide for finding Los Angeles Mission College student resources"
           allow="clipboard-write">
         </iframe>
 
@@ -859,13 +947,13 @@
                aria-labelledby="next-heading">
 
         <h2 id="next-heading">
-          Prefer to Browse Resources Yourself?
+          Want a Different Way to Get Help?
         </h2>
 
         <p>
-          You can also use our Student Resources page to browse support
-          by category, or visit the official Los Angeles Mission College
-          Student Services website.
+          You never have to use the interactive guide. Browse resources
+          yourself, ask the Eagles Help Desk where to start, or open LAMC&rsquo;s
+          official Student Services directory.
         </p>
 
         <div class="button-row">
@@ -873,6 +961,13 @@
           <a class="button"
              href="student-resources.html">
             Browse Student Resources
+          </a>
+
+          <a class="button button-secondary"
+             href="https://www.lamc.edu/student-services/welcome-center"
+             target="_blank"
+             rel="noopener">
+            Ask the Eagles Help Desk
           </a>
 
           <a class="button button-secondary"
@@ -934,7 +1029,7 @@
 
       <p>
         <strong>About This Resource:</strong>
-        The LAMC Student Resource Navigator is designed to help students
+        The Interactive Support Guide is designed to help students
         explore possible support resources. Its suggestions are not official
         academic advising, eligibility determinations, medical advice, legal
         advice, or emergency services. Program information and availability
