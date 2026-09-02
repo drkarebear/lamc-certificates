@@ -385,6 +385,20 @@
       border-color: var(--white);
     }
 
+    .hero-helper-link {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      color: var(--white);
+      font-weight: 700;
+      text-underline-offset: 4px;
+    }
+
+    .hero-helper-link:hover,
+    .hero-helper-link:focus {
+      text-decoration-thickness: 2px;
+    }
+
 
     /* =========================================================
        STUDENT PATHWAYS
@@ -1233,6 +1247,12 @@
         padding: 13px 16px;
       }
 
+      .hero-helper-link {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+
 
       /* Student pathways */
 
@@ -1590,12 +1610,12 @@
 
           <a class="hero-button"
              href="#programs">
-            Explore Our Programs
+            Explore Degrees &amp; Certificates
           </a>
 
-          <a class="hero-button hero-button-secondary"
+          <a class="hero-helper-link"
              href="program-explorer.html">
-            Try the Program Finder
+            Not sure what fits? Try the Interactive Program Finder →
           </a>
 
         </div>
@@ -1690,7 +1710,7 @@
 
             <a class="pathway-secondary"
                href="resource-navigator.html">
-              Not sure where to start? Try the Interactive Support Guide
+              <strong>Interactive Guide:</strong> Not sure where to start? Try the Support Guide
             </a>
 
           </article>
@@ -1941,69 +1961,6 @@
     </section>
 
 
-    <!-- =====================================================
-         STUDENT SUPPORT
-         ===================================================== -->
-
-    <div class="support-wrapper">
-
-      <section class="support-section"
-               aria-labelledby="support-heading">
-
-        <div>
-
-          <h2 id="support-heading">
-            Not Sure Which Office to Ask?
-          </h2>
-
-          <p>
-            Use the Interactive Support Guide and describe what is going on in
-            everyday language. You do not need to know the name of an office first.
-          </p>
-
-        </div>
-
-        <a class="support-button"
-           href="resource-navigator.html">
-          Start the Support Guide
-        </a>
-
-      </section>
-
-    </div>
-
-
-    <!-- =====================================================
-         NEXT STEP
-         ===================================================== -->
-
-    <div class="path-wrapper">
-
-      <section class="path-section"
-               aria-labelledby="path-heading">
-
-        <div>
-
-          <h2 id="path-heading">
-            Your Path. Your Purpose.
-          </h2>
-
-          <p>
-            Whether you are preparing to transfer, exploring a career,
-            developing your creative voice, or adding new professional
-            skills, these programs can help you take your next step.
-          </p>
-
-        </div>
-
-        <a class="secondary-button"
-           href="https://www.lamc.edu/academics">
-          Explore LAMC Academics
-        </a>
-
-      </section>
-
-    </div>
 
   </main>
 
