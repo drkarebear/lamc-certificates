@@ -318,71 +318,6 @@
 
 
     /* =========================================================
-       OFFICIAL SITE CALLOUT
-       ========================================================= */
-
-    .official-callout {
-      margin-bottom: 34px;
-      padding: 23px 25px;
-
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-
-      gap: 25px;
-
-      background: var(--cream);
-
-      border: 1px solid #ead89d;
-      border-left: 5px solid var(--gold);
-      border-radius: 9px;
-    }
-
-    .official-callout h2 {
-      margin: 0 0 6px;
-
-      color: var(--navy);
-
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.45rem;
-      line-height: 1.3;
-    }
-
-    .official-callout p {
-      margin: 0;
-
-      color: #465463;
-    }
-
-    .official-button {
-      min-height: 48px;
-
-      padding: 11px 18px;
-
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      background: var(--navy);
-      color: var(--white);
-
-      border-radius: 5px;
-
-      font-weight: 700;
-      line-height: 1.3;
-      text-align: center;
-      text-decoration: none;
-    }
-
-    .official-button:hover {
-      background: var(--blue);
-
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-
-    /* =========================================================
        INTRO
        ========================================================= */
 
@@ -452,6 +387,59 @@
 
       font-size: .86rem;
     }
+
+    .guide-badge {
+      width: fit-content;
+      margin: 0 0 9px !important;
+      padding: 5px 9px;
+
+      background: var(--navy);
+      color: var(--white) !important;
+
+      border-radius: 999px;
+
+      font-size: .72rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .guide-examples {
+      margin: 14px 0 12px;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .guide-examples span {
+      padding: 6px 9px;
+
+      background: rgba(255,255,255,.82);
+      color: #3f4e5c;
+
+      border: 1px solid rgba(57,122,118,.25);
+      border-radius: 6px;
+
+      font-size: .82rem;
+      line-height: 1.35;
+    }
+
+    .privacy-reminder {
+      margin-top: 12px !important;
+      padding: 10px 12px;
+
+      background: rgba(255,255,255,.72);
+      color: #465463 !important;
+
+      border-left: 4px solid var(--gold);
+      border-radius: 5px;
+
+      font-size: .8rem;
+      line-height: 1.45;
+    }
+
 
     .navigator-button {
       min-height: 50px;
@@ -552,6 +540,10 @@
     .choice-card:hover strong {
       text-decoration: underline;
       text-underline-offset: 3px;
+    }
+
+    .choice-grid .choice-card:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
     }
 
     .choice-school {
@@ -883,6 +875,51 @@
     }
 
 
+
+    .human-links {
+      margin-top: 17px;
+
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .human-option {
+      min-height: 104px;
+      padding: 16px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+
+      background: var(--white);
+      color: var(--navy);
+
+      border: 1px solid #dfd1a5;
+      border-radius: 8px;
+
+      text-decoration: none;
+    }
+
+    .human-option strong {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .human-option span {
+      color: #465463;
+      font-size: .88rem;
+      line-height: 1.45;
+    }
+
+    .human-option:hover {
+      border-color: var(--gold);
+      box-shadow: 0 3px 10px rgba(20,43,67,.07);
+    }
+
+
     /* =========================================================
        FOOTER
        ========================================================= */
@@ -1053,22 +1090,6 @@
       }
 
 
-      /* Official callout */
-
-      .official-callout {
-        padding: 20px 18px;
-
-        grid-template-columns: 1fr;
-
-        gap: 16px;
-      }
-
-      .official-button {
-        width: 100%;
-        min-height: 50px;
-      }
-
-
       /* Navigator */
 
       .navigator-callout {
@@ -1161,6 +1182,16 @@
       .safety-box,
       .not-sure {
         padding: 21px 18px;
+      }
+
+
+      .guide-examples {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .human-links {
+        grid-template-columns: 1fr;
       }
 
 
@@ -1297,9 +1328,9 @@
         </h1>
 
         <p class="hero-description">
-          College involves more than coursework. If something is
-          making it harder to learn, stay enrolled, or reach your
-          goals, there may be a resource that can help.
+          If school, money, technology, health, family, or something
+          else is making college harder, you do not have to figure it
+          out alone. Start with what you need today.
         </p>
 
       </div>
@@ -1311,66 +1342,71 @@
 
 
       <!-- =====================================================
-           OFFICIAL STUDENT SERVICES
-           ===================================================== -->
-
-      <section class="official-callout"
-               aria-labelledby="official-heading">
-
-        <div>
-
-          <h2 id="official-heading">
-            Looking for the Official LAMC Student Services Site?
-          </h2>
-
-          <p>
-            This page can help you figure out where to start.
-            You can also go directly to the official Los Angeles
-            Mission College Student Services website for current
-            college information, offices, and services.
-          </p>
-
-        </div>
-
-        <a class="official-button"
-           href="https://www.lamc.edu/student-services"
-           target="_blank"
-           rel="noopener">
-          Visit Official LAMC Student Services
-        </a>
-
-      </section>
-
-
-      <!-- =====================================================
-           INTRO
+           START HERE
            ===================================================== -->
 
       <section class="intro"
                aria-labelledby="start-heading">
 
         <h2 id="start-heading">
-          You Don't Need to Know Which Office You Need
+          You Don't Need to Know Which Office to Ask
         </h2>
 
         <p>
-          Start with <strong>what's going on in your life.</strong>
-          More than one situation may apply to you, and you can use
-          more than one resource.
+          Start with <strong>what is going on for you.</strong> You can
+          use the interactive guide if you are not sure where to begin,
+          or browse the resource categories if you already have an idea
+          of what you need.
         </p>
 
-        <p>
-          <strong>You don't have to wait until a problem becomes
-          a crisis.</strong>
-          Support can help with a new problem, an ongoing challenge,
-          or something that suddenly becomes difficult.
-        </p>
+      </section>
 
-        <p>
-          <strong>Not sure whether you qualify for a program?</strong>
-          Ask anyway. You don't need to figure out your eligibility
-          before reaching out.
-        </p>
+
+      <!-- =====================================================
+           INTERACTIVE SUPPORT GUIDE
+           ===================================================== -->
+
+      <section class="navigator-callout"
+               aria-labelledby="navigator-callout-heading">
+
+        <div class="navigator-copy">
+
+          <p class="guide-badge">
+            Interactive Support Guide
+          </p>
+
+          <h2 id="navigator-callout-heading">
+            Tell the Guide What's Going On
+          </h2>
+
+          <p>
+            Describe your situation in everyday language. The guide can
+            suggest LAMC resources that may fit and give you a place to
+            start.
+          </p>
+
+          <div class="guide-examples" aria-label="Examples of what you can ask">
+            <span>“I'm worried I'm falling behind in a class.”</span>
+            <span>“I need help paying for food.”</span>
+            <span>“I don't know what classes to take.”</span>
+          </div>
+
+          <p class="navigator-note">
+            <strong>You do not need to know the name of an office or program.</strong>
+          </p>
+
+          <p class="privacy-reminder">
+            <strong>Protect your privacy:</strong> Do not enter passwords,
+            your student ID number, medical records, or other sensitive
+            personal information.
+          </p>
+
+        </div>
+
+        <a class="navigator-button"
+           href="resource-navigator.html">
+          Start the Support Guide
+        </a>
 
       </section>
 
@@ -1382,7 +1418,7 @@
       <details class="emergency-box">
 
         <summary>
-          Is This an Emergency?
+          Need Urgent or Emergency Help?
         </summary>
 
         <div class="emergency-content">
@@ -1420,41 +1456,6 @@
 
 
       <!-- =====================================================
-           RESOURCE NAVIGATOR
-           ===================================================== -->
-
-      <section class="navigator-callout"
-               aria-labelledby="navigator-callout-heading">
-
-        <div>
-
-          <h2 id="navigator-callout-heading">
-            Not Sure Which Resource Fits?
-          </h2>
-
-          <p>
-            Use the LAMC Student Resource Navigator to describe what
-            is going on in your own words. It can help you identify
-            resources that may fit your situation and suggest where
-            to start.
-          </p>
-
-          <p class="navigator-note">
-            You do not need to know the name of an office or program.
-          </p>
-
-        </div>
-
-
-        <a class="navigator-button"
-           href="resource-navigator.html">
-          Help Me Find the Right Resource
-        </a>
-
-      </section>
-
-
-      <!-- =====================================================
            QUICK NAVIGATION
            ===================================================== -->
 
@@ -1462,12 +1463,12 @@
            aria-labelledby="help-heading">
 
         <h2 id="help-heading">
-          What's Getting in the Way?
+          Or Browse by What You Need
         </h2>
 
         <p class="quick-nav-intro">
-          If you already know roughly what kind of help you need,
-          choose the situation that sounds closest.
+          Choose the situation that sounds closest. More than one may
+          fit, and you can use more than one resource.
         </p>
 
 
@@ -1481,7 +1482,7 @@
             </strong>
 
             <span>
-              Classes, writing, studying, research, Canvas,
+              Classes, tutoring, writing, research, Canvas,
               or technology
             </span>
 
@@ -1511,8 +1512,8 @@
             </strong>
 
             <span>
-              Health, disability, parenting, immigration,
-              foster care, or other circumstances
+              Health, accessibility, parenting, immigration,
+              foster care, or other life circumstances
             </span>
 
           </a>
@@ -1541,23 +1542,8 @@
             </strong>
 
             <span>
-              Counseling, mentoring, learning communities,
-              clubs, or involvement
-            </span>
-
-          </a>
-
-
-          <a class="choice-card choice-unsure"
-             href="resource-navigator.html">
-
-            <strong>
-              I'm Not Sure Where to Start
-            </strong>
-
-            <span>
-              Tell the Resource Navigator what's going on,
-              and it can help you figure out where to begin.
+              Mentoring, learning communities, clubs,
+              belonging, or involvement
             </span>
 
           </a>
@@ -1835,7 +1821,7 @@
             </p>
 
             <h3>
-              Financial or educational barriers are making college harder.
+              Money or other barriers are making it harder to stay in college.
             </h3>
 
             <p class="resource-description">
@@ -1957,7 +1943,7 @@
             </p>
 
             <h3>
-              A disability or health condition is affecting my coursework.
+              A disability or health condition is making classes harder.
             </h3>
 
             <p class="resource-description">
@@ -2470,8 +2456,7 @@
             </p>
 
             <h3>
-              I'm interested in counseling, mentoring,
-              community, and transfer support.
+              I want counseling, mentoring, community, and transfer support.
             </h3>
 
             <p class="resource-description">
@@ -2592,7 +2577,7 @@
 
 
       <!-- =====================================================
-           NOT SURE / HUMAN FALLBACK
+           HUMAN HELP / OFFICIAL DIRECTORY
            ===================================================== -->
 
       <section class="not-sure"
@@ -2600,39 +2585,35 @@
                aria-labelledby="unsure-heading">
 
         <h2 id="unsure-heading">
-          Prefer to Ask a Person?
+          Want to Ask a Person?
         </h2>
 
         <p>
-          You do not have to use the Resource Navigator or figure out
-          which college office handles your situation before asking
-          for help.
+          You do not have to figure out the right office before asking
+          for help. Start with the Eagles Help Desk, or use LAMC's
+          official Student Services directory if you want to browse
+          college offices directly.
         </p>
 
-        <p>
-          The <strong>Eagles Help Desk</strong> can be a general
-          starting point for student questions and campus navigation.
-          You can also browse the official LAMC Student Services
-          website.
-        </p>
+        <div class="human-links">
 
-        <p>
-          <a class="resource-link"
+          <a class="human-option"
              href="https://www.lamc.edu/student-services/welcome-center"
              target="_blank"
              rel="noopener">
-            Ask the Eagles Help Desk →
+            <strong>Ask the Eagles Help Desk →</strong>
+            <span>General student questions and help finding the right campus office.</span>
           </a>
-        </p>
 
-        <p>
-          <a class="resource-link"
+          <a class="human-option"
              href="https://www.lamc.edu/student-services"
              target="_blank"
              rel="noopener">
-            Browse Official LAMC Student Services →
+            <strong>Browse Official LAMC Student Services →</strong>
+            <span>View LAMC's official directory of student services, offices, and information.</span>
           </a>
-        </p>
+
+        </div>
 
       </section>
 
