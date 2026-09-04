@@ -7,10 +7,12 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
+  <meta name="referrer" content="no-referrer">
+
   <title>Interactive Support Guide | ECJ | Los Angeles Mission College</title>
 
   <meta name="description"
-        content="Use the ECJ Interactive Support Guide to describe what you need in everyday language and find Los Angeles Mission College resources that may be a good place to start.">
+        content="Use the ECJ Interactive Support Guide to choose a broad category of help and find Los Angeles Mission College resources that may be a good place to start.">
 
   <link rel="icon"
         type="image/png"
@@ -448,6 +450,69 @@
     }
 
 
+
+
+    /* Privacy-first loading for third-party interactive guides */
+
+    .embed-consent {
+      padding: 24px;
+      background: #f7f9fb;
+      color: var(--text);
+      border-top: 1px solid var(--border, #dce2e8);
+    }
+
+    .embed-consent h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+
+    .embed-consent p {
+      max-width: 800px;
+      margin: 0 0 12px;
+    }
+
+    .embed-consent .privacy-detail {
+      font-size: .92rem;
+      color: var(--muted);
+    }
+
+    .load-guide-button {
+      min-height: 48px;
+      margin-top: 6px;
+      padding: 11px 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--navy);
+      color: var(--white);
+      border: 2px solid var(--navy);
+      border-radius: 5px;
+      font: inherit;
+      font-weight: 700;
+      line-height: 1.3;
+      cursor: pointer;
+    }
+
+    .load-guide-button:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .load-guide-button:focus-visible {
+      outline: 3px solid var(--focus, var(--gold));
+      outline-offset: 4px;
+    }
+
+    .no-script-fallback {
+      margin-top: 14px !important;
+      font-size: .9rem;
+    }
+
     /* Guidance callout */
 
     .guidance-box {
@@ -829,9 +894,9 @@
         </h1>
 
         <p class="hero-description">
-          Tell the guide what's going on in everyday language. It can help
-          you find Los Angeles Mission College resources that may fit your
-          situation—you do not need to know which office to ask.
+          Choose the kind of help you need in broad terms. The guide can help
+          you find Los Angeles Mission College resources that may fit—you do
+          not need to know which office to ask.
         </p>
 
       </div>
@@ -848,13 +913,14 @@
                aria-labelledby="intro-heading">
 
         <h2 id="intro-heading">
-          Just Tell the Guide What&rsquo;s Going On
+          Start With the Kind of Help You Need
         </h2>
 
         <p>
           You do not need college vocabulary or the name of a department.
-          Describe what you need in your own words, and the guide can suggest
-          a few places that may be worth trying first.
+          Keep your description broad. A category such as tutoring, food
+          assistance, counseling, financial aid, or class planning is enough
+          for the guide to suggest places that may be worth trying first.
         </p>
 
         <p class="example-heading">
@@ -865,24 +931,28 @@
              aria-label="Examples of what you can ask the support guide">
 
           <p class="example-prompt">
-            &ldquo;I&rsquo;m falling behind in a class and I don&rsquo;t know what to do.&rdquo;
+            &ldquo;Tutoring or academic support.&rdquo;
           </p>
 
           <p class="example-prompt">
-            &ldquo;I need help paying for food and other basics.&rdquo;
+            &ldquo;Food assistance or help with basic needs.&rdquo;
           </p>
 
           <p class="example-prompt">
-            &ldquo;I don&rsquo;t know what classes to take next semester.&rdquo;
+            &ldquo;Help choosing classes for next semester.&rdquo;
           </p>
 
         </div>
 
         <div class="privacy-note">
-          <strong>Protect your privacy:</strong> You do not need to share a
-          student ID number, password, Social Security number, medical record,
-          financial account information, or other sensitive personal details.
-          <a href="privacy.html">Read the privacy statement</a>.
+          <strong>Protect your privacy:</strong> This optional guide is provided
+          through PlayLab, an external AI service. Anything you type into the
+          guide is sent to PlayLab and may be stored according to its privacy
+          practices. Use a broad category of need rather than your personal
+          story. Do not include your name, student ID, contact information,
+          password, Social Security number, medical or disability information,
+          financial account information, immigration information, or other
+          sensitive personal details. <a href="privacy.html">Read the privacy statement</a>.
         </div>
 
       </section>
@@ -910,13 +980,13 @@
       <div class="tool-intro">
         <h2>Start the Interactive Support Guide</h2>
         <p>
-          Type what is getting in the way, then use the suggestions as a
+          Enter only a broad category of help, then use the suggestions as a
           starting point for finding real LAMC people and services.
         </p>
         <p class="tool-note">
-          This interactive guide is powered by PlayLab. It can suggest places
-          to start, but it is not a counselor, official college system, or
-          emergency service.
+          This optional guide is powered by PlayLab, an external AI service.
+          It can suggest places to start, but it is not a counselor, official
+          college system, or emergency service.
         </p>
       </div>
 
@@ -931,12 +1001,35 @@
           Interactive Support Guide
         </div>
 
-        <iframe
-          class="navigator-frame"
-          src="https://www.playlab.ai/embedded/cmtev8j2m0y0ckn0w3zzazmw5"
-          title="Interactive support guide for finding Los Angeles Mission College student resources"
-          allow="clipboard-write">
-        </iframe>
+        <div class="embed-consent" id="support-guide-consent">
+          <h3>Load the Optional PlayLab Guide?</h3>
+          <p>
+            The guide has not loaded yet. If you choose <strong>Load Interactive
+            Guide</strong>, your browser will connect to PlayLab, which may
+            receive technical information such as your IP address, browser or
+            device information, and usage information. Anything you type into
+            the guide will also be sent to PlayLab.
+          </p>
+          <p class="privacy-detail">
+            Keep prompts general. You can use the other resources on this site
+            without loading PlayLab. <a href="privacy.html">Read the full privacy statement</a>.
+          </p>
+          <button class="load-guide-button"
+                  type="button"
+                  id="load-support-guide"
+                  aria-controls="support-guide-container">
+            Load Interactive Guide
+          </button>
+          <noscript>
+            <p class="no-script-fallback">
+              JavaScript is required to load the embedded guide on this page.
+              You can instead
+              <a href="https://www.playlab.ai/embedded/cmtev8j2m0y0ckn0w3zzazmw5" target="_blank" rel="noopener noreferrer">open the Support Guide directly in PlayLab</a>.
+            </p>
+          </noscript>
+        </div>
+
+        <div id="support-guide-container" aria-live="polite"></div>
 
       </section>
 
@@ -1061,6 +1154,31 @@
     </div>
 
   </footer>
+
+
+
+  <script>
+    (function () {
+      const button = document.getElementById('load-support-guide');
+      const consent = document.getElementById('support-guide-consent');
+      const container = document.getElementById('support-guide-container');
+
+      if (!button || !consent || !container) return;
+
+      button.addEventListener('click', function () {
+        const frame = document.createElement('iframe');
+        frame.className = 'navigator-frame';
+        frame.src = 'https://www.playlab.ai/embedded/cmtev8j2m0y0ckn0w3zzazmw5';
+        frame.title = 'Interactive support guide for finding Los Angeles Mission College student resources';
+        frame.referrerPolicy = 'no-referrer';
+        frame.setAttribute('allow', 'clipboard-write');
+
+        consent.hidden = true;
+        container.appendChild(frame);
+        frame.focus();
+      }, { once: true });
+    }());
+  </script>
 
 </body>
 

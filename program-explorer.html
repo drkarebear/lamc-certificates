@@ -7,6 +7,8 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
+  <meta name="referrer" content="no-referrer">
+
   <title>Interactive Program Finder | ECJ | Los Angeles Mission College</title>
 
   <meta name="description"
@@ -465,6 +467,69 @@
       background: var(--white);
     }
 
+
+
+
+    /* Privacy-first loading for third-party interactive guides */
+
+    .embed-consent {
+      padding: 24px;
+      background: #f7f9fb;
+      color: var(--text);
+      border-top: 1px solid var(--border, #dce2e8);
+    }
+
+    .embed-consent h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+
+    .embed-consent p {
+      max-width: 800px;
+      margin: 0 0 12px;
+    }
+
+    .embed-consent .privacy-detail {
+      font-size: .92rem;
+      color: var(--muted);
+    }
+
+    .load-guide-button {
+      min-height: 48px;
+      margin-top: 6px;
+      padding: 11px 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--navy);
+      color: var(--white);
+      border: 2px solid var(--navy);
+      border-radius: 5px;
+      font: inherit;
+      font-weight: 700;
+      line-height: 1.3;
+      cursor: pointer;
+    }
+
+    .load-guide-button:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .load-guide-button:focus-visible {
+      outline: 3px solid var(--focus, var(--gold));
+      outline-offset: 4px;
+    }
+
+    .no-script-fallback {
+      margin-top: 14px !important;
+      font-size: .9rem;
+    }
 
     /* =========================================================
        AFTER EXPLORER
@@ -993,8 +1058,10 @@
           possibility and then open the program pages to compare your options.
         </p>
         <p class="tool-note">
-          This interactive guide is powered by PlayLab. Its suggestions are for
-          exploration and are not official academic advising.
+          This optional interactive guide is powered by PlayLab, an external
+          AI service. Its suggestions are for exploration and are not official
+          academic advising. Do not include private student information or
+          other sensitive personal details.
         </p>
       </div>
 
@@ -1011,12 +1078,37 @@
             Interactive Program Finder
           </div>
 
-          <iframe
-            class="explorer-frame"
-            src="https://www.playlab.ai/embedded/cmtezps40124lov0w08d7ssil"
-            title="Interactive program finder for ECJ degrees and certificates at Los Angeles Mission College"
-            allow="clipboard-write">
-          </iframe>
+          <div class="embed-consent" id="program-finder-consent">
+            <h3>Load the Optional PlayLab Program Finder?</h3>
+            <p>
+              The finder has not loaded yet. If you choose <strong>Load Program
+              Finder</strong>, your browser will connect to PlayLab, which may
+              receive technical information such as your IP address, browser or
+              device information, and usage information. Anything you type into
+              the finder will also be sent to PlayLab.
+            </p>
+            <p class="privacy-detail">
+              You can browse every degree and certificate on this website
+              without loading PlayLab. Do not enter your name, student ID,
+              contact information, or other sensitive personal information.
+              <a href="privacy.html">Read the full privacy statement</a>.
+            </p>
+            <button class="load-guide-button"
+                    type="button"
+                    id="load-program-finder"
+                    aria-controls="program-finder-container">
+              Load Program Finder
+            </button>
+            <noscript>
+              <p class="no-script-fallback">
+                JavaScript is required to load the embedded finder on this page.
+                You can instead
+                <a href="https://www.playlab.ai/embedded/cmtezps40124lov0w08d7ssil" target="_blank" rel="noopener noreferrer">open the Program Finder directly in PlayLab</a>.
+              </p>
+            </noscript>
+          </div>
+
+          <div id="program-finder-container" aria-live="polite"></div>
 
         </div>
 
@@ -1157,6 +1249,31 @@
     </div>
 
   </footer>
+
+
+
+  <script>
+    (function () {
+      const button = document.getElementById('load-program-finder');
+      const consent = document.getElementById('program-finder-consent');
+      const container = document.getElementById('program-finder-container');
+
+      if (!button || !consent || !container) return;
+
+      button.addEventListener('click', function () {
+        const frame = document.createElement('iframe');
+        frame.className = 'explorer-frame';
+        frame.src = 'https://www.playlab.ai/embedded/cmtezps40124lov0w08d7ssil';
+        frame.title = 'Interactive program finder for ECJ degrees and certificates at Los Angeles Mission College';
+        frame.referrerPolicy = 'no-referrer';
+        frame.setAttribute('allow', 'clipboard-write');
+
+        consent.hidden = true;
+        container.appendChild(frame);
+        frame.focus();
+      }, { once: true });
+    }());
+  </script>
 
 </body>
 
