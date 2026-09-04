@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Statement | ECJ | Los Angeles Mission College</title>
-  <meta name="description" content="Privacy information for the faculty-maintained ECJ Degrees & Certificates website.">
+  <title>License & Reuse | ECJ | Los Angeles Mission College</title>
+  <meta name="description" content="License and reuse information for the faculty-maintained ECJ Degrees & Certificates website.">
   <link rel="icon" type="image/png" href="favicon.png">
   <style>
     :root {
@@ -19,11 +19,12 @@
       --soft-gray: #f7f9fb;
     }
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--text); line-height: 1.65; background: var(--white); }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { margin: 0; min-width: 320px; font-family: Arial, Helvetica, sans-serif; color: var(--text); line-height: 1.65; background: var(--white); overflow-wrap: break-word; }
     a { color: var(--blue); }
-    a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
-    .skip-link { position: absolute; left: -9999px; top: auto; }
-    .skip-link:focus { left: 16px; top: 16px; z-index: 1000; padding: 10px 14px; background: var(--white); color: var(--navy); border: 2px solid var(--navy); }
+    a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 3px; }
+    .skip-link { position: absolute; left: -9999px; top: 0; z-index: 1000; padding: 10px 14px; background: var(--white); color: var(--navy); border: 2px solid var(--navy); }
+    .skip-link:focus { left: 16px; top: 16px; }
     .site-header { background: var(--white); border-bottom: 1px solid var(--border); }
     .header-inner { max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; gap: 30px; }
     .college-name { text-decoration: none; }
@@ -38,12 +39,17 @@
     .hero p { margin: 0; max-width: 720px; font-size: 1.08rem; }
     .content { max-width: 900px; margin: 0 auto; padding: 48px 24px 64px; }
     .content h2 { color: var(--navy); margin-top: 34px; }
+    .content p, .content li { max-width: 75ch; }
     .notice { padding: 20px 22px; background: var(--soft-gray); border-left: 5px solid var(--blue); border-radius: 4px; }
     footer { background: var(--navy-dark); color: var(--white); }
     .footer-inner { max-width: 900px; margin: 0 auto; padding: 34px 24px; }
     footer h2 { color: var(--white); margin: 0 0 8px; font-size: 1.4rem; }
     footer p { margin: 5px 0; }
     footer a { color: var(--white); }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    }
     @media (max-width: 760px) {
       .header-inner { padding: 14px 17px 13px; flex-direction: column; align-items: stretch; gap: 11px; }
       .college-name-main { font-size: 1.38rem; }
@@ -51,25 +57,7 @@
       .top-nav { padding-top: 10px; border-top: 1px solid var(--border); }
       .top-nav ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; width: 100%; }
       .top-nav a { width: 100%; min-height: 48px; padding: 9px 10px; justify-content: center; background: #f5f8fb; border: 1px solid #d9e2ea; border-radius: 6px; font-size: .81rem; line-height: 1.2; text-align: center; }
-    }
-  
-    /* Keep an odd final navigation item full-width on small screens. */
-    @media (max-width: 760px) {
-      .top-nav li:last-child:nth-child(odd) {
-        grid-column: 1 / -1;
-      }
-    }
-
-  
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
+      .top-nav li:last-child:nth-child(odd) { grid-column: 1 / -1; }
     }
 
   </style>
@@ -95,26 +83,27 @@
   <main id="main-content">
     <section class="hero">
       <div class="hero-inner">
-        <h1>Privacy Statement</h1>
-        <p>How to protect your privacy while using this faculty-maintained ECJ website and its interactive guides.</p>
+        <h1>License &amp; Reuse</h1>
+        <p>What original site content may be reused and which college or third-party materials remain under separate terms.</p>
       </div>
     </section>
-
     <div class="content">
       <div class="notice">
-        <strong>Protect your privacy:</strong> Do not enter passwords, Social Security numbers, student ID numbers, medical records, financial account information, or other sensitive personal information into an interactive guide on this site.
+        <strong>Reuse note:</strong> The Creative Commons license below applies only to original content created for this faculty-maintained website unless a page or item says otherwise.
       </div>
 
-      <h2>About This Website</h2>
-      <p>This website is maintained by faculty in the Los Angeles Mission College English, Communication Studies &amp; Journalism Department as a resource for students and the community. It is not an official Los Angeles Mission College or Los Angeles Community College District website.</p>
+      <h2>License and Reuse</h2>
+      <p>Unless otherwise noted, the original explanatory and educational content I created for this faculty-maintained ECJ Degrees &amp; Certificates website is licensed under the <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)</a>. You may share and adapt that original content with attribution for noncommercial purposes.</p>
 
-      <h2>Interactive Guides</h2>
-      <p>Some pages include interactive guides provided through an external service. Information entered into those tools may be handled by that service under its own privacy practices. You can use the rest of this website without using an interactive guide.</p>
+      <h2>What the License Does Not Automatically Cover</h2>
+      <p>This license does not automatically apply to official Los Angeles Mission College or Los Angeles Community College District content, names, logos, trademarks, catalog language, program or course materials reproduced or adapted from official sources, embedded third-party tools, linked websites, or material that carries a separate copyright, license, or rights statement. Those materials remain subject to their own terms.</p>
 
-      <h2>Official College Services</h2>
-      <p>For official college records, services, policies, or matters involving private student information, use official Los Angeles Mission College systems and offices rather than an interactive guide on this site.</p>
+      <h2>Program Information</h2>
+      <p>Program requirements, course availability, transfer information, policies, and other official college information can change. This faculty-maintained website is intended as a student-friendly starting point, not as a replacement for the current LAMC Catalog, official college websites, or academic counseling.</p>
 
-      <p><a href="student-resources.html">Return to Student Resources</a></p>
+      <h2>Attribution</h2>
+      <p>When reusing original site content covered by CC BY-NC 4.0, please identify the source as the ECJ Degrees &amp; Certificates faculty-maintained website and include a link to the page you used when practical.</p>
+
     </div>
   </main>
 
@@ -125,9 +114,9 @@
       <p>13356 Eldridge Avenue · Sylmar, CA 91342</p>
       <p><a href="https://www.lamc.edu/">Visit the Los Angeles Mission College website</a></p>
       <p><a href="https://www.lamc.edu/student-services" target="_blank" rel="noopener">Official LAMC Student Services</a></p>
-      <p><a href="privacy.html" aria-current="page">Privacy Statement</a></p>
+      <p><a href="privacy.html">Privacy Statement</a></p>
       <p><a href="accessibility.html">Accessibility</a></p>
-      <p><a href="license.html">License &amp; Reuse</a></p>
+      <p><a href="license.html" aria-current="page">License &amp; Reuse</a></p>
     </div>
   </footer>
 </body>

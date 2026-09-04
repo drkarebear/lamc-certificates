@@ -466,6 +466,18 @@
       }
     }
 
+  
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
   </style>
 
   <link rel="icon" type="image/png" href="favicon.png">
@@ -930,6 +942,8 @@
       <p>
         <a href="privacy.html">Privacy Statement</a>
       </p>
+      <p><a href="accessibility.html">Accessibility</a></p>
+      <p><a href="license.html">License &amp; Reuse</a></p>
 
     </div>
 
